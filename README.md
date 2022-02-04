@@ -1,6 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Luxury Ride Service Nuxt 3
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+This Project Includes Windicss, Pinia for State Management, VueSplide for the Slider, Iconify for Icons, and 
+headlessUI. Production deployed to Cloudflare Workers.
+More Updates to come
+
+Look at the Nuxt 3 [documentation](https://v3.nuxtjs.org).
 
 ## Setup
 
@@ -20,10 +24,10 @@ yarn dev
 
 ## Production
 
-Build the application for production:
+Build the application for production to Cloudflare Workers:
 
 ```bash
-yarn build
+wrangler publish
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
