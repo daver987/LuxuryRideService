@@ -35,5 +35,9 @@ export default defineNuxtConfig({
     icons: true,
     uno: true,
     attributify: true,
+  },
+  privateRuntimeConfig: {
+    ZONE_ID: process.env.ZONE_ID,
+    ACCOUNT_ID: process.env.ACCOUNT_ID,
   }
 })
