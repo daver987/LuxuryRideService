@@ -1,0 +1,15 @@
+name = "luxuryrideservice"
+type = "javascript"
+account_id = "9daf554a647e8485085e1bfe6244c8a3"
+workers_dev = true
+route = "*.luxuryrideservice.com/"
+zone_id = "14577cec19038e2f63ce7d7d1e4b4668"
+compatibility_date = "2022-01-28"
+
+[site]
+bucket = ".output/public"
+entry-point = ".output"
+
+[build]
+command = "NITRO_PRESET=cloudflare yarn nuxt build"
+upload.format = "service-worker"

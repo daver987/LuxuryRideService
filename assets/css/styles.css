@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'caviar-dreams';
+  font-style: normal;
+  font-weight: 400;
+  src: local('caviar-dreams'),
+    url('./assets/fonts/caviar-dreams.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'caviar-dreams-bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('caviar-dreams-bold'),
+    url('./assets/fonts/caviar-dreams-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'campton-light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('campton-light'),
+    url('./assets/fonts/campton-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'campton-thin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('campton-thin'),
+    url('./assets/fonts/campton-thin.woff') format('woff');
+}
+
+@layer components {
+  body {
+    @apply bg-background;
+  }
+
+  .heading {
+    @apply font-heading text-4xl uppercase lg:text-5xl;
+  }
+
+  .subheading {
+    @apply font-subheading text-primary text-xs
+    leading-relaxed tracking-[0.5em] uppercase md:text-sm;
+  }
+
+  .btn {
+    @apply border border-solid font-sans text-base py-2 px-5 tracking-[0.4em]
+    uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300;
+  }
+
+  .btn-primary {
+    @apply border-primary text-primary active:bg-primary/20;
+  }
+
+  .btn-light {
+    @apply border-body-light text-body-light hover:border-primary hover:text-primary active:bg-primary/20;
+  }
+
+  .btn-dark {
+    @apply border-background-dark text-background-dark active:bg-primary/20;
+  }
+  .btn-flat {
+    @apply border-0 text-primary active:bg-primary/20;
+  }
+  .btn-solid {
+    @apply bg-primary  border-primary text-sm text-background-dark w-full py-4 px-4 transition-all duration-300 uppercase hover:text-background-dark hover:transform-none hover:transition-none active:bg-primary/50;
+  }
+
+  p {
+    @apply font-body text-sm text-body;
+  }
+
+  img {
+    @apply object-cover object-center;
+  }
+
+  h1 {
+    @apply font-heading text-heading-light text-4xl uppercase lg:text-5xl;
+  }
+
+  h2 {
+    @apply font-heading text-4xl uppercase md:text-2xl lg:text-4xl xl:text-5xl;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+.router-link-active {
+  color: rgba(187, 136, 15);
+}
