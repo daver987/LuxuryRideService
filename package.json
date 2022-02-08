@@ -4,22 +4,21 @@
     "dev": "yarn develop",
     "develop": "nuxi dev",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs",
+    "start": "nuxi preview",
     "publish": "wrangler publish"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.4.3",
-    "@iconify/json": "^2.0.33",
+    "@iconify/json": "^2.0.34",
     "@pinia/nuxt": "^0.1.8",
     "@splidejs/vue-splide": "^0.5.18",
     "@vueuse/nuxt": "^7.5.5",
     "nuxt-windicss": "^2.2.4",
     "nuxt3": "latest",
+    "@unocss/nuxt": "^0.24.0",
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@unocss/nuxt": "^0.22.7",
-    "pinia": "^2.0.11",
-    "vee-validate": "^4.5.8"
+    "pinia": "^2.0.11"
   }
 }

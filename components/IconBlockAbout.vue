@@ -8,11 +8,11 @@
           <img :alt="altText" :src="`/icons/${image}.svg`" class="w-16" />
         </div>
         <div>
-          <h4
+          <h2
             class="font-subheading mt-2 text-md text-primary tracking-widest uppercase md:text-center"
           >
             {{ title }}
-          </h4>
+          </h2>
           <p class="font-body mt-1 text-sm text-body md:text-center">
             {{ body }}
           </p>
