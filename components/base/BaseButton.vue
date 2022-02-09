@@ -1,8 +1,15 @@
 <template>
-  <button :class="kind" class="btn focus:border-primary focus:ring focus:ring-primary active:bg-primary/70">
+  <component
+    :is="to ? 'nuxt-link' : href ? 'a' : 'button'"
+    :href="href"
+    :to="to"
+    @click="$emit('click')"
+    :class="kind"
+    class="btn focus:border-primary focus:ring focus:ring-primary active:bg-primary/70"
+  >
     {{ label }}
     <slot></slot>
-  </button>
+  </component>
 </template>
 
 <script setup>
@@ -16,6 +23,14 @@ defineProps({
     type: String,
     required: false,
     default: 'Button',
+  },
+  to: {
+    type: String,
+    default: null,
+  },
+  href: {
+    type: String,
+    default: null,
   },
 })
 </script>

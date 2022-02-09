@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       {
         name: 'description',
         content:
-          'Luxury Ride Service is the premier Toronto car service. We offer Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
+          'Luxury Ride Service a premier Toronto car service. Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
       },
       {
         name: 'google-site-verification',
@@ -36,18 +36,14 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
   ],
 
-  vueuse: {
-    ssrHandlers: true,
-  },
+  // vueuse: {
+  //   ssrHandlers: true,
+  // },
   css: ['@/assets/css/styles.css'],
 
   unocss: {
     icons: true,
     uno: true,
     attributify: true,
-  },
-  privateRuntimeConfig: {
-    ZONE_ID: process.env.ZONE_ID,
-    ACCOUNT_ID: process.env.ACCOUNT_ID,
   },
 })
