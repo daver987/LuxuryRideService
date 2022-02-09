@@ -8,7 +8,7 @@
         :image="headerInfo.image"
       />
     </div>
-    <div class="container px-6 pt-4">
+    <div class="container pt-4">
       <TabGroup
         class="bg-background w-full lg:-mt-20"
         as="div"

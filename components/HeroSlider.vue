@@ -17,16 +17,16 @@
           <p class="text-center subheading md:text-left" id="subheading">
             {{ slide.subHeading }}
           </p>
-          <NuxtLink to="/reservations" class="self-center md:self-start">
-            <BaseButton
-              cursor-pointer
-              mt-8
-              self-center
-              md:self-start
-              :label="slide.buttonText"
-              kind="btn-light"
-            />
-          </NuxtLink>
+          <BaseButton
+            class="self-center md:self-start"
+            cursor-pointer
+            mt-8
+            self-center
+            md:self-start
+            :label="slide.buttonText"
+            kind="btn-light"
+            to="/reservations"
+          />
         </div>
         <div
           class="max-w-lg row-start-5 self-center md:col-start-2 md:row-start-2 lg:max-w-xl"
@@ -34,7 +34,7 @@
           <img
             :src="slide.image"
             :alt="slide.altText"
-            class="object-fit object-cover w-full h-full"
+            class="h-full object-fit object-cover w-full"
             :class="slide.style"
           />
         </div>

@@ -7,3 +7,8 @@
     <TheFooter />
   </div>
 </template>
+<style>
+html {
+  scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
+}
+</style>

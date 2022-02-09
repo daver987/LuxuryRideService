@@ -1,10 +1,8 @@
-// noinspection JSCheckFunctionSignatures,JSUnusedGlobalSymbols
-
 import { defineNuxtConfig } from 'nuxt3'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  dev: false,
+
   meta: {
     title: 'Toronto Car Service | Luxury Ride Service',
     htmlAttrs: {
@@ -17,7 +15,7 @@ export default defineNuxtConfig({
       {
         name: 'description',
         content:
-          'Luxury Ride Service is the premier Toronto car service. We offer Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
+          'Luxury Ride Service a premier Toronto car service. Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
       },
       {
         name: 'google-site-verification',
@@ -45,9 +43,5 @@ export default defineNuxtConfig({
     icons: true,
     uno: true,
     attributify: true,
-  },
-  privateRuntimeConfig: {
-    ZONE_ID: process.env.ZONE_ID,
-    ACCOUNT_ID: process.env.ACCOUNT_ID,
   },
 })
