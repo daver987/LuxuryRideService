@@ -7,16 +7,26 @@ export default defineNuxtConfig({
   dev: false,
   meta: {
     title: 'Toronto Car Service | Luxury Ride Service',
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'format-detection', content: 'telephone=no' },
       {
         name: 'description',
         content:
-          'Luxury Ride Service is a premier car service in the Toronto Area. We offer luxury cars for hire, limousine services and airport transfers at affordable prices.',
+          'Luxury Ride Service is the premier Toronto car service. We offer Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
       },
       {
         name: 'google-site-verification',
         content: 'vxHnCltMFx06rPY1w0vXooUDj8NjRfXmIHbOREMUxrQ',
       },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', href: 'https://luxuryrideservice.com' },
     ],
   },
   buildModules: [
@@ -39,5 +49,5 @@ export default defineNuxtConfig({
   privateRuntimeConfig: {
     ZONE_ID: process.env.ZONE_ID,
     ACCOUNT_ID: process.env.ACCOUNT_ID,
-  }
+  },
 })

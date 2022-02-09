@@ -9,7 +9,7 @@
         </div>
         <div>
           <h2
-            class="font-subheading mt-2 text-md text-primary tracking-widest uppercase md:text-center"
+            class="font-subheading mt-2 text-base text-primary tracking-widest uppercase md:text-center"
           >
             {{ title }}
           </h2>
