@@ -34,9 +34,9 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
   ],
 
-  vueuse: {
-    ssrHandlers: true,
-  },
+  // vueuse: {
+  //   ssrHandlers: true,
+  // },
   css: ['@/assets/css/styles.css'],
 
   unocss: {
