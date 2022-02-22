@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
       { rel: 'canonical', href: 'https://luxuryrideservice.com' },
     ],
   },
@@ -35,9 +35,7 @@ export default defineNuxtConfig({
   ],
 
   unocss: {
-    // presets
-    icons: true, // enabled `@unocss/preset-icons`
-
+    icons: true,
   },
 
   vueuse: {
