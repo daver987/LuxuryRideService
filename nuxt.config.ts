@@ -31,17 +31,19 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'nuxt-windicss',
-    '@unocss/nuxt',
+    '@unocss/nuxt'
   ],
 
-  // vueuse: {
-  //   ssrHandlers: true,
-  // },
+  unocss: {
+    // presets
+    icons: true, // enabled `@unocss/preset-icons`
+
+  },
+
+  vueuse: {
+    ssrHandlers: true,
+  },
   css: ['@/assets/css/styles.css'],
 
-  unocss: {
-    icons: true,
-    uno: true,
-    attributify: true,
-  },
+
 })
