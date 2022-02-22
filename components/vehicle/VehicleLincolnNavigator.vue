@@ -36,9 +36,9 @@
       </div>
     </div>
     <div
-      class="mb-12 grid auto-cols-auto md:gap-4 grid-cols-1 place-items-center md:grid-cols-12"
+      class="mb-12 auto-cols-auto grid grid-cols-1 place-items-center md:gap-4 md:grid-cols-12"
     >
-      <div class="col-span-1 md:col-span-4 mb-6 md:mb-0">
+      <div class="mb-6 col-span-1 md:mb-0 md:col-span-4">
         <img
           src="/images/lincoln-navigator-interior-fleet-3.jpg"
           alt="Lincoln Navigator"

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-background">
+  <footer class="bg-background">
     <div class="px-6">
       <div
         class="container bg-background-light flex flex-col space-y-4 shadow-xl -mb-28 max-w-7xl py-10 px-8 z-10 relative lg:flex-row lg:space-y-0 lg:-mb-12 lg:justify-between"
@@ -25,8 +25,8 @@
             <img
               alt="Luxury Ride Service"
               src="/images/Luxury-Ride-Service-Logo.png"
-              width='1944'
-              height='544'
+              width="1944"
+              height="544"
             />
           </NuxtLink>
 
@@ -62,8 +62,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/reservations">
-                Reservations</NuxtLink>
+              <NuxtLink to="/reservations"> Reservations</NuxtLink>
             </li>
           </ul>
         </div>
@@ -93,11 +92,9 @@
         © LUXURY RIDE SERVICE - ALL RIGHTS RESERVED 2022
       </p>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script setup>
 const navigation = useNavigation()
 </script>
-
-

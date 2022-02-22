@@ -1,5 +1,5 @@
 <template>
-  <section
+  <header
     class="bg-center bg-cover bg-no-repeat h-screen px-6 z-10 overflow-hidden relative"
     style="background-image: url('/icons/gradient-background.svg')"
   >
@@ -44,7 +44,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </header>
 </template>
 
 <script setup>

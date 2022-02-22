@@ -6,11 +6,11 @@
           <img :alt="altText" :src="`icons/${image}.svg`" class="w-20" />
         </div>
         <div>
-          <h4
+          <h3
             class="font-subheading text-md text-primary tracking-widest uppercase"
           >
             {{ title }}
-          </h4>
+          </h3>
           <p class="font-body mt-1 text-sm text-body">
             {{ body }}
           </p>
