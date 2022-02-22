@@ -96,5 +96,6 @@
 </template>
 
 <script setup>
-const navigation = useNavigation()
+// const navigation = useNavigation()
+const { data: navigation } = useFetch(`/api/navigation`)
 </script>
