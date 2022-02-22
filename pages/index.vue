@@ -143,84 +143,8 @@
 </template>
 
 <script setup>
+const { data: services } = useFetch('/api/services')
+const { data: iconBlock } = useFetch('/api/features')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
-
-const iconBlock = [
-  {
-    title: 'PROFESSIONAL DRIVERS',
-    body: "You deserve the best from a car service! That's why we always make sure you'll get an expert driver ready for your every need. The passengers' safety is of utmost priority. As one of the best Toronto car service companies in town, we ensure that our services to you or your business are safe and reliable.",
-    image: 'chauffeur',
-    altText: 'chauffeur',
-  },
-  {
-    title: 'All Inclusive rates',
-    body: "There's no need to worry about hidden fees when you reserve your car service with us. We will provide a safe and affordable means of transportation for everyone who books with our company. So they can arrive stress-free at Pearson International Airport (or any other location).  The customer always comes first, and every trip gets the attention it deserves, ensuring satisfaction throughout each journey.",
-    image: 'credit-cards',
-    altText: 'credit-cards',
-  },
-  {
-    title: 'book ahead',
-    body: "If you're planning on taking a trip to Toronto, Ontario, use our booking software online to book your Toronto car service in advance. This way, you can ensure that your car and driver are at the airport waiting to take you to your destination.",
-    image: 'calendar',
-    altText: 'calendar icon',
-  },
-  {
-    title: 'Complimentary Wait Time',
-    body: "Can't wait to get picked up on your journey from the Toronto airport? Don't worry; we've got it covered! As one of the premier Toronto car service companies, we make sure that we monitor your flight and that your driver is on location when you land. So you can focus on the things that are important to you and not if your ride will be there waiting.",
-    image: 'time',
-    altText: 'clock icon',
-  },
-]
-
-const services = [
-  {
-    title: 'TORONTO TOURS',
-    body: 'Get a tour of the city of Toronto with a car service for an unforgettable experience. Toronto is the most culturally diverse city in Canada. Customer satisfaction and the safety of our clients are our number one priority! Along the way, your driver can stop at your favourite landmarks and take pictures to make your visit to Toronto more memorable.',
-    image: 'toronto',
-    altText: 'Toronto-City-Tour',
-  },
-  {
-    title: 'NIGHT ON THE TOWN',
-    body: "We are a VIP Toronto car service offering professional service at a reasonable price. It's perfect for special occasions with friends and family. If you're looking to celebrate with your partner, our car service can get you where you need to go hassle-free and in comfort in an SUV or car. Our car service ensures you arrive safely and stylishly so that you can relax and enjoy your night out.",
-    image: 'Night-On-The-Town',
-    altText: 'Night-On-The-Town',
-  },
-  {
-    title: 'INTERCITY TRAVEL',
-    body: 'In the current times of Covid-19, more business clients want to take a car service when they are going out of Toronto for a business trip. Having personal transportation when travelling from city to city in Southern Ontario can benefit you and your business. Whether travelling from Toronto to Ottawa or Toronto to Windsor, hire one of our reliable chauffeurs to take you from point A to point B.',
-    image: 'intercity-travel-1',
-    altText: 'Intercity-Travel',
-  },
-  {
-    title: 'NIAGARA FALLS TOURS',
-    body: "It is only an hour and a half from the city of Toronto. Suppose you are coming on a flight into Pearson airport in Mississauga. In that case, your transportation by one of our chauffeurs is only about an hour. Get out of town and take a tour of Niagara Falls with a car service to one of Canada's most visited tourist attractions. You'll be taken aback by its beauty and awe-inspiring wonder. Or take in the sights from a different perspective entirely as you explore one of Ontario's premier wine regions nearby.",
-    image: 'niagara-falls-tour',
-    altText: 'Niagara-Falls-Tour',
-  },
-  {
-    title: 'TORONTO INTERNATIONAL FILM FESTIVAL',
-    body: 'Make the red carpet your runway with our Toronto car service and arrive at the largest film festival in Canada looking like a movie star. Travel to TIFF events in style and come feeling like a celebrity. There are many Toronto car services, but only one car service ensures you have a good time.',
-    image: 'TIFF',
-    altText: 'TIFF',
-  },
-  {
-    title: 'AIRPORT SERVICES',
-    body: 'Take your time. All travellers picked at Toronto Pearson International Airport get 60 minutes complimentary waiting time. For airport pickups, drivers track flights status tracking to ensure they are there when they arrive. We will load your luggage and take you to your hotel. We cover all airports in southern Ontario at reasonable prices.',
-    image: 'airplane',
-    altText: 'airport-services',
-  },
-  {
-    title: 'CORPORATE TRAVEL',
-    body: "With our car service, as far as we're concerned, you are number one! Arrive on time to all corporate events during your stay in Toronto. Whether you're coming in from Toronto Pearson Airport (YYZ) or from Toronto Airport (YTZ) located downtown Toronto we have a car or an SUV that will cover your needs.",
-    image: 'briefcase',
-    altText: 'Corporate-Travel',
-  },
-  {
-    title: 'POINT TO POINT SERVICES',
-    body: 'Point-To-Point transfers are an excellent choice for anyone who wants more convenience when it comes to transportation. Many people rely on our company for transportation, and we work hard to provide them with a solution that matches up with their needs at all times. We will take care of your needs and make sure that you are happy with what you get.',
-    image: 'point-to-point',
-    altText: 'Point-To-Point',
-  },
-]
 </script>

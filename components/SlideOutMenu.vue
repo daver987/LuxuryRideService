@@ -86,7 +86,7 @@ import { storeToRefs } from 'pinia'
 
 const store = useMenu()
 const { open } = storeToRefs(store)
-const navigation = useNavigation()
+const { data: navigation } = useFetch('/api/navigation')
 </script>
 
 <style scoped>

@@ -8,7 +8,7 @@
         :image="headerInfo.image"
       />
     </div>
-    <div class="container pt-4 px-6 md:px-0">
+    <div class="container px-6 pt-4 md:px-0">
       <TabGroup
         class="bg-background w-full lg:-mt-20"
         as="div"
@@ -50,51 +50,14 @@
 
 <script setup>
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
-
+const { data: tabs } = useFetch('/api/fleetTabs')
 const headerInfo = {
   aboveHeading: 'Discover Our Luxury Vehicles',
   heading: 'OUR FLEET',
   body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
   image: 'background-image: url("/images/City-View-Navigator-Interior.jpg")',
 }
-const tabs = [
-  {
-    icon: 'Fleet-XTS-Continental',
-    title: 'Cadillac XTS',
-    id: 1,
-    tag: 'VehicleCadillacXts',
-  },
-  {
-    icon: 'Fleet-XTS-Continental',
-    title: 'Lincoln Continental',
-    id: 2,
-    tag: 'VehicleLincolnContinental',
-  },
-  {
-    icon: 'Fleet-Navigator-Escalade',
-    title: 'Cadillac Escalade',
-    id: 3,
-    tag: 'VehicleCadillacEscalade',
-  },
-  {
-    icon: 'Fleet-Navigator-Escalade',
-    title: 'Lincoln Navigator',
-    id: 4,
-    tag: 'VehicleLincolnNavigator',
-  },
-  {
-    icon: 'Fleet-Tesla',
-    title: 'Tesla S',
-    id: 5,
-    tag: 'VehicleTeslaS',
-  },
-  {
-    icon: 'Fleet-Other',
-    title: 'Other',
-    id: 6,
-    tag: 'VehicleOther',
-  },
-]
+
 const selectedTab = ref('VehicleCadillacXts')
 function changedTab() {
   selectedTab.value = tabs.tag
