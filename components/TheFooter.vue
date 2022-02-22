@@ -61,6 +61,10 @@
                 {{ myNavigation.name }}
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink to="/reservations">
+                Reservations</NuxtLink>
+            </li>
           </ul>
         </div>
         <div class="space-y-6 my-8 lg:space-y-4">

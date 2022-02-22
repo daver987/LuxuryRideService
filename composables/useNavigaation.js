@@ -20,9 +20,5 @@ export function useNavigation() {
       name: 'Contact',
       href: '/contact',
     },
-    {
-      name: 'Reservations',
-      href: '/reservations',
-    }
   ]
 }
