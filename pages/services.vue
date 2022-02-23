@@ -63,13 +63,12 @@
               <h2 class="subheading">{{ service.aboveHeading }}</h2>
               <h2 class="mt-4 text-4xl heading">{{ service.title }}</h2>
               <p class="mt-2">{{ service.body }}</p>
-              <NuxtLink to="/contact">
-                <BaseButton
-                  class="mt-4"
-                  kind="btn-primary"
-                  label="Contact Us"
-                />
-              </NuxtLink>
+              <BaseButton
+                class="mt-4"
+                kind="btn-primary"
+                label="Contact Us"
+                to="/contact"
+              />
             </div>
           </div>
         </div>

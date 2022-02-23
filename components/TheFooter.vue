@@ -10,9 +10,7 @@
           </h2>
         </div>
         <div class="self-center">
-          <NuxtLink to="/reservations">
-            <BaseButton kind="btn-dark" label="Reserve Now" />
-          </NuxtLink>
+          <BaseButton kind="btn-dark" label="Reserve Now" to="/reservations" />
         </div>
       </div>
     </div>
@@ -56,13 +54,10 @@
           <ul
             class="flex flex-col font-bold font-body text-body-light leading-relaxed tracking-wider uppercase"
           >
-            <li v-for="myNavigation in navigation" :key="myNavigation.name">
+            <li v-for="myNavigation in navigation" :key="myNavigation.id">
               <NuxtLink :to="myNavigation.href">
                 {{ myNavigation.name }}
               </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/reservations"> Reservations</NuxtLink>
             </li>
           </ul>
         </div>
@@ -96,5 +91,5 @@
 </template>
 
 <script setup>
-const { data: navigation } = useFetch(`/api/navigation`)
+const { data: navigation } = useFetch('/api/navigation')
 </script>
