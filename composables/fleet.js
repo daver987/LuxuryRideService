@@ -4,8 +4,8 @@ export function useFleet() {
   return [
     {
       id: 1,
-      title: 'Caddilac XTS',
-      altTitle: 'Caddilac XTS Sedan',
+      title: 'Cadillac XTS',
+      altTitle: 'Cadillac XTS Sedan',
       subHeading: 'LUXURY VEHICLE',
       description: `If you're looking for a legend to take care of you (regardless of
       whether your destination is Toronto or Montreal), the Cadillac XTS is
@@ -25,11 +25,11 @@ export function useFleet() {
     {
       id: 2,
       title: 'CADILLAC ESCALADE',
-      altTitle: 'Caddilac Escalade SUV',
+      altTitle: 'Cadillac Escalade SUV',
       subHeading: 'LUXURY VEHICLE',
       description: `The Cadillac Escalade combines luxury, style, and comfort with
     high-tech features. The luxurious features include soft leather
-    upholstery, a state-of-the-art entertainment system. The techy
+    upholstery, a state-of-the-art entertainment system. The tech
     upgrades make this vehicle a perfect choice for a comfortable ride on
     your night out. The Escalade's powerful engine provides 6.2 litres of
     V8 power that can take you to your destination in no time. You'll

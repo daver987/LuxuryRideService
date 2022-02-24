@@ -47,7 +47,8 @@ export function uesTours() {
       subHeading: '',
       description: `If you are looking for a more intimate experience, we can create a custom tour for your group or family. Whether it is a bachelor party, bachelorette party, or any other special occasion, we offer transportation for all of these occasions and more`,
       excerpt:
-        'If you are looking for a more intimate experience, we can create a custom tour for your group or family. Whether it is a bachelor party, bachelorette party, or any other special occasion, we offer transportation for all of these occasions and more',
+        'If you are looking for a more intimate experience, we can create a custom tour for your group or family.' +
+        ' Whether it is a bachelor party, bachelorette party, or any other special occasion, we offer transportation for all of these occasions and more',
       icon: '',
       image: '',
       altText: 'Custom-Tours',

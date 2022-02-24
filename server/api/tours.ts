@@ -7,7 +7,9 @@ export default (req, res) => [
   },
   {
     title: 'Niagara Winery Tour',
-    body: 'For those who are looking for an incredible day, we offer wine tours in Niagara. We have worked with some ofthe best wineries in the region and provide exclusive tours that offer one-of-a-kind experiences and memories.',
+    body: 'For those who are looking for an incredible day, we offer wine tours in Niagara. We have worked with some' +
+      ' of the best wineries in the region and provide exclusive tours that offer one-of-a-kind experiences and' +
+      ' memories.',
     image: 'Night-On-The-Town',
     altText: 'Niagara-Wine-Tour',
   },
