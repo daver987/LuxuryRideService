@@ -68,7 +68,6 @@ function changedTab() {
 .fade-leave-active {
   transition: opacity 0.7s ease-in-out;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

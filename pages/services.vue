@@ -52,22 +52,23 @@
             <img
               :alt="service.altText"
               :src="service.image"
-              class="object-cover"
+              class="object-cover object-center"
             />
           </div>
           <div :class="service.infoPosition" class="flex">
             <div
               :class="service.infoBoxPosition"
-              class="py-7 px-5 md:py-12 md:px-10"
+              class="space-y-4 py-7 px-5 md:py-12 md:px-10"
             >
               <h2 class="subheading">{{ service.aboveHeading }}</h2>
               <h2 class="mt-4 text-4xl heading">{{ service.title }}</h2>
-              <p class="mt-2">{{ service.body }}</p>
+              <p class="mt-2 mb-8">{{ service.body }}</p>
               <BaseButton
                 class="mt-4"
                 kind="btn-primary"
                 label="Contact Us"
                 to="/contact"
+                :nuxtLink="true"
               />
             </div>
           </div>

@@ -18,14 +18,11 @@
             {{ slide.subHeading }}
           </p>
           <BaseButton
-            class="self-center md:self-start"
-            cursor-pointer
-            mt-8
-            self-center
-            md:self-start
+            class="mt-8 self-center md:self-start"
             :label="slide.buttonText"
             kind="btn-light"
             to="/reservations"
+            :nuxtLink="true"
           />
         </div>
         <div

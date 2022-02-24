@@ -10,7 +10,12 @@
           </h2>
         </div>
         <div class="self-center">
-          <BaseButton kind="btn-dark" label="Reserve Now" to="/reservations" />
+          <BaseButton
+            kind="btn-dark"
+            label="Reserve Now"
+            to="/reservations"
+            :nuxtLink="true"
+          />
         </div>
       </div>
     </div>
@@ -25,6 +30,7 @@
               src="/images/Luxury-Ride-Service-Logo.png"
               width="1944"
               height="544"
+              class="object-cover object-center"
             />
           </NuxtLink>
 

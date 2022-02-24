@@ -29,13 +29,13 @@
             </p>
           </div>
           <div class="flex py-4 px-4 justify-center sm:px-6">
-            <NuxtLink to="/reservations">
-              <BaseButton
-                kind="btn-primary"
-                class="self-center"
-                label="Reserve Now"
-              />
-            </NuxtLink>
+            <BaseButton
+              kind="btn-primary"
+              class="self-center"
+              label="Reserve Now"
+              to="/reservations"
+              :nuxtLink="true"
+            />
           </div>
         </div>
         <div class="md:self-center">
@@ -127,9 +127,12 @@
               </p>
             </div>
             <div class="py-4 px-4 sm:px-6">
-              <NuxtLink to="/contact">
-                <BaseButton kind="btn-primary" label="Contact Us" />
-              </NuxtLink>
+              <BaseButton
+                kind="btn-primary"
+                label="Contact Us"
+                to="/contact"
+                :nuxtLink="true"
+              />
             </div>
           </div>
         </div>

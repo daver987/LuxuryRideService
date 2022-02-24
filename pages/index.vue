@@ -32,9 +32,12 @@
             </h2>
           </div>
           <div>
-            <NuxtLink to="/fleet">
-              <BaseButton kind="btn-light" label="View All" />
-            </NuxtLink>
+            <BaseButton
+              kind="btn-light"
+              label="View All"
+              :nuxtLink="true"
+              to="/fleet"
+            />
           </div>
         </div>
       </div>

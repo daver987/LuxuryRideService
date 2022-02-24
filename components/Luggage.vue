@@ -9,9 +9,12 @@
       <div class="text-body text-6xl i-ic-twotone-luggage" />
     </ItemCount>
     <div class="flex flex-col h-full justify-center items-center">
-      <NuxtLink to="/reservations">
-        <BaseButton kind="btn-primary" label="Reserve" />
-      </NuxtLink>
+      <BaseButton
+        kind="btn-primary"
+        label="Reserve"
+        to="/reservations"
+        :nuxtLink="true"
+      />
     </div>
   </BaseCard>
 </template>
