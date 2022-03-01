@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.6",
+    "@iconify/json": "^2.1.8",
     "@pinia/nuxt": "^0.1.8",
     "@splidejs/vue-splide": "^0.5.18",
-    "@unocss/nuxt": "^0.26.2",
-    "@vueuse/nuxt": "^7.6.2",
-    "nuxt-windicss": "^2.2.6",
+    "@unocss/nuxt": "^0.26.4",
+    "@vueuse/nuxt": "^7.7.0",
+    "nuxt-windicss": "^2.2.7",
     "nuxt3": "latest",
     "prettier": "^2.5.1"
   },
