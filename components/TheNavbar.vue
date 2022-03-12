@@ -22,7 +22,7 @@
         />
         <span class="sr-only">Open main menu</span>
       </div>
-      <SlideOutMenu />
+      <LazySlideOutMenu />
     </nav>
   </div>
 </template>
