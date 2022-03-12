@@ -60,7 +60,7 @@
           <ul
             class="flex flex-col font-bold font-body text-body-light leading-relaxed tracking-wider uppercase"
           >
-            <li v-for="myNavigation in navigation" :key="myNavigation.id">
+            <li v-for="myNavigation in nav" :key="myNavigation.id">
               <NuxtLink :to="myNavigation.href">
                 {{ myNavigation.name }}
               </NuxtLink>
@@ -96,6 +96,7 @@
   </footer>
 </template>
 
-<script setup>
-const { data: navigation } = useFetch('/api/navigation')
+<script setup lang="ts">
+import { navigation } from '@/composables/useNavigation'
+const  nav = navigation()
 </script>
