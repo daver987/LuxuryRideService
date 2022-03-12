@@ -7,18 +7,20 @@
       <h2 class="text-center text-heading md:text-left">
         {{ heading }}
       </h2>
-      <BaseButton
-        kind="btn-flat"
-        label="View More"
-        to="/fleet"
-        :nuxtLink="true"
-      >
-        <img
-          alt="right arrow"
-          class="pr-8 self-center"
-          src="/icons/right-arrow.svg"
-        />
-      </BaseButton>
+      <div class="max-w-lg">
+        <BaseButton
+          kind="btn-flat"
+          label="View More"
+          to="/fleet"
+          :nuxtLink="true"
+        >
+          <img
+            alt="right arrow"
+            class="pr-8 self-center"
+            src="/icons/right-arrow.svg"
+          />
+        </BaseButton>
+      </div>
     </div>
   </div>
 </template>

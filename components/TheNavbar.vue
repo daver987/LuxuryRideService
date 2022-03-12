@@ -28,9 +28,6 @@
 </template>
 
 <script setup>
-import { useMenu } from '~/stores/useMenu'
-
+import { useMenu } from '~~/stores/useMenu'
 const store = useMenu()
-store.toggleMenu()
-store.closeMenu()
 </script>

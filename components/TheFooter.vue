@@ -97,6 +97,6 @@
 </template>
 
 <script setup lang="ts">
-import { navigation } from '@/composables/useNavigation'
-const  nav = navigation()
+import { useNavigation as navigation } from '@/composables/useNavigation'
+const nav = navigation()
 </script>

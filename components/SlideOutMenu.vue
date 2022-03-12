@@ -2,7 +2,12 @@
   <div class="bg-white">
     <!-- Mobile menu -->
     <TransitionRoot as="template" :show="open">
-      <Dialog as="div" class="flex inset-0 z-40 fixed" @close="open = false">
+      <Dialog
+        as="div"
+        class="flex inset-0 z-40 fixed"
+        @close="open = false"
+        :open="open"
+      >
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-500"
@@ -64,9 +69,7 @@
               </div>
             </div>
 
-            <div class="border-t space-y-6 border-gray-200 py-6 px-4">
-              <!-- Currency selector -->
-            </div>
+            <div class="border-t space-y-6 border-gray-200 py-6 px-4" />
           </div>
         </TransitionChild>
       </Dialog>
@@ -74,19 +77,21 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {
   TransitionChild,
   TransitionRoot,
   DialogOverlay,
   Dialog,
 } from '@headlessui/vue'
-import { useMenu } from '~/stores/useMenu'
 import { storeToRefs } from 'pinia'
+import { useNavigation } from '~~/composables/useNavigation'
+import { useMenu } from '~~/stores/useMenu'
 
 const store = useMenu()
 const { open } = storeToRefs(store)
-const { data: navigation } = useFetch('/api/navigation')
+
+const navigation = useNavigation()
 </script>
 
 <style scoped>
