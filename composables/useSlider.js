@@ -1,5 +1,3 @@
-// noinspection JSUnusedGlobalSymbols
-
 export function useSlider() {
   return [
     {

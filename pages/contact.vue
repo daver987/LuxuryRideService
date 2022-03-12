@@ -23,11 +23,12 @@
               >
               <div class='mt-1'>
                 <input
+
                   type='text'
-                  name='from_name'
+                  name='first-name'
                   id='first-name'
                   autocomplete='first-name'
-                  class='rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary'
+                  class='form-input rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary'
                   v-model='store.from_name'
                   required
                 />
