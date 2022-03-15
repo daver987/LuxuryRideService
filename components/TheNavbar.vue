@@ -16,18 +16,19 @@
       <div
         class="flex flex-row col-span-1 col-start-2 col-end-3 self-center justify-end"
       >
-        <div
+        <button
           class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
-          @click="store.toggleMenu"
+          @click="store.toggleMenu()"
         />
         <span class="sr-only">Open main menu</span>
       </div>
-      <LazySlideOutMenu />
+      <SlideOutMenu />
     </nav>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useMenu } from '~~/stores/useMenu'
+
 const store = useMenu()
 </script>

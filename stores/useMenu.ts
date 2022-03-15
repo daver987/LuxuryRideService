@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore, acceptHMRUpdate } from 'pinia'
 
 export const useMenu = defineStore('menu', {
   state: () => {
@@ -12,8 +12,12 @@ export const useMenu = defineStore('menu', {
     toggleMenu() {
       this.open = !this.open
     },
-    closeMenu() {
-      this.open = false
-    },
+    // closeMenu() {
+    //   this.open = false
+    // },
   },
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useMenu, import.meta.hot))
+}

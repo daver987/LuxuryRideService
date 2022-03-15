@@ -29,7 +29,7 @@ const btnType = computed(() => {
     return 'a'
   }
   if (props.nuxtLink) {
-    return 'nuxt-link'
+    return 'router-link'
   }
   return 'button'
 })
