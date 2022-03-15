@@ -96,6 +96,6 @@ const navigation = useNavigation()
 
 <style scoped>
 .router-link-active {
-  color: rgba(187, 136, 15);
+  color: #A57C52;
 }
 </style>

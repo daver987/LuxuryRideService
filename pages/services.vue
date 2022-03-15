@@ -25,7 +25,7 @@
               CHECK OUT OUR SERVICES
             </h2>
             <p>
-              Luxury Ride Service puts you or your business at the forefront of
+              High Park Livery puts you or your business at the forefront of
               Toronto car service. For nearly a decade, we have maintained a
               fleet of new model vehicles. We have constantly upgraded to meet
               the Toronto GTA car service market demands. ensuring that our
@@ -80,7 +80,7 @@
         class="bg-center bg-no-repeat bg-cover py-8 px-6 z-10 relative sm:px-8 md:py-16 lg:py-20"
         style="background-image: url('/images/Niagara-Falls-Tour.jpg')"
       >
-        <h2 class="text-center subheading">Luxury Ride Service Tours</h2>
+        <h2 class="text-center subheading">High Park Livery Tours</h2>
         <h2 class="mt-2 text-center text-heading-light text-4xl heading">
           Tour Services Available
         </h2>
@@ -103,13 +103,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { data: tours } = useFetch('/api/tours')
 const { data: services } = useFetch('/api/service')
 const headerInfo = {
   aboveHeading: 'WHAT WE OFFER YOU',
   heading: 'OUR SERVICES',
   image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
-  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
+  body: "High Park Livery is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
 }
 </script>

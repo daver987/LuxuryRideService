@@ -1,8 +1,13 @@
 {
-  "name": "luxury-ride-service",
-  "version": "1.0.0",
+  "name": "high-park-livery",
+  "version": "0.0.1",
+  "description": "High Park Livery Website",
+  "author": "David Robertson",
+  "license": "MIT",
   "private": true,
   "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,css,html,md,json}\" --ignore-path .gitignore",
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
@@ -13,11 +18,19 @@
     "@iconify/json": "^2.1.13",
     "@pinia/nuxt": "^0.1.8",
     "@splidejs/vue-splide": "^0.5.18",
+    "@types/node": "^12.20.21",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
     "@unocss/nuxt": "^0.27.5",
-    "@vueuse/nuxt": "^7.7.1",
+    "@vueuse/core": "^8.0.0",
+    "@vueuse/nuxt": "^8.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^8.5.0",
     "nuxt-windicss": "^2.2.8",
-    "nuxt3": "latest",
-    "prettier": "^2.5.1"
+    "nuxt3": "^3.0.0-27404660.0f9bcbf",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
   },
   "dependencies": {
     "pinia": "^2.0.11"

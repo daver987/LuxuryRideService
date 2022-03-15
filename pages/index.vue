@@ -47,7 +47,7 @@
         >
           <p class="font-body text-sm text-body prose">
             <span class="font-bold font-body text-sm text-heading uppercase"
-              >Luxury Ride Service</span
+              >High Park Livery</span
             >
             puts you or your business at the forefront of Toronto car service.
             For nearly a decade, we have maintained a fleet of new model
@@ -118,7 +118,7 @@
         class="bg-white mx-auto space-y-4 shadow-xl max-w-7xl p-8 lg:p-x-8 lg:pt-32 lg:pb-8"
       >
         <p class="text-center subheading">
-          WHAT LUXURY RIDE SERVICE OFFERS YOU
+          WHAT High Park Livery OFFERS YOU
         </p>
         <h2 class="text-center">We Offer</h2>
       </div>
@@ -137,7 +137,7 @@
     </section>
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
-        <p class="text-center subheading">LUXURY RIDE SERVICE PARTNERS</p>
+        <p class="text-center subheading">High Park Livery PARTNERS</p>
         <h2 class="text-center">They Trust Us</h2>
       </div>
       <TheLogoCloud />

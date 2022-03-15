@@ -19,17 +19,17 @@
         </div>
       </div>
     </div>
-    <div class="bg-background-dark w-full px-8 pt-24 pb-8 lg:pt-16 lg:pb-4">
+    <div class="bg-[#1C1C1C] w-full px-8 pt-24 pb-8 lg:pt-16 lg:pb-4">
       <div
         class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:gap-8 lg:grid-cols-3"
       >
         <div class="space-y-10 my-8">
-          <NuxtLink to="/" class="max-w-[200px] block">
+          <NuxtLink to="/" class="max-w-[130px] block">
             <img
-              alt="Luxury Ride Service"
-              src="/images/Luxury-Ride-Service-Logo.png"
-              width="1944"
-              height="544"
+              alt="High Park Livery"
+              src="/images/HPL-Logo-White 2.png"
+              width="960"
+              height="568"
               class="object-cover object-center"
             />
           </NuxtLink>
@@ -78,7 +78,7 @@
           <p
             class="font-body text-base text-center text-body-light tracking-wider uppercase"
           >
-            Socialize With Luxury Ride Service
+            Socialize With High Park Livery
           </p>
           <div class="flex flex-row mx-auto max-w-40 justify-between">
             <div class="text-primary text-3xl i-zmdi-facebook" />
@@ -89,8 +89,8 @@
       </div>
     </div>
     <div class="bg-primary flex h-16 justify-center">
-      <p class="font-body text-xs text-center text-body-light self-center">
-        © LUXURY RIDE SERVICE - ALL RIGHTS RESERVED 2022
+      <p class="font-body uppercase text-xs text-center text-body-light self-center">
+        © High Park Livery - ALL RIGHTS RESERVED 2022
       </p>
     </div>
   </footer>

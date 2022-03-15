@@ -1,17 +1,17 @@
 <template>
   <div
-    class="-mb-[5.05rem] w-full px-6 z-30 row-start-1 self-start justify-self-stretch relative md:col-span-2"
+    class="-mb-[6.3rem] w-full px-6 z-30 row-start-1 self-start justify-self-stretch relative md:col-span-2"
   >
     <nav class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
       <div class="col-span-1 col-start-1">
-        <NuxtLink to="/" class="max-w-[200px] block">
+        <nuxt-link to="/" class="max-w-[130px] block">
           <img
-            src="/images/Luxury-Ride-Service-Logo.png"
-            alt="Luxury-Ride-Service"
-            width="1944"
-            height="544"
+            src="/images/HPL-Logo-White 2.png"
+            alt="High-Park-Livery"
+            width="960"
+            height="568"
           />
-        </NuxtLink>
+        </nuxt-link>
       </div>
       <div
         class="flex flex-row col-span-1 col-start-2 col-end-3 self-center justify-end"
@@ -27,7 +27,8 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useMenu } from '~~/stores/useMenu'
+
 const store = useMenu()
 </script>

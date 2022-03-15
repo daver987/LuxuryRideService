@@ -22,7 +22,7 @@
               and fully certified drivers by the city of Toronto. We ensure that
               our clients arrive at their destination on time and always provide
               a safe and comfortable ride.<br />Your chauffeur is just a phone
-              call away! Luxury Ride Service will get you to your destination on
+              call away! High Park Livery will get you to your destination on
               time and in style. When you require something exceptional, don't
               hesitate to contact us or get an online quote for rates and
               availability.
@@ -89,7 +89,7 @@
           <div class="bg-white py-6 overflow-hidden md:px-2 lg:px-4">
             <div class="py-5 px-4 sm:px-6">
               <p class="text-center subheading md:text-left">
-                LUXURY RIDE SERVICE?
+                High Park Livery?
               </p>
               <h2 class="mt-6 text-center text-heading md:text-left">
                 WHO WE ARE
@@ -97,15 +97,15 @@
             </div>
             <div class="py-4 px-3 sm:p-6">
               <p class="font-body text-sm text-body">
-                Luxury Ride Service is a Toronto-based car service company. We
+                High Park Livery is a Toronto-based car service company. We
                 provide luxury transportation to clients in the Greater Toronto
                 and southern Ontario area. In addition to offering a variety of
-                car models and levels of service. Luxury Ride Service caters to
+                car models and levels of service. High Park Livery caters to
                 corporate and non-corporate clients with highly personalized
                 services that aim to exceed all expectations.
               </p>
               <p class="font-body text-sm text-body">
-                When you choose to work with Luxury Ride Service, you'll work
+                When you choose to work with High Park Livery, you'll work
                 with highly trained professionals who know about the industry.
                 We are committed to customer satisfaction and punctuality in all
                 that we do. We offer suggestions on routes as well as excellent
@@ -114,14 +114,14 @@
                 and relaxed throughout their journey.
               </p>
               <p class="font-body text-sm text-body">
-                At Luxury Ride Service, we don't cut corners or skimp on your
+                At High Park Livery, we don't cut corners or skimp on your
                 comfort to offer you a low price. We believe that all of our
                 luxury cars should be maintained to the highest industry
                 standards, ensuring a safe and unforgettable experience.
               </p>
               <p class="font-body text-sm text-body">
                 Whether it's a night out on the town or a business meeting
-                across downtown Toronto, Luxury Ride Service can provide a
+                across downtown Toronto, High Park Livery can provide a
                 luxurious ride that fits perfectly within your schedule and
                 budget.
               </p>
@@ -143,9 +143,10 @@
 
 <script setup>
 const headerInfo = {
-  aboveHeading: 'DISCOVER LUXURY RIDE SERVICE',
+  aboveHeading: 'DISCOVER High Park Livery',
   heading: 'ABOUT US',
-  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
+  body:
+    "High Park Livery is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
   image: 'background-image: url("/images/Chauffeur-Opens-Door.jpg")',
 }
 

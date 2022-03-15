@@ -42,7 +42,7 @@ export function useServices() {
       id: 4,
       title: 'AIRPORT SERVICES',
       subHeading: 'Travel In Comfort',
-      description: `No one wants to spend hours in an airport before their flight, but it is inevitable. With a limousine service, you do not need to worry about the time spent at the airport. Drivers are available 24/7 and can pick you up at any terminal. They will also drop you off at your terminal for your departure flight. When flying internationally, the process can be even more daunting with all of the security checks and hours of waiting in line. You will not have to worry about this as long as you are booked with a Luxury Ride Service!`,
+      description: `No one wants to spend hours in an airport before their flight, but it is inevitable. With a limousine service, you do not need to worry about the time spent at the airport. Drivers are available 24/7 and can pick you up at any terminal. They will also drop you off at your terminal for your departure flight. When flying internationally, the process can be even more daunting with all of the security checks and hours of waiting in line. You will not have to worry about this as long as you are booked with a High Park Livery!`,
       excerpt: `Take your time. All travellers picked at Toronto Pearson International Airport get 60 minutes complimentary waiting time. For airport pickups, drivers track flights status tracking to ensure they are there when they arrive. We will load your luggage and take you to your hotel. We cover all airports in southern Ontario at reasonable prices.`,
       icon: '',
       image: '',

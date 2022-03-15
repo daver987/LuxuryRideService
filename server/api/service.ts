@@ -2,7 +2,11 @@ export default (req, res) => [
   {
     title: 'Airport Services',
     aboveHeading: 'TRAVEL IN COMFORT',
-    body: 'No one wants to spend hours in an airport before their flight, but it is inevitable. With a limousine service, you do not need to worry about the time spent at the airport. Drivers are available 24/7 and can pick you up at any terminal. They will also drop you off at your terminal for your departure flight. When flying internationally, the process can be even more daunting with all of the security checks and hours of waiting in line. You will not have to worry about this as long as you are booked with a Luxury Ride Service!',
+    body: 'No one wants to spend hours in an airport before their flight, but it is inevitable. With a limousine' +
+      ' service, you do not need to worry about the time spent at the airport. Drivers are available 24/7 and can' +
+      ' pick you up at any terminal. They will also drop you off at your terminal for your departure flight. When' +
+      ' flying internationally, the process can be even more daunting with all of the security checks and hours of' +
+      ' waiting in line. You will not have to worry about this as long as you are booked with a High Park Livery!',
     image: '/images/Airplane-Toronto-Pearson-Airport.jpg',
     altText: 'Airport-Service',
     boxPosition: 'md:col-span-2 md:grid md:grid-cols-2 mb-8',
