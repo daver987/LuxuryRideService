@@ -29,18 +29,18 @@
       <div
         class="tracking-wide pt-8 col-span-1 col-start-1 row-start-6 md:transform md:top-0 md:left-[-6.75rem] md:row-start-4 md:-rotate-90 md:absolute"
       >
-        <a href="tel:2894009408" class="font-body text-sm text-center text-body"
-          >CALL 289.400 .9408</a
+        <a href="tel:4167057627" class="font-body text-sm text-center text-body"
+          >CALL 416. 705. 7627</a
         >
       </div>
       <div
         class="pt-16 col-span-1 col-start-1 row-start-6 md:transform md:top-0 md:right-[-12.5rem] md:col-start-2 md:row-start-4 md:rotate-90 md:absolute"
       >
         <a
-          href="mailto:info@luxuryrideservice.com"
+          href="mailto:info@highparklivery.com"
           class="font-body text-sm text-center text-body tracking-wide"
         >
-          EMAIL: INFO@LUXURYRIDESERVICE.COM
+          EMAIL: INFO@HIGHPARKLIVERY.COM
         </a>
       </div>
     </div>

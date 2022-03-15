@@ -2,12 +2,7 @@
   <div class="bg-white">
     <!-- Mobile menu -->
     <TransitionRoot as="template" :show="open">
-      <Dialog
-        as="div"
-        class="flex inset-0 z-40 fixed"
-        @close="open = false"
-        :open="open"
-      >
+      <Dialog as="div" class="flex inset-0 z-40 fixed" @close="open = false">
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-500"
@@ -58,14 +53,12 @@
                 </NuxtLink>
               </div>
               <div class="flow-root">
-                <BaseButton
-                  class="my-3 self-center"
-                  kind="btn-light"
-                  label="Reserve"
+                <NuxtLink
+                  class="border border-solid border-primary cursor-pointer text-primary text-base py-2 px-5 tracking-[0.4em] inline-flex items-center uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 focus:border-primary focus:ring focus:ring-primary active:bg-primary/20"
                   to="/reservations"
-                  @click="open = false"
-                  :nuxtLink="true"
-                />
+                  @clicked="open = false"
+                  ><span>Reserve</span></NuxtLink
+                >
               </div>
             </div>
 
@@ -90,12 +83,11 @@ import { useMenu } from '~~/stores/useMenu'
 
 const store = useMenu()
 const { open } = storeToRefs(store)
-
 const navigation = useNavigation()
 </script>
 
 <style scoped>
 .router-link-active {
-  color: #A57C52;
+  color: #a57c52;
 }
 </style>

@@ -27,7 +27,7 @@
           <NuxtLink to="/" class="max-w-[130px] block">
             <img
               alt="High Park Livery"
-              src="/images/HPL-Logo-White 2.png"
+              src="/images/HPL-Logo-White-2.png"
               width="960"
               height="568"
               class="object-cover object-center"
@@ -37,17 +37,17 @@
           <div class="flex flex-row justify-items-center">
             <div class="text-primary mr-8 text-3xl i-zmdi-phone" />
             <a
-              href="tel:2894009408"
+              href="tel:4167057627"
               class="font-body text-body-light text-md tracking-wider"
-              >289.400.9408
+              >416.705.7627
             </a>
           </div>
           <div class="flex flex-row justify-items-center">
             <div class="mr-8 text-primary text-4xl i-ic-outline-mail" />
             <a
-              href="mailto:info@luxuryrideservice.com"
+              href="mailto:info@highparklivery.com"
               class="font-body text-body-light text-md tracking-wider"
-              >info@luxuryrideservice.com
+              >info@highparklivery.com
             </a>
           </div>
         </div>
@@ -89,7 +89,9 @@
       </div>
     </div>
     <div class="bg-primary flex h-16 justify-center">
-      <p class="font-body uppercase text-xs text-center text-body-light self-center">
+      <p
+        class="font-body text-xs text-center text-body-light uppercase self-center"
+      >
         © High Park Livery - ALL RIGHTS RESERVED 2022
       </p>
     </div>

@@ -2,6 +2,7 @@ node_modules
 *.log
 .nuxt
 nuxt.d.ts
+.DS_Store
 .output
 .env
 .idea

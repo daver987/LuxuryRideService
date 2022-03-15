@@ -6,7 +6,7 @@
       <div class="col-span-1 col-start-1">
         <nuxt-link to="/" class="max-w-[130px] block">
           <img
-            src="/images/HPL-Logo-White 2.png"
+            src="/images/HPL-Logo-White-2.png"
             alt="High-Park-Livery"
             width="960"
             height="568"
@@ -16,13 +16,13 @@
       <div
         class="flex flex-row col-span-1 col-start-2 col-end-3 self-center justify-end"
       >
-        <div
+        <button
           class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
-          @click="store.toggleMenu"
+          @click="store.toggleMenu()"
         />
         <span class="sr-only">Open main menu</span>
       </div>
-      <LazySlideOutMenu />
+      <SlideOutMenu />
     </nav>
   </div>
 </template>
