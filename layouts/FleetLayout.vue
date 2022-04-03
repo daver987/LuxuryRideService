@@ -23,4 +23,6 @@ const headerInfo = {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

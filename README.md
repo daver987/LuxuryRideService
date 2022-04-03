@@ -1,7 +1,7 @@
 # Luxury Ride Service Nuxt 3
 
-This Project Includes Windicss, Pinia for State Management, VueSplide for the Slider, Iconify for Icons, and 
-headlessUI. Production deployed to Cloudflare Workers.
+This Project Includes windicss, Pinia for State Management, VueSplide for the Slider, Iconify for Icons, and 
+headlessUI from tailwind. Site was deployed to Cloudflare Workers.
 More Updates to come
 
 Look at the Nuxt 3 [documentation](https://v3.nuxtjs.org).
