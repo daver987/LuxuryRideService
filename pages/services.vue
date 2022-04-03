@@ -112,4 +112,7 @@ const headerInfo = {
   image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
   body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
 }
+definePageMeta({
+  layout: 'default',
+})
 </script>

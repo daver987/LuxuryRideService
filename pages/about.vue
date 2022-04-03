@@ -150,4 +150,7 @@ const headerInfo = {
 }
 
 const { data: quality } = useFetch('/api/qualities')
+definePageMeta({
+  layout: 'default',
+})
 </script>

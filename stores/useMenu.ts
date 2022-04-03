@@ -12,9 +12,6 @@ export const useMenu = defineStore('menu', {
     toggleMenu() {
       this.open = !this.open
     },
-    // closeMenu() {
-    //   this.open = false
-    // },
   },
 })
 

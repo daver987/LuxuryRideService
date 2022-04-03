@@ -36,7 +36,7 @@
               kind="btn-light"
               label="View All"
               :nuxtLink="true"
-              to="/fleet"
+              to="/fleet/cadillac-xts"
             />
           </div>
         </div>
@@ -150,4 +150,16 @@ const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
+
+definePageMeta({
+  layout: 'default',
+  // pageTransition: {
+  //   appear: true,
+  //   enterFromClass: 'opacity-0 translate-x-10',
+  //   enterActiveClass: 'duration-[2000ms]',
+  //   leaveToClass: 'opacity-0 translate-x-10',
+  //   leaveActiveClass: 'duration-[2000ms]',
+  //   mode: 'out-in',
+  // },
+})
 </script>

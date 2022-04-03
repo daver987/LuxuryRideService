@@ -6,7 +6,7 @@ const useNavigation = () => [
   },
   {
     name: 'Fleet',
-    href: '/fleet',
+    href: '/fleet/cadillac-xts',
     id: 2,
   },
   {

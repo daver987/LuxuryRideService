@@ -6,7 +6,7 @@ export default (req, res) => [
   },
   {
     name: 'Fleet',
-    href: '/fleet',
+    href: '/fleet/cadillac-xts',
     id: 2,
   },
   {

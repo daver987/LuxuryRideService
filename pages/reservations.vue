@@ -25,4 +25,7 @@ const headerInfo = {
   body: "Your chauffeur is just a phone call away! Don't hesitate to contact us or get an online quote for rates and availability.",
   image: 'background-image: url("/images/Waiting-For-Car-Service.jpg");',
 }
+definePageMeta({
+  layout: 'default',
+})
 </script>

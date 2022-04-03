@@ -20,7 +20,7 @@ export function useFleet() {
       altText: 'Cadillac XTS',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 5,
@@ -84,7 +84,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 6,
@@ -98,7 +98,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 7,
@@ -112,7 +112,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
     {
       id: 8,
@@ -126,7 +126,7 @@ export function useFleet() {
       altText: '',
       gallery: [{ image: '', altText: '' }],
       buttonText: 'contact us',
-      buttonLink: '/fleet',
+      buttonLink: '/fleet/cadillac-xts',
     },
   ]
 }
