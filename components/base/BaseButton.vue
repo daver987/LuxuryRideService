@@ -2,11 +2,11 @@
   <component
     :class="btnStyle"
     :is="btnType"
-    :href="href"
-    :to="to"
+    :href="props.href"
+    :to="props.to"
     @click="$emit('clicked')"
   >
-    <span class="mx-auto">{{ label }}</span>
+    <span class="mx-auto">{{ props.label }}</span>
     <slot></slot>
   </component>
 </template>
