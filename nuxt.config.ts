@@ -38,9 +38,9 @@ export default defineNuxtConfig({
     icons: true,
   },
 
-  vueuse: {
-    ssrHandlers: true,
-  },
+  // vueuse: {
+  //   ssrHandlers: true,
+  // },
   css: ['@/assets/css/styles.css'],
 
   router: {

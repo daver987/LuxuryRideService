@@ -1,5 +1,12 @@
+<script setup lang="ts">
+const tabs = useFleetTabs()
+
+definePageMeta({
+  layout: false
+})
+</script>
+
 <template>
-  <div>
     <NuxtLayout name='fleet-layout'>
       <div class="container px-6 pt-4 md:px-0">
         <div class="bg-background w-full lg:-mt-20">
@@ -18,22 +25,13 @@
               </NuxtLink>
             </template>
           </div>
-
           <NuxtPage />
         </div>
       </div>
     </NuxtLayout>
-  </div>
 </template>
 
-<script setup lang="ts">
-const tabs = useFleetTabs()
 
-definePageMeta({
-  layout: false
-
-})
-</script>
 <style scoped>
 .router-link-active {
   background-color: rgba(187, 136, 15);

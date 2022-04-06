@@ -1,3 +1,15 @@
+<script setup lang='ts'>
+const headerInfo = {
+  aboveHeading: 'GET IN TOUCH',
+  heading: 'BOOK TODAY',
+  body: "Your chauffeur is just a phone call away! Don't hesitate to contact us or get an online quote for rates and availability.",
+  image: 'background-image: url("/images/Waiting-For-Car-Service.jpg");',
+}
+definePageMeta({
+  layout: 'default',
+})
+</script>
+
 <template>
   <div>
     <TheHeader
@@ -18,14 +30,4 @@
     </section>
   </div>
 </template>
-<script setup>
-const headerInfo = {
-  aboveHeading: 'GET IN TOUCH',
-  heading: 'BOOK TODAY',
-  body: "Your chauffeur is just a phone call away! Don't hesitate to contact us or get an online quote for rates and availability.",
-  image: 'background-image: url("/images/Waiting-For-Car-Service.jpg");',
-}
-definePageMeta({
-  layout: 'default',
-})
-</script>
+

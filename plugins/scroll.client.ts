@@ -5,7 +5,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({ left: 0, top: 0, behaviour: "smooth" });
-      }, 100);
+      }, 300);
     });
   };
 });

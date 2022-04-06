@@ -1,3 +1,17 @@
+<script setup lang='ts'>
+const { data: tours } = useFetch('/api/tours')
+const { data: services } = useFetch('/api/service')
+const headerInfo = {
+  aboveHeading: 'WHAT WE OFFER YOU',
+  heading: 'OUR SERVICES',
+  image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
+  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
+}
+definePageMeta({
+  layout: 'default',
+})
+</script>
+
 <template>
   <div>
     <TheHeader
@@ -103,16 +117,4 @@
   </div>
 </template>
 
-<script setup>
-const { data: tours } = useFetch('/api/tours')
-const { data: services } = useFetch('/api/service')
-const headerInfo = {
-  aboveHeading: 'WHAT WE OFFER YOU',
-  heading: 'OUR SERVICES',
-  image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
-  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
-}
-definePageMeta({
-  layout: 'default',
-})
-</script>
+

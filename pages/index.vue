@@ -1,3 +1,22 @@
+<script setup lang='ts'>
+const { data: services } = useFetch('/api/services')
+const { data: iconBlock } = useFetch('/api/features')
+const fleetImage =
+  'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
+
+definePageMeta({
+  layout: 'default',
+  // pageTransition: {
+  //   appear: true,
+  //   enterFromClass: 'opacity-0 translate-x-10',
+  //   enterActiveClass: 'duration-[2000ms]',
+  //   leaveToClass: 'opacity-0 translate-x-10',
+  //   leaveActiveClass: 'duration-[2000ms]',
+  //   mode: 'out-in',
+  // },
+})
+</script>
+
 <template>
   <div>
     <HeroSlider />
@@ -145,21 +164,4 @@
   </div>
 </template>
 
-<script setup>
-const { data: services } = useFetch('/api/services')
-const { data: iconBlock } = useFetch('/api/features')
-const fleetImage =
-  'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 
-definePageMeta({
-  layout: 'default',
-  // pageTransition: {
-  //   appear: true,
-  //   enterFromClass: 'opacity-0 translate-x-10',
-  //   enterActiveClass: 'duration-[2000ms]',
-  //   leaveToClass: 'opacity-0 translate-x-10',
-  //   leaveActiveClass: 'duration-[2000ms]',
-  //   mode: 'out-in',
-  // },
-})
-</script>
