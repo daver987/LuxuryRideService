@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useMenu } from '~~/stores/useMenu'
+
+const store = useMenu()
+</script>
+
 <template>
   <div
     class="-mb-[5.05rem] w-full px-6 z-30 row-start-1 self-start justify-self-stretch relative md:col-span-2"
@@ -26,9 +32,3 @@
     </nav>
   </div>
 </template>
-
-<script setup lang="ts">
-import { useMenu } from '~~/stores/useMenu'
-
-const store = useMenu()
-</script>

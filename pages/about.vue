@@ -141,7 +141,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const headerInfo = {
   aboveHeading: 'DISCOVER LUXURY RIDE SERVICE',
   heading: 'ABOUT US',

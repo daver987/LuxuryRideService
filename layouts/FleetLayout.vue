@@ -22,7 +22,3 @@ const headerInfo = {
   image: 'background-image: url("/images/City-View-Navigator-Interior.jpg")',
 }
 </script>
-
-<style scoped>
-
-</style>

@@ -53,7 +53,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useForm } from '~/stores/useForm'
 
 const store = useForm()

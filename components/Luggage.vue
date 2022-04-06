@@ -19,7 +19,7 @@
   </BaseCard>
 </template>
 
-<script setup>
+<script setup lang="ts">
 defineProps({
   people: {
     type: String,
