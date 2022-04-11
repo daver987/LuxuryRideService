@@ -38,7 +38,7 @@ definePageMeta({
             <h2 class="text-center mb-4 subheading lg:text-left">
               CHECK OUT OUR SERVICES
             </h2>
-            <p class="text-body">
+            <p class="text-body text-sm">
               Luxury Ride Service puts you or your business at the forefront of
               Toronto car service. For nearly a decade, we have maintained a
               fleet of new model vehicles. We have constantly upgraded to meet
@@ -76,7 +76,7 @@ definePageMeta({
             >
               <h2 class="subheading">{{ service.aboveHeading }}</h2>
               <h2 class="mt-4 text-4xl heading">{{ service.title }}</h2>
-              <p class="mt-2 text-body mb-8">{{ service.body }}</p>
+              <p class="mt-2 text-body text-sm mb-8">{{ service.body }}</p>
               <BaseButton
                 class="mt-4"
                 kind="btn-primary"
