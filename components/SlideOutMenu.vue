@@ -44,7 +44,7 @@
             <div class="border-t space-y-6 border-gray-200 py-6 px-4">
               <div class="flow-root">
                 <NuxtLink
-                  class="font-medium -m-2 text-white tracking-widest p-2 text-2xl block uppercase"
+                  class="font-body -m-2 text-white tracking-widest p-2 text-2xl block uppercase"
                   v-for="nav in navigation"
                   :to="nav.href"
                   :key="nav.name"

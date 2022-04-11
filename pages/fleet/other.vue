@@ -10,7 +10,7 @@
             <h2 class="text-center text-3xl heading md:text-left">
               Executive Passenger Van
             </h2>
-            <p class="text-body max-w-[50ch]">
+            <p class="text-body text-sm max-w-[50ch]">
               The 12 Passenger Transit Van is a perfect vehicle for the large
               group looking to travel together. This van can accommodate up to
               twelve people and has some storage capability. This makes it
@@ -48,7 +48,7 @@
             <h2 class="text-center text-3xl heading md:text-left">
               Chevy Suburban
             </h2>
-            <p class="text-body max-w-[50ch]">
+            <p class="text-body max-w-[50ch] text-sm">
               The Chevy Suburban is a full-size SUV that seats up to six people
               comfortably. This vehicle can be used for airport transportation,
               weddings or any other destination requiring an upgrade from a
@@ -67,7 +67,7 @@
           <BaseCard class="container space-y-6 md:col-span-6">
             <h2 class="subheading">ABOUT THE VEHICLE</h2>
             <h3 class="text-center text-3xl heading md:text-left">YUKON XL</h3>
-            <p class="text-body max-w-[55ch]">
+            <p class="text-body max-w-[55ch] text-sm">
               The GMC Yukon XL is a full-size SUV that seats up to eight people
               comfortably. This vehicle can be used for airport transportation,
               weddings or any other destination requiring an upgrade from a

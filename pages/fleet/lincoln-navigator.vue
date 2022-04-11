@@ -15,7 +15,7 @@
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <BaseCard class="space-y-6">
         <h3 class="subheading">About The Vehicle</h3>
-        <p class="text-body">
+        <p class="text-body text-sm">
           The Lincoln Navigator is one of the best vehicles to use for your
           night on the town. It comfortably fits six people, has plenty of
           amenities, and delivers luxury. The three-tonne colossus can easily

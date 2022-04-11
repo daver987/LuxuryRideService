@@ -47,7 +47,7 @@ const btnStyle = computed(() => {
 
   if (props.kind === 'btn-dark') {
     return [
-      'inline-flex items-center cursor-pointer border border-solid border-background-dark text-background-dark text-base py-2 px-5 tracking-[0.4em] uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 active:bg-primary/20 focus:border-primary focus:ring focus:ring-primary',
+      'inline-flex items-center cursor-pointer border border-solid border-heading text-heading text-base py-2 px-5 tracking-[0.4em] uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 active:bg-primary/20 focus:border-primary focus:ring focus:ring-primary',
     ]
   }
   if (props.kind === 'btn-flat') {

@@ -70,7 +70,7 @@ export default defineNuxtConfig({
     shortcuts: {
       subheading:
         'font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm',
-      heading: 'font-heading text-4xl uppercase lg:text-5xl',
+      heading: 'font-heading text-4xl text-heading uppercase lg:text-5xl',
       body: 'bg-background',
       p: 'font-body text-sm text-body',
       img: 'object-cover object-center',

@@ -17,7 +17,7 @@
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <BaseCard class="space-y-6">
         <h3 class="subheading">About The Vehicle</h3>
-        <p class="text-body">
+        <p class="text-body text-sm">
           The Lincoln Continental is the industry's sleekest, most sophisticated
           limousine available. It features leather seating and fine wood
           accents. Its four chrome-accented headlights are sure to turn heads

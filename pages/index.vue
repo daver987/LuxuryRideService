@@ -46,9 +46,7 @@ definePageMeta({
             <p class="text-center subheading lg:text-left">
               The Many Types of Comfort We offer
             </p>
-            <h2
-              class="text-center text-heading-light capitalize heading lg:text-left"
-            >
+            <h2 class="text-center text-white capitalize heading lg:text-left">
               Our Fleet
             </h2>
           </div>
@@ -141,7 +139,7 @@ definePageMeta({
         <p class="text-center subheading">
           WHAT LUXURY RIDE SERVICE OFFERS YOU
         </p>
-        <h2 class="text-center heading">We Offer</h2>
+        <h2 class="text-center heading text-heading">We Offer</h2>
       </div>
       <div
         class="bg-white mx-auto shadow-xl max-w-4xl grid z-10 grid-cols-1 relative place-items-center md:px-6 md:pb-8 lg:max-w-7xl lg:grid-cols-2"
@@ -159,7 +157,7 @@ definePageMeta({
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
         <p class="text-center subheading">LUXURY RIDE SERVICE PARTNERS</p>
-        <h2 class="text-center heading">They Trust Us</h2>
+        <h2 class="text-center text-heading heading">They Trust Us</h2>
       </div>
       <TheLogoCloud />
     </section>

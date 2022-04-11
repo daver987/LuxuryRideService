@@ -2,11 +2,11 @@
   <Splide
     :options="options"
     style="background-image: url('/icons/gradient-background.svg')"
-    class="bg-center bg-cover bg-no-repeat h-screen px-6 z-10 overflow-hidden relative slider-background"
+    class="bg-center bg-cover bg-no-repeat h-screen px-6 z-10 overflow-hidden relative"
   >
     <SplideSlide v-for="slide in slider" :key="slide.id">
       <div
-        class="container h-full max-w-7xl grid py-8 grid-cols-1 grid-rows-6 place-items-center md:grid-rows-3 md:grid-cols-2"
+        class="container mx-auto h-full max-w-7xl grid py-8 grid-cols-1 grid-rows-6 place-items-center md:grid-rows-3 md:grid-cols-2"
       >
         <div
           class="flex flex-col mx-auto max-w-lg space-y-6 row-start-3 md:max-w-xl md:row-start-2 md:justify-self-stretch"

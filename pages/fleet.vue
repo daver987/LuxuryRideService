@@ -19,7 +19,9 @@ definePageMeta({
               class="bg-white flex flex-col space-y-4 text-black w-full py-16 col-span-1 items-center justify-center hover:bg-primary"
             >
               <img :src="`/icons/${tab.icon}.svg`" alt="icon" class="w-16" />
-              <span class="text-sm text-center tracking-widest uppercase">
+              <span
+                class="text-sm text-center text-body tracking-widest uppercase"
+              >
                 {{ tab.title }}
               </span>
             </NuxtLink>
@@ -34,6 +36,11 @@ definePageMeta({
 <style scoped>
 .router-link-active {
   background-color: rgba(187, 136, 15);
+}
+.router-link-active span {
+  color: #fff;
+}
+.router-link-active span:hover {
   color: #fff;
 }
 </style>
