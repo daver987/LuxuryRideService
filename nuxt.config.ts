@@ -1,8 +1,8 @@
 import { defineNuxtConfig } from 'nuxt3'
+import { presetUno, transformerDirectives } from 'unocss'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-
   meta: {
     title: 'Toronto Car Service | Luxury Ride Service',
     htmlAttrs: {
@@ -27,28 +27,61 @@ export default defineNuxtConfig({
       { rel: 'canonical', href: 'https://luxuryrideservice.com' },
     ],
   },
-  buildModules: [
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    'nuxt-windicss',
-    '@unocss/nuxt'
-  ],
+  buildModules: ['@vueuse/nuxt', '@pinia/nuxt', '@unocss/nuxt'],
 
   unocss: {
+    uno: true,
     icons: true,
+    transformers: [transformerDirectives()],
+    attributify: true,
+    theme: {
+      fontFamily: {
+        sans: ['caviar-dreams'],
+        subheading: ['caviar-dreams-bold'],
+        heading: ['campton-thin'],
+        body: ['campton-light'],
+      },
+
+      colors: {
+        primary: {
+          DEFAULT: '#BB880F',
+        },
+        background: {
+          light: '#fff',
+          DEFAULT: '#EBEBEB',
+          dark: '#262626',
+        },
+        body: {
+          light: '#fff',
+          DEFAULT: '#AAAAAA',
+        },
+        heading: {
+          light: '#fff',
+          DEFAULT: '#2B2B2B',
+        },
+        icon: {
+          DEFAULT: '#C0C0C0',
+        },
+      },
+      container: {
+        center: true,
+      },
+    },
+    shortcuts: {
+      subheading:
+        'font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm',
+      heading: 'font-heading text-4xl uppercase lg:text-5xl',
+      body: 'bg-background',
+      p: 'font-body text-sm text-body',
+      img: 'object-cover object-center',
+      h1: 'font-heading text-heading-light text-4xl uppercase lg:text-5xl',
+      h2: 'font-heading text-4xl uppercase md:text-2xl lg:text-4xl xl:text-5xl',
+    },
   },
 
-  // vueuse: {
-  //   ssrHandlers: true,
-  // },
-  css: ['@/assets/css/styles.css'],
+  css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
 
-  router: {
-    options: {
-
-    }
-
-  }
-
-
+  // analyze: {
+  //   analyzerMode: 'static'
+  // }
 })

@@ -54,7 +54,7 @@
               </div>
               <div class="flow-root">
                 <NuxtLink
-                  class="border border-solid border-primary cursor-pointer text-primary text-base py-2 px-5 tracking-[0.4em] inline-flex items-center uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 focus:border-primary focus:ring focus:ring-primary active:bg-primary/20"
+                  class="border border-solid border-primary cursor-pointer font-light text-primary py-2 px-5 tracking-[0.4em] inline-flex items-center uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 focus:border-primary focus:ring focus:ring-primary active:bg-primary/20"
                   to="/reservations"
                   @click="open = false"
                   ><span>Reserve</span></NuxtLink
@@ -78,7 +78,6 @@ import {
   Dialog,
 } from '@headlessui/vue'
 import { storeToRefs } from 'pinia'
-import { useNavigation } from '~~/composables/useNavigation'
 import { useMenu } from '~~/stores/useMenu'
 
 const store = useMenu()

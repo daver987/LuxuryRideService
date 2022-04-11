@@ -9,9 +9,9 @@
         class="container h-full max-w-7xl grid py-8 grid-cols-1 grid-rows-6 place-items-center md:grid-rows-3 md:grid-cols-2"
       >
         <div
-          class="flex flex-col max-w-md space-y-6 row-start-3 md:max-w-xl md:row-start-2 md:justify-self-stretch"
+          class="flex flex-col mx-auto max-w-lg space-y-6 row-start-3 md:max-w-xl md:row-start-2 md:justify-self-stretch"
         >
-          <h1 class="text-center leading-tight md:text-left" id="heading">
+          <h1 class="text-center text-white leading-tight heading md:text-left">
             {{ slide.heading }}
           </h1>
           <p class="text-center subheading md:text-left" id="subheading">
@@ -31,7 +31,7 @@
           <img
             :src="slide.image"
             :alt="slide.altText"
-            class="h-full object-fit object-cover w-full"
+            class="h-full object-center object-cover w-full"
             :class="slide.style"
           />
         </div>

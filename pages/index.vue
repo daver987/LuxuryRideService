@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const fleetImage =
@@ -46,7 +46,9 @@ definePageMeta({
             <p class="text-center subheading lg:text-left">
               The Many Types of Comfort We offer
             </p>
-            <h2 class="text-center text-heading-light capitalize lg:text-left">
+            <h2
+              class="text-center text-heading-light capitalize heading lg:text-left"
+            >
               Our Fleet
             </h2>
           </div>
@@ -64,7 +66,7 @@ definePageMeta({
         <div
           class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl py-8 px-6 md:mx-auto md:px-16"
         >
-          <p class="font-body text-sm text-body prose">
+          <p class="font-body text-sm text-body">
             <span class="font-bold font-body text-sm text-heading uppercase"
               >Luxury Ride Service</span
             >
@@ -80,7 +82,7 @@ definePageMeta({
             transportation company, we have a wide range of vehicles available
             to accommodate any need.
           </p>
-          <p class="font-body text-sm text-primary prose">
+          <p class="font-body text-sm text-primary">
             Special requests are available for Specialty 6+ person vehicles that
             can take larger tour groups. Contact us to learn about the various
             options available from our limo service.
@@ -139,7 +141,7 @@ definePageMeta({
         <p class="text-center subheading">
           WHAT LUXURY RIDE SERVICE OFFERS YOU
         </p>
-        <h2 class="text-center">We Offer</h2>
+        <h2 class="text-center heading">We Offer</h2>
       </div>
       <div
         class="bg-white mx-auto shadow-xl max-w-4xl grid z-10 grid-cols-1 relative place-items-center md:px-6 md:pb-8 lg:max-w-7xl lg:grid-cols-2"
@@ -157,11 +159,9 @@ definePageMeta({
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
         <p class="text-center subheading">LUXURY RIDE SERVICE PARTNERS</p>
-        <h2 class="text-center">They Trust Us</h2>
+        <h2 class="text-center heading">They Trust Us</h2>
       </div>
       <TheLogoCloud />
     </section>
   </div>
 </template>
-
-

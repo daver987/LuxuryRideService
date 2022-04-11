@@ -2,7 +2,7 @@
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <div>
-        <h2 class="text-center pt-8 md:text-left">
+        <h2 class="text-center pt-8 heading md:text-left">
           Cadillac Escalade<br />SUV
         </h2>
       </div>
@@ -19,7 +19,7 @@
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <BaseCard class="space-y-6">
         <h3 class="subheading">About The Vehicle</h3>
-        <p>
+        <p class="text-body">
           The Cadillac Escalade combines luxury, style, and comfort with
           high-tech features. The luxurious features include soft leather
           upholstery, a state-of-the-art entertainment system. The tech upgrades

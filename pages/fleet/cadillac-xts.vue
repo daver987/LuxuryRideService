@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Cadillac XTS Sedan</h2></div>
+      <div><h2 class="text-center pt-8 heading">Cadillac XTS Sedan</h2></div>
       <div>
         <img
           src="/images/Cadillac-XTS-Car-Service.png"
@@ -14,7 +14,7 @@
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <BaseCard class="space-y-6">
         <h3 class="subheading">About The Vehicle</h3>
-        <p>
+        <p class="text-body">
           If you're looking for a legend to take care of you regardless of
           whether your destination is Toronto or Montreal, the Cadillac XTS is
           it. Its sophisticated and sleek design comes with features that make

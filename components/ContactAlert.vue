@@ -21,7 +21,7 @@
             <div class="flex items-start">
               <div class="flex-shrink-0">
                 <div
-                  class="text-md text-green-600 i-ion-checkmark-circled"
+                  class="text-base text-green-600 i-ion-checkmark-circled"
                   aria-hidden="true"
                 />
               </div>

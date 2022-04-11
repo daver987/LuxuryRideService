@@ -9,22 +9,23 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
-    "publish": "wrangler publish"
+    "publish": "wrangler publish",
+    "test": "vitest"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.24",
-    "@nuxt/test-utils-edge": "^3.0.0-27486226.7a70644",
+    "@iconify/json": "^2.1.26",
+    "@nuxt/test-utils-edge": "^3.0.0-27491748.3186841",
     "@nuxt/types": "^2.15.8",
     "@pinia/nuxt": "^0.1.8",
-    "@splidejs/vue-splide": "^0.6.2",
-    "@unocss/nuxt": "^0.30.11",
-    "@vueuse/core": "^8.2.4",
-    "@vueuse/nuxt": "^8.2.4",
-    "nuxt-windicss": "^2.2.8",
-    "nuxt3": "^3.0.0-27486226.7a70644",
+    "@splidejs/vue-splide": "^0.6.3",
+    "@unocss/nuxt": "^0.31.0",
+    "@unocss/reset": "^0.31.0",
+    "@vueuse/core": "^8.2.5",
+    "@vueuse/nuxt": "^8.2.5",
+    "nuxt3": "3.0.0-27491748.3186841",
     "prettier": "^2.6.2",
-    "vitest": "^0.8.4"
+    "vitest": "^0.9.3"
   },
   "dependencies": {
     "pinia": "^2.0.13"

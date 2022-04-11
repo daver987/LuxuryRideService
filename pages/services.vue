@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 const { data: tours } = useFetch('/api/tours')
 const { data: services } = useFetch('/api/service')
 const headerInfo = {
@@ -13,7 +13,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <div class="bg-background">
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
@@ -21,7 +21,7 @@ definePageMeta({
       :image="headerInfo.image"
     />
     <section class="mb-8 px-6">
-      <div class="container max-w-7xl">
+      <div class="container mx-auto max-w-7xl">
         <div
           class="bg-white mx-auto shadow-xl -mt-12 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-16 md:px-2 lg:grid lg:px-4 lg:grid-cols-7"
         >
@@ -38,7 +38,7 @@ definePageMeta({
             <h2 class="text-center mb-4 subheading lg:text-left">
               CHECK OUT OUR SERVICES
             </h2>
-            <p>
+            <p class="text-body">
               Luxury Ride Service puts you or your business at the forefront of
               Toronto car service. For nearly a decade, we have maintained a
               fleet of new model vehicles. We have constantly upgraded to meet
@@ -56,7 +56,7 @@ definePageMeta({
       </div>
     </section>
     <section class="mb-8 px-6">
-      <div class="container max-w-7xl md:grid md:grid-cols-2">
+      <div class="container mx-auto max-w-7xl md:grid md:gap-4 md:grid-cols-2">
         <div
           :class="service.boxPosition"
           v-for="service in services"
@@ -76,7 +76,7 @@ definePageMeta({
             >
               <h2 class="subheading">{{ service.aboveHeading }}</h2>
               <h2 class="mt-4 text-4xl heading">{{ service.title }}</h2>
-              <p class="mt-2 mb-8">{{ service.body }}</p>
+              <p class="mt-2 text-body mb-8">{{ service.body }}</p>
               <BaseButton
                 class="mt-4"
                 kind="btn-primary"
@@ -89,7 +89,7 @@ definePageMeta({
         </div>
       </div>
     </section>
-    <section class="mb-8">
+    <section class="bg-background mb-8">
       <div
         class="bg-center bg-no-repeat bg-cover py-8 px-6 z-10 relative sm:px-8 md:py-16 lg:py-20"
         style="background-image: url('/images/Niagara-Falls-Tour.jpg')"
@@ -116,5 +116,3 @@ definePageMeta({
     </section>
   </div>
 </template>
-
-

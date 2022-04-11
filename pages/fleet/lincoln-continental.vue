@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Lincoln Continental Sedan</h2></div>
+      <div>
+        <h2 class="text-center pt-8 heading">Lincoln Continental Sedan</h2>
+      </div>
       <div>
         <img
           src="/images/Lincoln-Continental-Car-Service.png"
@@ -15,7 +17,7 @@
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <BaseCard class="space-y-6">
         <h3 class="subheading">About The Vehicle</h3>
-        <p>
+        <p class="text-body">
           The Lincoln Continental is the industry's sleekest, most sophisticated
           limousine available. It features leather seating and fine wood
           accents. Its four chrome-accented headlights are sure to turn heads

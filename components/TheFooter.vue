@@ -1,8 +1,8 @@
 <template>
   <footer class="bg-background">
-    <div class="px-6">
+    <div class="bg-background px-6">
       <div
-        class="container bg-background-light flex flex-col space-y-4 shadow-xl -mb-28 max-w-7xl py-10 px-8 z-10 relative lg:flex-row lg:space-y-0 lg:-mb-12 lg:justify-between"
+        class="container bg-background-light flex flex-col mx-auto space-y-4 shadow-xl -mb-28 max-w-7xl py-10 px-8 z-10 relative lg:flex-row lg:space-y-0 lg:-mb-12 lg:justify-between"
       >
         <div class="lg:self-center">
           <h2 class="text-center heading lg:text-4xl">
@@ -38,7 +38,7 @@
             <div class="text-primary mr-8 text-3xl i-zmdi-phone" />
             <a
               href="tel:2894009408"
-              class="font-body text-body-light text-md tracking-wider"
+              class="font-body text-body-light text-base tracking-wider"
               >289.400.9408
             </a>
           </div>
@@ -46,7 +46,7 @@
             <div class="mr-8 text-primary text-4xl i-ic-outline-mail" />
             <a
               href="mailto:info@luxuryrideservice.com"
-              class="font-body text-body-light text-md tracking-wider"
+              class="font-body text-body-light text-base tracking-wider"
               >info@luxuryrideservice.com
             </a>
           </div>

@@ -4,7 +4,7 @@
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <div
-      class="container h-full max-w-7xl grid py-8 grid-cols-1 grid-rows-6 relative md:grid-cols-2"
+      class="container h-full mx-auto max-w-7xl grid py-8 grid-cols-1 grid-rows-6 relative md:grid-cols-2"
     >
       <div
         :style="image"
@@ -16,7 +16,7 @@
           <p class="text-center subheading md:text-left">
             {{ aboveHeading }}
           </p>
-          <h2 class="text-center text-white leading-tight md:text-left">
+          <h2 class="text-center text-white leading-tight heading md:text-left">
             {{ heading }}
           </h2>
           <p

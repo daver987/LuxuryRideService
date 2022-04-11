@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
   heading: 'BOOK TODAY',
@@ -20,7 +20,7 @@ definePageMeta({
     />
     <section class="px-6">
       <div
-        class="container h-[125vh] -mt-16 mb-16 w-full max-w-7xl z-20 relative md:-mt-20"
+        class="container mx-auto h-[125vh] -mt-16 mb-16 w-full max-w-7xl z-20 relative md:-mt-20"
       >
         <iframe
           src="https://book.mylimobiz.com/v4/luxridesvc"
@@ -30,4 +30,3 @@ definePageMeta({
     </section>
   </div>
 </template>
-

@@ -7,10 +7,10 @@
         <div class="w-full md:col-span-6">
           <BaseCard class="space-y-6 w-full">
             <h3 class="subheading">About The Vehicle</h3>
-            <h2 class="text-center text-3xl md:text-left">
+            <h2 class="text-center text-3xl heading md:text-left">
               Executive Passenger Van
             </h2>
-            <p class="max-w-[50ch]">
+            <p class="text-body max-w-[50ch]">
               The 12 Passenger Transit Van is a perfect vehicle for the large
               group looking to travel together. This van can accommodate up to
               twelve people and has some storage capability. This makes it
@@ -45,8 +45,10 @@
         <div class="mb-8 md:col-span-6">
           <BaseCard class="container space-y-6 mb-8 col-span-6 md:pl-56">
             <h2 class="subheading">ABOUT THE VEHICLE</h2>
-            <h2 class="text-center text-3xl md:text-left">Chevy Suburban</h2>
-            <p class="max-w-[50ch]">
+            <h2 class="text-center text-3xl heading md:text-left">
+              Chevy Suburban
+            </h2>
+            <p class="text-body max-w-[50ch]">
               The Chevy Suburban is a full-size SUV that seats up to six people
               comfortably. This vehicle can be used for airport transportation,
               weddings or any other destination requiring an upgrade from a
@@ -64,8 +66,8 @@
         <div class="mb-8 md:col-span-6">
           <BaseCard class="container space-y-6 md:col-span-6">
             <h2 class="subheading">ABOUT THE VEHICLE</h2>
-            <h3 class="text-center text-3xl md:text-left">YUKON XL</h3>
-            <p class="max-w-[55ch]">
+            <h3 class="text-center text-3xl heading md:text-left">YUKON XL</h3>
+            <p class="text-body max-w-[55ch]">
               The GMC Yukon XL is a full-size SUV that seats up to eight people
               comfortably. This vehicle can be used for airport transportation,
               weddings or any other destination requiring an upgrade from a

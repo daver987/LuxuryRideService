@@ -7,13 +7,13 @@
       :image="headerInfo.image"
     />
     <section class="bg-background mb-8 px-4 sm:px-6">
-      <div class="container md:grid md:grid-cols-2">
+      <div class="container mx-auto md:grid md:grid-cols-2">
         <div
           class="bg-white shadow-xl -mt-12 py-6 z-10 relative overflow-hidden md:-mt-16"
         >
           <div class="py-5">
             <p class="text-center subheading">Behind The Wheel</p>
-            <h2 class="mt-6 text-center text-heading">The Driver</h2>
+            <h2 class="mt-6 text-center heading">The Driver</h2>
           </div>
           <div class="py-5 px-4 sm:p-6">
             <p class="font-body text-sm text-body">
@@ -49,7 +49,7 @@
         </div>
       </div>
     </section>
-    <section class="mb-8 px-4 background-bg sm:px-6">
+    <section class="bg-background mb-8 px-4 sm:px-6">
       <div class="container place-items-center md:grid md:grid-cols-2">
         <div class="flex">
           <img
@@ -91,7 +91,7 @@
               <p class="text-center subheading md:text-left">
                 LUXURY RIDE SERVICE?
               </p>
-              <h2 class="mt-6 text-center text-heading md:text-left">
+              <h2 class="mt-6 text-center text-heading heading md:text-left">
                 WHO WE ARE
               </h2>
             </div>

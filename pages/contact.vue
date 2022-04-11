@@ -7,10 +7,10 @@
       :image="headerInfo.image"
     />
     <section class="bg-background -mt-12 px-6 pb-12 md:-mt-16 md:pb-16">
-      <div class="container bg-white shadow-xl z-10 relative">
+      <div class="container bg-white mx-auto shadow-xl z-10 relative">
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="mb-4 subheading">Tell Us Something</h3>
-          <h2 class="text-background-dark">Send Us A Message</h2>
+          <h2 class="text-background-dark heading">Send Us A Message</h2>
           <form
             class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
             @submit.prevent="store.submitForm"
@@ -139,7 +139,6 @@
                 label="submit"
                 type="submit"
                 value="Send"
-                class="btn-primary inline-flex items-center justify-center sm:w-auto focus:outline-none focus:ring-primary focus:ring-2 focus:ring-offset-2"
                 @click="store.submitForm"
                 kind="btn-primary"
               />
@@ -149,9 +148,11 @@
       </div>
     </section>
     <section class="bg-background mt-16 px-6">
-      <div class="container bg-white space-y-10 shadow-xl mb-16 py-20 px-12">
+      <div
+        class="container bg-white mx-auto space-y-10 shadow-xl mb-16 py-20 px-12"
+      >
         <h3 class="text-center subheading">OR REACH US</h3>
-        <h2 class="text-center">CONTACT INFORMATION</h2>
+        <h2 class="text-center heading">CONTACT INFORMATION</h2>
         <div
           class="flex flex-col justify-center items-center md:grid md:grid-cols-12 md:place-items-center"
         >
