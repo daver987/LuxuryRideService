@@ -30,14 +30,6 @@
     url('./assets/fonts/campton-thin.woff') format('woff');
 }
 
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.3s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
-}
 .router-link-active {
   color: rgba(187, 136, 15);
 }
