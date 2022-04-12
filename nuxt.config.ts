@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt3'
-import { presetUno, transformerDirectives } from 'unocss'
+import { transformerDirectives } from 'unocss'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
