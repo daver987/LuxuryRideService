@@ -14,8 +14,8 @@
   },
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.26",
-    "@nuxt/test-utils-edge": "^3.0.0-27491748.3186841",
+    "@iconify/json": "^2.1.27",
+    "@nuxt/test-utils-edge": "^3.0.0-27495135.4d1a6ba",
     "@nuxt/types": "^2.15.8",
     "@pinia/nuxt": "^0.1.8",
     "@splidejs/vue-splide": "^0.6.3",
@@ -28,6 +28,7 @@
     "vitest": "^0.9.3"
   },
   "dependencies": {
+    "@formkit/nuxt": "^1.0.0-beta.6",
     "pinia": "^2.0.13"
   }
 }

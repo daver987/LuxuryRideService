@@ -11,37 +11,30 @@
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="mb-4 subheading">Tell Us Something</h3>
           <h2 class="text-background-dark heading">Send Us A Message</h2>
-          <form
+          <FormKit
+            type="form"
             class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
-            @submit.prevent="store.submitForm"
+            submit-label="Send Message"
           >
             <div>
-              <label
-                for="first-name"
-                class="font-medium text-sm text-warm-gray-900 block"
-                >First name</label
-              >
               <div class="mt-1">
-                <input
+                <FormKit
+                  label="First Name"
                   type="text"
                   name="first-name"
                   id="first-name"
                   autocomplete="first-name"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 form-input block focus:border-primary focus:ring-primary"
+                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
                   v-model="store.from_name"
                   required
                 />
               </div>
             </div>
             <div>
-              <label
-                for="last-name"
-                class="font-medium text-sm text-warm-gray-900 block"
-                >Last name</label
-              >
               <div class="mt-1">
-                <input
+                <FormKit
                   type="text"
+                  label="Last Name"
                   name="from_last_name"
                   id="last-name"
                   autocomplete="family-name"
@@ -52,13 +45,9 @@
               </div>
             </div>
             <div>
-              <label
-                for="email"
-                class="font-medium text-sm text-warm-gray-900 block"
-                >Email</label
-              >
               <div class="mt-1">
-                <input
+                <FormKit
+                  label="Email Address"
                   id="email"
                   name="from_email"
                   type="email"
@@ -71,17 +60,13 @@
             </div>
             <div>
               <div class="flex justify-between">
-                <label
-                  for="phone"
-                  class="font-medium text-sm text-warm-gray-900 block"
-                  >Phone</label
-                >
                 <span id="phone-optional" class="text-sm text-warm-gray-500"
                   >Optional</span
                 >
               </div>
               <div class="mt-1">
-                <input
+                <FormKit
+                  label="Phone Number"
                   type="text"
                   name="phone_number"
                   id="phone"
@@ -93,13 +78,9 @@
               </div>
             </div>
             <div class="sm:col-span-2">
-              <label
-                for="subject"
-                class="font-medium text-sm text-warm-gray-900 block"
-                >Subject</label
-              >
               <div class="mt-1">
-                <input
+                <FormKit
+                  label="Subject"
                   type="text"
                   name="subject"
                   id="subject"
@@ -112,17 +93,14 @@
             </div>
             <div class="sm:col-span-2">
               <div class="flex justify-between">
-                <label
-                  for="message"
-                  class="font-medium text-sm text-warm-gray-900 block"
-                  >Message</label
-                >
                 <span id="message-max" class="text-sm text-warm-gray-500"
                   >Max. 500 characters</span
                 >
               </div>
               <div class="mt-1">
-                <textarea
+                <FormKit
+                  label="Message"
+                  type="textarea"
                   id="message"
                   name="message"
                   rows="4"
@@ -134,16 +112,7 @@
                 />
               </div>
             </div>
-            <div class="sm:flex sm:col-span-2 sm:justify-end">
-              <BaseButton
-                label="submit"
-                type="submit"
-                value="Send"
-                @click="store.submitForm"
-                kind="btn-primary"
-              />
-            </div>
-          </form>
+          </FormKit>
         </div>
       </div>
     </section>

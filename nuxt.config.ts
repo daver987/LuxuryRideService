@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     ],
   },
   buildModules: ['@vueuse/nuxt', '@pinia/nuxt', '@unocss/nuxt'],
-
+  modules: ['@formkit/nuxt'],
   unocss: {
     uno: true,
     icons: true,
@@ -79,7 +79,11 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
+  css: [
+    '@/assets/css/styles.css',
+    '@unocss/reset/tailwind.css',
+    '@/assets/css/reset.css',
+  ],
 
   // analyze: {
   //   analyzerMode: 'static'

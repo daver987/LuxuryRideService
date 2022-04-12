@@ -289,15 +289,98 @@
   dependencies:
     mime "^3.0.0"
 
+"@formkit/core@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/core/-/core-1.0.0-beta.6.tgz#fe15788b62e57ed486b1bab9f49b6aa982e72be5"
+  integrity sha512-xy2Yw5/+WQiLJcrgTbEDWCJPSw6lYgFHTcI1tkU222aFv4G7xDGfoo8bKtQRSZ9NiU3rXfi14wvcaeije+eUmg==
+  dependencies:
+    "@formkit/utils" "1.0.0-beta.6"
+
+"@formkit/dev@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/dev/-/dev-1.0.0-beta.6.tgz#126ccfee894a309a3a0aadd555284159bf342122"
+  integrity sha512-rLobDBnWuxXzCMUvSkdcUWfWDxRV2CTYslu8S0qR3RguIR0eXY3ApfLoHrGj2TDUKdrdPrBnGp5bfUBNhu/iHA==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/utils" "1.0.0-beta.6"
+
+"@formkit/i18n@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/i18n/-/i18n-1.0.0-beta.6.tgz#2593522a113ab282855617267438689dd4f28b29"
+  integrity sha512-6SyKLBd/HWkpRZF9DHb8HndOYy7GNohD8ee57pDqwQhFx5MQ6YPD1RcsU1MWjYcRG/ZbRqt+iQuVnLDiIGDfmQ==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/utils" "1.0.0-beta.6"
+    "@formkit/validation" "1.0.0-beta.6"
+
+"@formkit/inputs@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/inputs/-/inputs-1.0.0-beta.6.tgz#423c9932be3af2da1d535399c70a12e4d535e1be"
+  integrity sha512-W2FNyitDGJ4S8cpeAMJPyQekuXlYGcSkqTNTIgOgGZSsH7niQVCwPH/7Zjcde53Nhs/M7NmZB2lSxT/gO6+AAw==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+
+"@formkit/nuxt@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/nuxt/-/nuxt-1.0.0-beta.6.tgz#87709fce7377a5271782aa372d5837ebf62a74da"
+  integrity sha512-7Y5VsGPKmSbZxqxFus9wYDUjXFiXqvMUItfLiNTRvQ1yEqCfhTYcMap1f+HDg0XVnEq3NghUx7GCIlBKs7UM+g==
+  dependencies:
+    "@formkit/vue" "1.0.0-beta.6"
+    "@nuxt/kit" "npm:@nuxt/kit-edge@latest"
+
+"@formkit/observer@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/observer/-/observer-1.0.0-beta.6.tgz#9a575de4ed0dbbef5c2081928f70b48b1c7a4657"
+  integrity sha512-hKcYJxitN3dAoc/V6WUn+BWFxewmcAWlv2B3fyDAuRqkqsvHPMkl8FJ4xLsMC0e6juCmFjblSGUQFkYGdiWGJA==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/utils" "1.0.0-beta.6"
+
+"@formkit/rules@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/rules/-/rules-1.0.0-beta.6.tgz#f56d078521ac8c410ffcee7771eede1b4094730f"
+  integrity sha512-Yd9b+PBaHtNlTUeWGiXvJ8t8UQbOZmi1k0QJpQvlol/V8lvU5FRVuZVTt5ivdgcIXeufrs9T5D+mhEJeNAZ7Tw==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/utils" "1.0.0-beta.6"
+    "@formkit/validation" "1.0.0-beta.6"
+
+"@formkit/utils@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/utils/-/utils-1.0.0-beta.6.tgz#1e697aef4b68aab1ccbc3f2b76dd723b47c1c350"
+  integrity sha512-Xox4XxfDgOucUXugXPZsmZt+2aV3a/z850LNykw9+Xi2iw4D4cxe7/GKqWQdu2Rg+aZkxJWhRPoe+nv81zLs7A==
+
+"@formkit/validation@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/validation/-/validation-1.0.0-beta.6.tgz#199461029fa3c01d9dabda8dcd77c721fb6e559e"
+  integrity sha512-NlnGlvTDMnfM7kXP/hiYOZBfKSB9PwUb9H5BabTz1mAu/qfweUKbCouIAzCUGJEKdf1e+NtBdp0u8UUniLYLQg==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/observer" "1.0.0-beta.6"
+
+"@formkit/vue@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@formkit/vue/-/vue-1.0.0-beta.6.tgz#9408081036c91b17b70fd09d0e44607e39cc6e4a"
+  integrity sha512-EtIhrGXPYvG9cAiT0piZven3ncWC+BM3Ga+0d6ef5kk89q78li9PuHEDKrYlLAgw2BZVuRxIXAiXqriOFZEk7g==
+  dependencies:
+    "@formkit/core" "1.0.0-beta.6"
+    "@formkit/dev" "1.0.0-beta.6"
+    "@formkit/i18n" "1.0.0-beta.6"
+    "@formkit/inputs" "1.0.0-beta.6"
+    "@formkit/observer" "1.0.0-beta.6"
+    "@formkit/rules" "1.0.0-beta.6"
+    "@formkit/utils" "1.0.0-beta.6"
+    "@formkit/validation" "1.0.0-beta.6"
+
 "@headlessui/vue@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.5.0.tgz#8cd4877d3d344e482073a04ae8e3b7f987bb267c"
   integrity sha512-jAp6XYpqdEv32xhszaj5ejvjaX5qhu20sCbxu7lplePEfZL+4ffabivJBBTZAiPWczqAXmnZWNWG5DOyqjRa4w==
 
-"@iconify/json@^2.1.26":
-  version "2.1.26"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.26.tgz#45f870f52b9ff1d73012a6dac9a1741d7805a927"
-  integrity sha512-nOrXZzu0LPai/lseCLwVJPKTSL9DzzDZWagItLmkKkF+61Hs25NYP5gykHOTvh74+65BRgNt8s3MTIW5g53Zsg==
+"@iconify/json@^2.1.27":
+  version "2.1.27"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.27.tgz#5f7540a862fc7a9e4131150703956dc040d249f6"
+  integrity sha512-wvwvtJDvzEg02njo61IrocOj9nedgMlqYkOsE4hDIvxx3Fgrcu+y/I8NZk43ItevxZKJaDzQ4eQbfgHmLgB72Q==
   dependencies:
     "@iconify/types" "^1.1.0"
     pathe "^0.2.0"
@@ -385,12 +468,12 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@npm:@nuxt/kit-edge@3.0.0-27491748.3186841", "@nuxt/kit@npm:@nuxt/kit-edge@latest":
-  version "3.0.0-27491748.3186841"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27491748.3186841.tgz#2f6bbcdc69c043d2691ef7ef3cc0f3cf7008a5e2"
-  integrity sha512-bOMvsg3cieiF8fY8xo+wVel9L4V7N2PyPUPIEcN5kYd3espsjc9e7LG+ZZxwL+ndCctgpfWmuciCmM2CXKdN/A==
+"@nuxt/kit@npm:@nuxt/kit-edge@3.0.0-27495135.4d1a6ba":
+  version "3.0.0-27495135.4d1a6ba"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27495135.4d1a6ba.tgz#863e7e3562f682ea0fc004356dc15cd23e067a10"
+  integrity sha512-L9NEeY7lGBtuCe+VUrv2g7aztJmxjUOJ2gn1Y8+ZxPJxTI8K8RxoobK9Tq5z3sWiSykvojZ0jUk0L4rvab00fQ==
   dependencies:
-    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27491748.3186841"
+    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27495135.4d1a6ba"
     c12 "^0.2.5"
     consola "^2.15.3"
     defu "^6.0.0"
@@ -409,12 +492,12 @@
     unimport "^0.1.4"
     untyped "^0.4.4"
 
-"@nuxt/kit@npm:@nuxt/kit-edge@3.0.0-27495135.4d1a6ba":
-  version "3.0.0-27495135.4d1a6ba"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27495135.4d1a6ba.tgz#863e7e3562f682ea0fc004356dc15cd23e067a10"
-  integrity sha512-L9NEeY7lGBtuCe+VUrv2g7aztJmxjUOJ2gn1Y8+ZxPJxTI8K8RxoobK9Tq5z3sWiSykvojZ0jUk0L4rvab00fQ==
+"@nuxt/kit@npm:@nuxt/kit-edge@latest":
+  version "3.0.0-27491748.3186841"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-3.0.0-27491748.3186841.tgz#2f6bbcdc69c043d2691ef7ef3cc0f3cf7008a5e2"
+  integrity sha512-bOMvsg3cieiF8fY8xo+wVel9L4V7N2PyPUPIEcN5kYd3espsjc9e7LG+ZZxwL+ndCctgpfWmuciCmM2CXKdN/A==
   dependencies:
-    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27495135.4d1a6ba"
+    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27491748.3186841"
     c12 "^0.2.5"
     consola "^2.15.3"
     defu "^6.0.0"
@@ -465,16 +548,16 @@
     ufo "^0.8.3"
     unimport "^0.1.4"
 
-"@nuxt/test-utils-edge@^3.0.0-27491748.3186841":
-  version "3.0.0-27491748.3186841"
-  resolved "https://registry.yarnpkg.com/@nuxt/test-utils-edge/-/test-utils-edge-3.0.0-27491748.3186841.tgz#b3ba39b8378dd00c11da7f720006c297246f6010"
-  integrity sha512-+Q6kCYe3zGY5eEl6vMqhDi+B0h6Gi8QM6rCCZEGXzjFTkkEN3RJKBhxwZaB8jvztlrs7Cn2atxrl3J95/QhKXg==
+"@nuxt/test-utils-edge@^3.0.0-27495135.4d1a6ba":
+  version "3.0.0-27495135.4d1a6ba"
+  resolved "https://registry.yarnpkg.com/@nuxt/test-utils-edge/-/test-utils-edge-3.0.0-27495135.4d1a6ba.tgz#87eeae7cd92ddcccc18c036b7c2abe5bfea5e2e8"
+  integrity sha512-46BjHTOgaCcxTY/NDLLN6SUhbuZsdm4mvWNnmye8cpmVBUjvceTUHEcottvTev9lufsULfef2E31qSPhjYm9wA==
   dependencies:
-    "@nuxt/kit" "npm:@nuxt/kit-edge@3.0.0-27491748.3186841"
-    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27491748.3186841"
+    "@nuxt/kit" "npm:@nuxt/kit-edge@3.0.0-27495135.4d1a6ba"
+    "@nuxt/schema" "npm:@nuxt/schema-edge@3.0.0-27495135.4d1a6ba"
     defu "^6.0.0"
     execa "^6.1.0"
-    get-port-please "^2.4.3"
+    get-port-please "^2.5.0"
     jiti "^1.13.0"
     ohmyfetch "^0.4.15"
 
@@ -2705,7 +2788,7 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
     has "^1.0.3"
     has-symbols "^1.0.1"
 
-get-port-please@^2.1.0, get-port-please@^2.4.3:
+get-port-please@^2.1.0:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/get-port-please/-/get-port-please-2.4.3.tgz#8f054020016bfafb7f65001db501079c02ed59d1"
   integrity sha512-l5zVrG3mzz+I7MfbPwyJJ4xZKIdQfARpOtsBjUDUZ0iXlF0IXc1wMBg3Jb7G1te7tRzjOxu+MRLpvgxxTdCkwg==
