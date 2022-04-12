@@ -17,101 +17,65 @@
             submit-label="Send Message"
           >
             <div>
-              <div class="mt-1">
-                <FormKit
-                  label="First Name"
-                  type="text"
-                  name="first-name"
-                  id="first-name"
-                  autocomplete="first-name"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
-                  v-model="store.from_name"
-                  required
-                />
-              </div>
+              <FormKit
+                label="Full Name"
+                type="text"
+                name="full-name"
+                id="full-name"
+                autocomplete="full-name"
+                :classes="formClasses"
+                v-model="store.from_name"
+                validation="required"
+              />
             </div>
             <div>
-              <div class="mt-1">
-                <FormKit
-                  type="text"
-                  label="Last Name"
-                  name="from_last_name"
-                  id="last-name"
-                  autocomplete="family-name"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
-                  required
-                  v-model="store.from_last_name"
-                />
-              </div>
+              <FormKit
+                label="Email Address"
+                id="email"
+                name="from_email"
+                type="email"
+                autocomplete="email"
+                :classes="formClasses"
+                validation="required"
+                v-model="store.from_email"
+              />
             </div>
             <div>
-              <div class="mt-1">
-                <FormKit
-                  label="Email Address"
-                  id="email"
-                  name="from_email"
-                  type="email"
-                  autocomplete="email"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
-                  required
-                  v-model="store.from_email"
-                />
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between">
-                <span id="phone-optional" class="text-sm text-warm-gray-500"
-                  >Optional</span
-                >
-              </div>
-              <div class="mt-1">
-                <FormKit
-                  label="Phone Number"
-                  type="text"
-                  name="phone_number"
-                  id="phone"
-                  autocomplete="tel"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary/75"
-                  aria-describedby="phone-optional"
-                  v-model="store.phone_number"
-                />
-              </div>
+              <FormKit
+                label="Phone Number"
+                type="text"
+                name="phone_number"
+                id="phone"
+                autocomplete="tel"
+                :classes="formClasses"
+                aria-describedby="phone-optional"
+                v-model="store.phone_number"
+              />
             </div>
             <div class="sm:col-span-2">
-              <div class="mt-1">
-                <FormKit
-                  label="Subject"
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  class="rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
-                  required
-                  maxlength="500"
-                  v-model="store.subject"
-                />
-              </div>
+              <FormKit
+                label="Subject"
+                type="text"
+                name="subject"
+                id="subject"
+                :classes="formClasses"
+                validation="required"
+                maxlength="500"
+                v-model="store.subject"
+              />
             </div>
-            <div class="sm:col-span-2">
-              <div class="flex justify-between">
-                <span id="message-max" class="text-sm text-warm-gray-500"
-                  >Max. 500 characters</span
-                >
-              </div>
-              <div class="mt-1">
-                <FormKit
-                  label="Message"
-                  type="textarea"
-                  id="message"
-                  name="message"
-                  rows="4"
-                  class="border rounded-md border-warm-gray-300 shadow-sm w-full py-3 px-4 text-warm-gray-900 block focus:border-primary focus:ring-primary"
-                  aria-describedby="message-max"
-                  required
-                  maxlength="500"
-                  v-model="store.message"
-                />
-              </div>
-            </div>
+            <FormKit
+              label="Message"
+              type="textarea"
+              id="message"
+              name="message"
+              rows="4"
+              :classes="formClasses"
+              aria-describedby="message-max"
+              validation="required"
+              maxlength="500"
+              v-model="store.message"
+            />
           </FormKit>
         </div>
       </div>
@@ -130,14 +94,14 @@
           >
             <a
               href="mailto:info@luxuryrideservice.com"
-              class="font-bold text-xl tracking-wide"
+              class="text-heading text-lg tracking-wide"
             >
               <div class="mx-auto text-body mb-8 text-9xl i-carbon-email" />
               info@luxuryrideservice.com</a
             >
           </div>
           <div class="col-span-4 col-start-7 row-start-1">
-            <a href="tel:2894009408" class="font-bold text-xl tracking-wide">
+            <a href="tel:2894009408" class="text-lg tracking-wide text-heading">
               <div
                 class="mx-auto text-center text-body mb-6 text-9xl i-carbon-phone"
               />
@@ -165,4 +129,14 @@ const store = useForm()
 definePageMeta({
   layout: 'default',
 })
+
+const formClasses = {
+  outer: 'mb-2',
+  label: 'block text-sm font-body text-body sm:mt-px sm:pt-2',
+  inner: 'max-w-lg flex rounded-md shadow-sm',
+  input:
+    'flex-1 block w-full focus:ring-primary focus:border focus:border-primary min-w-0 rounded-none sm:text-sm border border-body p-2',
+  help: 'text-body',
+  message: 'text-red-600',
+}
 </script>

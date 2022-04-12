@@ -79,11 +79,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: [
-    '@/assets/css/styles.css',
-    '@unocss/reset/tailwind.css',
-    '@/assets/css/reset.css',
-  ],
+  css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
 
   // analyze: {
   //   analyzerMode: 'static'
