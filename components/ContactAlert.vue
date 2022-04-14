@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { useForm } from '~/stores/useForm'
+import { formStore } from '~/stores/formStore'
 
-const store = useForm()
+const store = formStore()
 </script>

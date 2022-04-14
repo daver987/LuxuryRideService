@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 
-export const useMenu = defineStore('menu', {
+export const menuStore = defineStore('menu', {
   state: () => {
     return {
       // all these properties will have their type inferred automatically
@@ -16,5 +16,5 @@ export const useMenu = defineStore('menu', {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useMenu, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(menuStore, import.meta.hot))
 }

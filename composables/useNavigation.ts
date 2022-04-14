@@ -1,4 +1,5 @@
 const useNavigation = () => [
+  //
   {
     name: 'Home',
     href: '/',
@@ -25,6 +26,8 @@ const useNavigation = () => [
     id: 5,
   },
 ]
-const useOpen = () => useState<boolean>('isOpen', () => false)
+function useOpen() {
+  return useState<boolean>('isOpen', () => false)
+}
 
 export { useNavigation, useOpen }

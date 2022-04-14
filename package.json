@@ -14,23 +14,24 @@
   },
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.27",
-    "@nuxt/test-utils-edge": "^3.0.0-27495135.4d1a6ba",
+    "@iconify/json": "^2.1.28",
+    "@microsoft/microsoft-graph-client": "^3.0.2",
+    "@microsoft/microsoft-graph-types": "^2.19.0",
+    "@nuxt/test-utils-edge": "^3.0.0-27497942.c519cee",
     "@nuxt/types": "^2.15.8",
     "@pinia/nuxt": "^0.1.8",
     "@splidejs/vue-splide": "^0.6.3",
-    "@unocss/nuxt": "^0.31.0",
-    "@unocss/reset": "~0.31.0",
-    "@vueuse/core": "^8.2.5",
+    "@testing-library/vue": "^6.5.1",
+    "@unocss/nuxt": "^0.31.2",
+    "@unocss/reset": "~0.31.2",
+    "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/nuxt": "^8.2.5",
-    "nuxt3": "^3.0.0-27495135.4d1a6ba",
+    "nuxt3": "^3.0.0-27497942.c519cee",
     "prettier": "^2.6.2",
-    "vitest": "^0.9.3"
+    "vitest": "^0.9.3",
+    "@formkit/nuxt": "^1.0.0-beta.6"
   },
   "dependencies": {
-    "@formkit/nuxt": "^1.0.0-beta.6",
-    "@microsoft/microsoft-graph-client": "^3.0.2",
-    "@microsoft/microsoft-graph-types": "^2.18.0",
     "pinia": "^2.0.13"
   }
 }

@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 
-export const useForm = defineStore('form', {
+export const formStore = defineStore('form', {
   state: () => {
     return {
       // all these properties will have their type inferred automatically
@@ -51,5 +51,5 @@ export const useForm = defineStore('form', {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useForm, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(formStore, import.meta.hot))
 }

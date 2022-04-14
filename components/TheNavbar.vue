@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useMenu } from '~~/stores/useMenu'
+import { menuStore } from '~/stores/menuStore'
 
-const store = useMenu()
+const store = menuStore()
 </script>
 
 <template>

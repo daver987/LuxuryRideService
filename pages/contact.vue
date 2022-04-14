@@ -11,72 +11,86 @@
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="mb-4 subheading">Tell Us Something</h3>
           <h2 class="text-background-dark heading">Send Us A Message</h2>
-          <FormKit
-            type="form"
-            class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
-            submit-label="Send Message"
-          >
-            <div>
+          <div>
+            <FormKit
+              type="form"
+              class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
+              submit-label="Send Message"
+            >
+              <div>
+                <FormKit
+                  label="Full Name"
+                  type="text"
+                  name="full-name"
+                  id="full-name"
+                  autocomplete="full-name"
+                  :classes="formClasses"
+                  v-model="store.from_name"
+                  validation="required"
+                />
+              </div>
+              <div>
+                <FormKit
+                  label="Email Address"
+                  id="email"
+                  name="from_email"
+                  type="email"
+                  autocomplete="email"
+                  :classes="formClasses"
+                  validation="required"
+                  v-model="store.from_email"
+                />
+              </div>
+              <div>
+                <FormKit
+                  label="Phone Number"
+                  type="text"
+                  name="phone_number"
+                  id="phone"
+                  autocomplete="tel"
+                  :classes="formClasses"
+                  aria-describedby="phone-optional"
+                  v-model="store.phone_number"
+                />
+              </div>
+              <div class="sm:col-span-2">
+                <FormKit
+                  label="Subject"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  :classes="formClasses"
+                  validation="required"
+                  maxlength="500"
+                  v-model="store.subject"
+                />
+              </div>
               <FormKit
-                label="Full Name"
-                type="text"
-                name="full-name"
-                id="full-name"
-                autocomplete="full-name"
+                label="Message"
+                type="textarea"
+                id="message"
+                name="message"
+                rows="4"
                 :classes="formClasses"
-                v-model="store.from_name"
-                validation="required"
-              />
-            </div>
-            <div>
-              <FormKit
-                label="Email Address"
-                id="email"
-                name="from_email"
-                type="email"
-                autocomplete="email"
-                :classes="formClasses"
-                validation="required"
-                v-model="store.from_email"
-              />
-            </div>
-            <div>
-              <FormKit
-                label="Phone Number"
-                type="text"
-                name="phone_number"
-                id="phone"
-                autocomplete="tel"
-                :classes="formClasses"
-                aria-describedby="phone-optional"
-                v-model="store.phone_number"
-              />
-            </div>
-            <div class="sm:col-span-2">
-              <FormKit
-                label="Subject"
-                type="text"
-                name="subject"
-                id="subject"
-                :classes="formClasses"
+                aria-describedby="message-max"
                 validation="required"
                 maxlength="500"
-                v-model="store.subject"
+                v-model="store.message"
               />
+            </FormKit>
+          </div>
+          <div id='form-opened'></div>
+            <div class="mt-6">
+              <button
+                type="submit"
+                class="btn btn-primary"
+
+
+              >
+                Send Message
+              </button>
             </div>
-            <FormKit
-              label="Message"
-              type="textarea"
-              id="message"
-              name="message"
-              rows="4"
-              :classes="formClasses"
-              aria-describedby="message-max"
-              validation="required"
-              maxlength="500"
-              v-model="store.message"
-            />
-          </FormKit>
+          <div id="lead-form"></div>
         </div>
       </div>
     </section>
@@ -108,6 +122,9 @@
               289.400.9408</a
             >
           </div>
+          <div>
+            <button class="p-3 bg-primary" @click="sendEmail">Send</button>
+          </div>
         </div>
       </div>
     </section>
@@ -116,7 +133,8 @@
 </template>
 
 <script setup lang="ts">
-import { useForm } from '~/stores/useForm'
+import { formStore } from '~/stores/formStore'
+// import { useRuntimeConfig } from '#nitro'
 
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
@@ -125,7 +143,7 @@ const headerInfo = {
   image: 'background-image: url("/images/View-City-Of-Toronto.jpg")',
 }
 
-const store = useForm()
+const store = formStore()
 definePageMeta({
   layout: 'default',
 })
@@ -138,5 +156,56 @@ const formClasses = {
     'flex-1 block w-full focus:ring-primary focus:border focus:border-primary min-w-0 rounded-none sm:text-sm border border-body p-2',
   help: 'text-body',
   message: 'text-red-600',
+}
+
+// const message = {
+//   subject: 'Message To Luxury Ride Service',
+//   body: {
+//     contentType: 'Text',
+//     content: 'This is a test Message',
+//   },
+//   toRecipients: [
+//     {
+//       emailAddress: {
+//         address: 'daveyalexander@outlook.com',
+//       },
+//     },
+//   ],
+// }
+
+const config = useRuntimeConfig()
+
+const sendEmail = async () => {
+  const myHeaders = new Headers()
+  myHeaders.append('Content-Type', 'application/json')
+  myHeaders.append('Authorization', 'Bearer ' + `${config.ACCESS_TOKEN}`)
+
+  const raw = JSON.stringify({
+    message: {
+      subject: 'Message from David',
+      body: {
+        contentType: 'Text',
+        content: 'this is a test email',
+      },
+      toRecipients: [
+        {
+          emailAddress: {
+            address: 'oplholds@hotmail.com',
+          },
+        },
+      ],
+    },
+  })
+
+  const requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+  }
+
+  fetch('https://graph.microsoft.com/v1.0/me/sendMail', requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log('error', error))
 }
 </script>

@@ -1,8 +1,19 @@
+/// <reference types="vitest" />
+
 import { defineNuxtConfig } from 'nuxt3'
 import { transformerDirectives } from 'unocss'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  typescript: {
+    shim: false,
+  },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL,
+  },
+  privateRuntimeConfig: {
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+  },
   meta: {
     title: 'Toronto Car Service | Luxury Ride Service',
     htmlAttrs: {
@@ -24,10 +35,21 @@ export default defineNuxtConfig({
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
-      { rel: 'canonical', href: 'https://luxuryrideservice.com' },
+      { rel: 'canonical', href: 'https://luxuryrideservice.com', crossorigin: true },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
+      },
+    ],
+    script: [
+      {
+        src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
+        config: '2',
+      },
     ],
   },
-  buildModules: ['@vueuse/nuxt', '@pinia/nuxt', '@unocss/nuxt'],
+  buildModules: ['@vueuse/nuxt', ['@pinia/nuxt',{disableVuex: true}], '@unocss/nuxt'],
   modules: ['@formkit/nuxt'],
   unocss: {
     uno: true,
@@ -81,7 +103,17 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
 
-  // analyze: {
-  //   analyzerMode: 'static'
-  // }
+  vite: {
+    server: {
+      proxy: {
+        '/api': {
+          target: {
+            host: 'luxuryrideservice.com',
+          },
+          changeOrigin: true,
+          secure: false,
+        },
+      }
+    }
+  }
 })

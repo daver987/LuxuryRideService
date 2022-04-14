@@ -78,9 +78,9 @@ import {
   Dialog,
 } from '@headlessui/vue'
 import { storeToRefs } from 'pinia'
-import { useMenu } from '~~/stores/useMenu'
+import { menuStore } from '~/stores/menuStore'
 
-const store = useMenu()
+const store = menuStore()
 const { open } = storeToRefs(store)
 const navigation = useNavigation()
 </script>
