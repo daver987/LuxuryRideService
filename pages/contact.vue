@@ -1,5 +1,10 @@
 <template>
   <div>
+    <Script
+      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
+      config="2"
+    ></Script>
+
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
@@ -11,74 +16,71 @@
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="mb-4 subheading">Tell Us Something</h3>
           <h2 class="text-background-dark heading">Send Us A Message</h2>
-          <div>
-            <FormKit
-              type="form"
-              class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
-              submit-label="Send Message"
-            >
-              <div>
+          <div id="section-262-10">
+            <div id="section-8-10">
+              <FormKit
+                type="form"
+                class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
+                submit-label="Send Message"
+              >
+                <div>
+                  <FormKit
+                    label="Full Name"
+                    type="text"
+                    name="full-name"
+                    id="full-name"
+                    autocomplete="full-name"
+                    :classes="formClasses"
+                    validation="required"
+                  />
+                </div>
+                <div>
+                  <FormKit
+                    label="Email Address"
+                    id="email"
+                    name="from_email"
+                    type="email"
+                    autocomplete="email"
+                    :classes="formClasses"
+                    validation="required"
+                  />
+                </div>
+                <div>
+                  <FormKit
+                    label="Phone Number"
+                    type="text"
+                    name="phone_number"
+                    id="phone"
+                    autocomplete="tel"
+                    :classes="formClasses"
+                    aria-describedby="phone-optional"
+                  />
+                </div>
+                <div class="sm:col-span-2">
+                  <FormKit
+                    label="Subject"
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    :classes="formClasses"
+                    validation="required"
+                    maxlength="500"
+                  />
+                </div>
                 <FormKit
-                  label="Full Name"
-                  type="text"
-                  name="full-name"
-                  id="full-name"
-                  autocomplete="full-name"
+                  label="Message"
+                  type="textarea"
+                  id="message"
+                  name="message"
+                  rows="4"
                   :classes="formClasses"
-                  validation="required"
-                />
-              </div>
-              <div>
-                <FormKit
-                  label="Email Address"
-                  id="email"
-                  name="from_email"
-                  type="email"
-                  autocomplete="email"
-                  :classes="formClasses"
-                  validation="required"
-                />
-              </div>
-              <div>
-                <FormKit
-                  label="Phone Number"
-                  type="text"
-                  name="phone_number"
-                  id="phone"
-                  autocomplete="tel"
-                  :classes="formClasses"
-                  aria-describedby="phone-optional"
-                />
-              </div>
-              <div class="sm:col-span-2">
-                <FormKit
-                  label="Subject"
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  :classes="formClasses"
+                  aria-describedby="message-max"
                   validation="required"
                   maxlength="500"
                 />
-              </div>
-              <FormKit
-                label="Message"
-                type="textarea"
-                id="message"
-                name="message"
-                rows="4"
-                :classes="formClasses"
-                aria-describedby="message-max"
-                validation="required"
-                maxlength="500"
-              />
-            </FormKit>
+              </FormKit>
+            </div>
           </div>
-          <div id="form-opened"></div>
-          <div class="mt-6">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </div>
-          <div id="lead-form"></div>
         </div>
       </div>
     </section>
@@ -109,9 +111,6 @@
               />
               289.400.9408</a
             >
-          </div>
-          <div>
-            <button class="p-3 bg-primary" @click="sendEmail">Send</button>
           </div>
         </div>
       </div>

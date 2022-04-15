@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white">
     <!-- Mobile menu -->
-    <TransitionRoot as="template" :show="store.isOpen">
+    <TransitionRoot as="template" :show="isOpen">
       <Dialog
         as="div"
         class="flex inset-0 z-40 fixed"
-        @close="store.isOpen = false"
+        @close="isOpen = false"
       >
         <TransitionChild
           as="template"
@@ -35,7 +35,7 @@
               <button
                 type="button"
                 class="rounded-md -m-2 p-2 text-gray-400 inline-flex items-center justify-center"
-                @click="store.isOpen = false"
+                @click="isOpen = false"
               >
                 <span class="sr-only">Close menu</span>
                 <div
@@ -52,7 +52,7 @@
                   v-for="nav in navigation"
                   :to="nav.href"
                   :key="nav.name"
-                  @click="store.isOpen = false"
+                  @click="isOpen = false"
                   >{{ nav.name }}
                 </NuxtLink>
               </div>
@@ -60,7 +60,7 @@
                 <NuxtLink
                   class="border border-solid border-primary cursor-pointer font-light text-primary py-2 px-5 tracking-[0.4em] inline-flex items-center uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 focus:border-primary focus:ring focus:ring-primary active:bg-primary/20"
                   to="/reservations"
-                  @click="store.isOpen = false"
+                  @click="isOpen = false"
                   ><span>Reserve</span></NuxtLink
                 >
               </div>
@@ -81,9 +81,9 @@ import {
   DialogOverlay,
   Dialog,
 } from '@headlessui/vue'
-import { store } from '../composables/store'
+
 const navigation = useNavigation()
-const { isOpen } = store
+const isOpen = useOpen()
 </script>
 
 <style scoped>

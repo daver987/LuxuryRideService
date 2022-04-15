@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { store } from '../composables/store'
+const isOpen = useOpen()
 const toggleMenu = () => {
-  store.isOpen = !store.isOpen
+  isOpen.value = !isOpen.value
 }
 </script>
 

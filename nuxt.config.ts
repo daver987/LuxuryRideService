@@ -44,13 +44,6 @@ export default defineNuxtConfig({
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
       },
     ],
-
-    script: [
-      {
-        src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
-        config: '2',
-      },
-    ],
   },
   buildModules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
 
@@ -123,8 +116,5 @@ export default defineNuxtConfig({
       //   },
       // },
     },
-  },
-  nitro: {
-    preset: 'cloudflare',
   },
 })
