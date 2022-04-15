@@ -2,7 +2,7 @@
   <div>
     <section class="my-32 w-full">
       <div
-        class="container flex flex-col-reverse mb-8 max-w-7xl md:grid md:grid-cols-10"
+        class="container mx-auto flex flex-col-reverse mb-8 max-w-7xl md:grid md:grid-cols-10"
       >
         <div class="w-full md:col-span-6">
           <BaseCard class="space-y-6 w-full">
@@ -43,7 +43,9 @@
           />
         </div>
         <div class="mb-8 md:col-span-6">
-          <BaseCard class="container space-y-6 mb-8 col-span-6 md:pl-56">
+          <BaseCard
+            class="container mx-auto space-y-6 mb-8 col-span-6 md:pl-56"
+          >
             <h2 class="subheading">ABOUT THE VEHICLE</h2>
             <h2 class="text-center text-3xl md:text-left">Chevy Suburban</h2>
             <p class="max-w-[50ch]">
@@ -62,7 +64,7 @@
     <section class="mb-24 w-full">
       <div class="flex flex-col-reverse md:grid md:grid-cols-10">
         <div class="mb-8 md:col-span-6">
-          <BaseCard class="container space-y-6 md:col-span-6">
+          <BaseCard class="container mx-auto space-y-6 md:col-span-6">
             <h2 class="subheading">ABOUT THE VEHICLE</h2>
             <h3 class="text-center text-3xl md:text-left">YUKON XL</h3>
             <p class="max-w-[55ch]">

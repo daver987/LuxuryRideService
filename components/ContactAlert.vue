@@ -14,14 +14,14 @@
         leave-to-class="opacity-0"
       >
         <div
-          v-if="store.showAlert"
+          v-if="showAlert"
           class="bg-white rounded-lg max-w-sm shadow-lg ring-black w-full ring-1 ring-opacity-5 pointer-events-auto overflow-hidden"
         >
           <div class="p-4">
             <div class="flex items-start">
               <div class="flex-shrink-0">
                 <div
-                  class="text-md text-green-600 i-ion-checkmark-circled"
+                  class="text-base text-green-600 i-ion-checkmark-circled"
                   aria-hidden="true"
                 />
               </div>
@@ -35,7 +35,7 @@
               </div>
               <div class="flex flex-shrink-0 ml-4">
                 <button
-                  @click="store.closeAlert"
+                  @click="closeAlert"
                   class="bg-white rounded-md text-gray-400 inline-flex hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50"
                 >
                   <span class="sr-only">Close</span>
@@ -54,7 +54,5 @@
 </template>
 
 <script setup>
-import { useForm } from '~/stores/useForm'
-
-const store = useForm()
+//scripts
 </script>

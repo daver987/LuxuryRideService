@@ -1,10 +1,7 @@
-# Luxury Ride Service Nuxt 3
+# High Park Livery Nuxt 3
 
-This Project Includes Windicss, Pinia for State Management, VueSplide for the Slider, Iconify for Icons, and 
+This Project Includes Unocss, VueSplide for the Slider, Iconify for Icons, and
 headlessUI. Production deployed to Cloudflare Workers.
-More Updates to come
-
-Look at the Nuxt 3 [documentation](https://v3.nuxtjs.org).
 
 ## Setup
 
@@ -30,4 +27,4 @@ Build the application for production to Cloudflare Workers:
 wrangler publish
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Checkout the site at https://highparklivery.com

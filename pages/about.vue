@@ -7,13 +7,13 @@
       :image="headerInfo.image"
     />
     <section class="bg-background mb-8 px-4 sm:px-6">
-      <div class="container md:grid md:grid-cols-2">
+      <div class="container mx-auto md:grid md:grid-cols-2">
         <div
           class="bg-white shadow-xl -mt-12 py-6 z-10 relative overflow-hidden md:-mt-16"
         >
           <div class="py-5">
             <p class="text-center subheading">Behind The Wheel</p>
-            <h2 class="mt-6 text-center text-heading">The Driver</h2>
+            <h2 class="mt-6 text-center heading">The Driver</h2>
           </div>
           <div class="py-5 px-4 sm:p-6">
             <p class="font-body text-sm text-body">
@@ -49,8 +49,8 @@
         </div>
       </div>
     </section>
-    <section class="mb-8 px-4 background-bg sm:px-6">
-      <div class="container place-items-center md:grid md:grid-cols-2">
+    <section class="mb-8 px-4 bg-background sm:px-6">
+      <div class="container mx-auto place-items-center md:grid md:grid-cols-2">
         <div class="flex">
           <img
             alt="Tesla-S-Back-Seat"
@@ -72,7 +72,7 @@
         </div>
       </div>
     </section>
-    <section class="mb-8 background-bg">
+    <section class="mb-8 bg-background">
       <div>
         <img
           alt="Toronto-evening-skyline"
@@ -84,16 +84,14 @@
       </div>
       <div class="px-6">
         <div
-          class="container bg-white mx-auto shadow-xl max-w-7xl px-4 sm:px-6 lg:px-8"
+          class="container mx-auto bg-white mx-auto shadow-xl max-w-7xl px-4 sm:px-6 lg:px-8"
         >
           <div class="bg-white py-6 overflow-hidden md:px-2 lg:px-4">
             <div class="py-5 px-4 sm:px-6">
               <p class="text-center subheading md:text-left">
                 High Park Livery?
               </p>
-              <h2 class="mt-6 text-center text-heading md:text-left">
-                WHO WE ARE
-              </h2>
+              <h2 class="mt-6 text-center heading md:text-left">WHO WE ARE</h2>
             </div>
             <div class="py-4 px-3 sm:p-6">
               <p class="font-body text-sm text-body">
@@ -105,10 +103,10 @@
                 services that aim to exceed all expectations.
               </p>
               <p class="font-body text-sm text-body">
-                When you choose to work with High Park Livery, you'll work
-                with highly trained professionals who know about the industry.
-                We are committed to customer satisfaction and punctuality in all
-                that we do. We offer suggestions on routes as well as excellent
+                When you choose to work with High Park Livery, you'll work with
+                highly trained professionals who know about the industry. We are
+                committed to customer satisfaction and punctuality in all that
+                we do. We offer suggestions on routes as well as excellent
                 amenities like refreshments and WiFi while en route. We aim to
                 create an atmosphere that ensures passengers feel comfortable
                 and relaxed throughout their journey.
@@ -145,8 +143,7 @@
 const headerInfo = {
   aboveHeading: 'DISCOVER High Park Livery',
   heading: 'ABOUT US',
-  body:
-    "High Park Livery is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
+  body: "High Park Livery is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
   image: 'background-image: url("/images/Chauffeur-Opens-Door.jpg")',
 }
 

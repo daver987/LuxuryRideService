@@ -7,7 +7,7 @@
       :image="headerInfo.image"
     />
     <section class="mb-8 px-6">
-      <div class="container max-w-7xl">
+      <div class="container mx-auto max-w-7xl">
         <div
           class="bg-white mx-auto shadow-xl -mt-12 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-16 md:px-2 lg:grid lg:px-4 lg:grid-cols-7"
         >
@@ -24,7 +24,7 @@
             <h2 class="text-center mb-4 subheading lg:text-left">
               CHECK OUT OUR SERVICES
             </h2>
-            <p>
+            <p class="text-small text-body">
               High Park Livery puts you or your business at the forefront of
               Toronto car service. For nearly a decade, we have maintained a
               fleet of new model vehicles. We have constantly upgraded to meet
@@ -42,7 +42,7 @@
       </div>
     </section>
     <section class="mb-8 px-6">
-      <div class="container max-w-7xl md:grid md:grid-cols-2">
+      <div class="container mx-auto max-w-7xl gap-4 md:grid md:grid-cols-2">
         <div
           :class="service.boxPosition"
           v-for="service in services"
@@ -62,7 +62,7 @@
             >
               <h2 class="subheading">{{ service.aboveHeading }}</h2>
               <h2 class="mt-4 text-4xl heading">{{ service.title }}</h2>
-              <p class="mt-2 mb-8">{{ service.body }}</p>
+              <p class="mt-2 text-body text-sm mb-8">{{ service.body }}</p>
               <BaseButton
                 class="mt-4"
                 kind="btn-primary"

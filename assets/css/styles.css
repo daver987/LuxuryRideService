@@ -30,35 +30,8 @@
     url('./assets/fonts/campton-thin.woff') format('woff');
 }
 
-@layer components {
-  body {
-    @apply bg-background;
-  }
-
-  .heading {
-    @apply font-heading text-4xl uppercase lg:text-5xl;
-  }
-
-  .subheading {
-    @apply font-subheading text-primary text-xs
-    leading-relaxed tracking-[0.5em] uppercase md:text-sm;
-  }
-
-  p {
-    @apply font-body text-sm text-body;
-  }
-
-  img {
-    @apply object-cover object-center;
-  }
-
-  h1 {
-    @apply font-heading text-heading-light text-4xl uppercase lg:text-5xl;
-  }
-
-  h2 {
-    @apply font-heading text-4xl uppercase md:text-2xl lg:text-4xl xl:text-5xl;
-  }
+body {
+  background-color: #ebebeb;
 }
 
 .page-enter-active,

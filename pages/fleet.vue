@@ -8,7 +8,7 @@
         :image="headerInfo.image"
       />
     </div>
-    <div class="container px-6 pt-4 md:px-0">
+    <div class="container mx-auto px-6 pt-4 md:px-0">
       <TabGroup
         class="bg-background w-full lg:-mt-20"
         as="div"
@@ -48,7 +48,8 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// import { res } from '#imports'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 const { data: tabs } = useFetch('/api/fleetTabs')
 const headerInfo = {
@@ -63,6 +64,7 @@ function changedTab() {
   selectedTab.value = tabs.tag
 }
 </script>
+
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {

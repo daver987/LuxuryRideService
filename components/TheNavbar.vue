@@ -18,7 +18,7 @@
       >
         <button
           class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
-          @click="store.toggleMenu()"
+          @click="toggleMenu"
         />
         <span class="sr-only">Open main menu</span>
       </div>
@@ -28,7 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import { useMenu } from '~~/stores/useMenu'
-
-const store = useMenu()
+const isOpen = useOpen()
+function toggleMenu() {
+  isOpen.value = !isOpen.value
+}
 </script>

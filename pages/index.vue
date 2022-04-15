@@ -21,13 +21,13 @@
         :style="fleetImage"
       >
         <div
-          class="container flex flex-col space-y-4 max-w-7xl justify-between place-items-center lg:flex-row"
+          class="container mx-auto flex flex-col space-y-4 max-w-7xl justify-between place-items-center lg:flex-row"
         >
           <div class="space-y-4">
             <p class="text-center subheading lg:text-left">
               The Many Types of Comfort We offer
             </p>
-            <h2 class="text-center text-heading-light capitalize lg:text-left">
+            <h2 class="text-center heading text-white capitalize lg:text-left">
               Our Fleet
             </h2>
           </div>
@@ -45,7 +45,7 @@
         <div
           class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl py-8 px-6 md:mx-auto md:px-16"
         >
-          <p class="font-body text-sm text-body prose">
+          <p class="font-body text-sm text-body">
             <span class="font-bold font-body text-sm text-heading uppercase"
               >High Park Livery</span
             >
@@ -61,7 +61,7 @@
             transportation company, we have a wide range of vehicles available
             to accommodate any need.
           </p>
-          <p class="font-body text-sm text-primary prose">
+          <p class="font-body text-sm text-primary">
             Special requests are available for Specialty 6+ person vehicles that
             can take larger tour groups. Contact us to learn about the various
             options available from our limo service.
@@ -117,10 +117,8 @@
       <div
         class="bg-white mx-auto space-y-4 shadow-xl max-w-7xl p-8 lg:p-x-8 lg:pt-32 lg:pb-8"
       >
-        <p class="text-center subheading">
-          WHAT High Park Livery OFFERS YOU
-        </p>
-        <h2 class="text-center">We Offer</h2>
+        <p class="text-center subheading">WHAT High Park Livery OFFERS YOU</p>
+        <h2 class="text-center heading">We Offer</h2>
       </div>
       <div
         class="bg-white mx-auto shadow-xl max-w-4xl grid z-10 grid-cols-1 relative place-items-center md:px-6 md:pb-8 lg:max-w-7xl lg:grid-cols-2"
@@ -138,7 +136,7 @@
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
         <p class="text-center subheading">High Park Livery PARTNERS</p>
-        <h2 class="text-center">They Trust Us</h2>
+        <h2 class="text-center heading">They Trust Us</h2>
       </div>
       <TheLogoCloud />
     </section>

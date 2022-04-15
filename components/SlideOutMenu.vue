@@ -1,8 +1,8 @@
 <template>
   <div class="bg-white">
     <!-- Mobile menu -->
-    <TransitionRoot as="template" :show="open">
-      <Dialog as="div" class="flex inset-0 z-40 fixed" @close="open = false">
+    <TransitionRoot as="template" :show="isOpen">
+      <Dialog as="div" class="flex inset-0 z-40 fixed" @close="isOpen = false">
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-500"
@@ -31,7 +31,7 @@
               <button
                 type="button"
                 class="rounded-md -m-2 p-2 text-gray-400 inline-flex items-center justify-center"
-                @click="open = false"
+                @click="isOpen = false"
               >
                 <span class="sr-only">Close menu</span>
                 <div
@@ -48,7 +48,7 @@
                   v-for="nav in navigation"
                   :to="nav.href"
                   :key="nav.name"
-                  @click="open = false"
+                  @click="isOpen = false"
                   >{{ nav.name }}
                 </NuxtLink>
               </div>
@@ -56,7 +56,7 @@
                 <NuxtLink
                   class="border border-solid border-primary cursor-pointer text-primary text-base py-2 px-5 tracking-[0.4em] inline-flex items-center uppercase hover:border-primary hover:text-primary hover:transform hover:transition hover:ease-in-out hover:scale-x-105 hover:-translate-y-1 hover:duration-300 focus:border-primary focus:ring focus:ring-primary active:bg-primary/20"
                   to="/reservations"
-                  @click="open = false"
+                  @click="isOpen = false"
                   ><span>Reserve</span></NuxtLink
                 >
               </div>
@@ -77,12 +77,9 @@ import {
   DialogOverlay,
   Dialog,
 } from '@headlessui/vue'
-import { storeToRefs } from 'pinia'
-import { useNavigation } from '~~/composables/useNavigation'
-import { useMenu } from '~~/stores/useMenu'
 
-const store = useMenu()
-const { open } = storeToRefs(store)
+const isOpen = useOpen()
+
 const navigation = useNavigation()
 </script>
 
