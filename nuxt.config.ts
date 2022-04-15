@@ -7,12 +7,6 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  publicRuntimeConfig: {
-    BASE_URL: process.env.BASE_URL,
-  },
-  privateRuntimeConfig: {
-    ACCESS_TOKEN: process.env.ACCESS_TOKEN,
-  },
   meta: {
     title: 'Toronto Car Service | Luxury Ride Service',
     htmlAttrs: {
@@ -38,10 +32,6 @@ export default defineNuxtConfig({
         rel: 'canonical',
         href: 'https://luxuryrideservice.com',
         crossorigin: true,
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
       },
     ],
   },
@@ -90,7 +80,6 @@ export default defineNuxtConfig({
         'font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm',
       heading: 'font-heading text-4xl text-heading uppercase lg:text-5xl',
       body: 'bg-background',
-      p: 'font-body text-sm text-body',
       img: 'object-cover object-center',
       h1: 'font-heading text-heading-light text-4xl uppercase lg:text-5xl',
       h2: 'font-heading text-4xl uppercase md:text-2xl lg:text-4xl xl:text-5xl',
@@ -98,23 +87,4 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
-
-  vite: {
-    server: {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      },
-      // origin: 'luxuryrideservice.com',
-
-      // proxy: {
-      //   '/api': {
-      //     target: {
-      //       host: 'luxuryrideservice.com',
-      //     },
-      //     changeOrigin: true,
-      //     secure: false,
-      //   },
-      // },
-    },
-  },
 })
