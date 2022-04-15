@@ -35,13 +35,21 @@ export default defineNuxtConfig({
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
-      { rel: 'canonical', href: 'https://luxuryrideservice.com', crossorigin: true },
+      {
+        rel: 'canonical',
+        href: 'https://luxuryrideservice.com',
+        crossorigin: true,
+      },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
       },
     ],
+    // script: [{
+    //   src: 'https://code.jquery.com/jquery-1.10.2.min.js',
+    //   integrity: 'sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=',
+    //   crossorigin: 'anonymous',
+    // }],
     script: [
       {
         src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
@@ -49,8 +57,13 @@ export default defineNuxtConfig({
       },
     ],
   },
-  buildModules: ['@vueuse/nuxt', ['@pinia/nuxt',{disableVuex: true}], '@unocss/nuxt'],
-  modules: ['@formkit/nuxt'],
+  buildModules: [
+    '@vueuse/nuxt',
+    ['@pinia/nuxt', { disableVuex: true }],
+    '@unocss/nuxt',
+    '@formkit/nuxt',
+  ],
+
   unocss: {
     uno: true,
     icons: true,
@@ -105,15 +118,20 @@ export default defineNuxtConfig({
 
   vite: {
     server: {
-      proxy: {
-        '/api': {
-          target: {
-            host: 'luxuryrideservice.com',
-          },
-          changeOrigin: true,
-          secure: false,
-        },
-      }
-    }
-  }
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+      // origin: 'luxuryrideservice.com',
+
+      // proxy: {
+      //   '/api': {
+      //     target: {
+      //       host: 'luxuryrideservice.com',
+      //     },
+      //     changeOrigin: true,
+      //     secure: false,
+      //   },
+      // },
+    },
+  },
 })

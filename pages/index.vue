@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const fleetImage =
@@ -15,10 +16,12 @@ definePageMeta({
   //   mode: 'out-in',
   // },
 })
+
 </script>
 
 <template>
   <div>
+
     <HeroSlider />
     <section class="bg-background mb-16 px-6">
       <div
