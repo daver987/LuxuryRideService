@@ -1,5 +1,4 @@
 /// <reference types="vitest" />
-
 import { defineNuxtConfig } from 'nuxt3'
 import { transformerDirectives } from 'unocss'
 
@@ -45,11 +44,7 @@ export default defineNuxtConfig({
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
       },
     ],
-    // script: [{
-    //   src: 'https://code.jquery.com/jquery-1.10.2.min.js',
-    //   integrity: 'sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=',
-    //   crossorigin: 'anonymous',
-    // }],
+
     script: [
       {
         src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
@@ -57,12 +52,7 @@ export default defineNuxtConfig({
       },
     ],
   },
-  buildModules: [
-    '@vueuse/nuxt',
-    ['@pinia/nuxt', { disableVuex: true }],
-    '@unocss/nuxt',
-    '@formkit/nuxt',
-  ],
+  buildModules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
 
   unocss: {
     uno: true,
@@ -133,5 +123,8 @@ export default defineNuxtConfig({
       //   },
       // },
     },
+  },
+  nitro: {
+    preset: 'cloudflare',
   },
 })

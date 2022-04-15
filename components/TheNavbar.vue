@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { menuStore } from '~/stores/menuStore'
-
-const store = menuStore()
+import { store } from '../composables/store'
+const toggleMenu = () => {
+  store.isOpen = !store.isOpen
+}
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const store = menuStore()
       >
         <button
           class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
-          @click="store.toggleMenu()"
+          @click="toggleMenu"
         />
         <span class="sr-only">Open main menu</span>
       </div>

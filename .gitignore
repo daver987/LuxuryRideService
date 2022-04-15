@@ -6,3 +6,4 @@ nuxt.d.ts
 .env
 .idea
 wrangler.toml
+.DS_Store

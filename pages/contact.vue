@@ -25,7 +25,6 @@
                   id="full-name"
                   autocomplete="full-name"
                   :classes="formClasses"
-                  v-model="store.from_name"
                   validation="required"
                 />
               </div>
@@ -38,7 +37,6 @@
                   autocomplete="email"
                   :classes="formClasses"
                   validation="required"
-                  v-model="store.from_email"
                 />
               </div>
               <div>
@@ -50,7 +48,6 @@
                   autocomplete="tel"
                   :classes="formClasses"
                   aria-describedby="phone-optional"
-                  v-model="store.phone_number"
                 />
               </div>
               <div class="sm:col-span-2">
@@ -62,7 +59,6 @@
                   :classes="formClasses"
                   validation="required"
                   maxlength="500"
-                  v-model="store.subject"
                 />
               </div>
               <FormKit
@@ -75,21 +71,13 @@
                 aria-describedby="message-max"
                 validation="required"
                 maxlength="500"
-                v-model="store.message"
               />
             </FormKit>
           </div>
-          <div id='form-opened'></div>
-            <div class="mt-6">
-              <button
-                type="submit"
-                class="btn btn-primary"
-
-
-              >
-                Send Message
-              </button>
-            </div>
+          <div id="form-opened"></div>
+          <div class="mt-6">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
           <div id="lead-form"></div>
         </div>
       </div>
@@ -133,9 +121,6 @@
 </template>
 
 <script setup lang="ts">
-import { formStore } from '~/stores/formStore'
-// import { useRuntimeConfig } from '#nitro'
-
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
   heading: 'CONTACT US',
@@ -143,7 +128,6 @@ const headerInfo = {
   image: 'background-image: url("/images/View-City-Of-Toronto.jpg")',
 }
 
-const store = formStore()
 definePageMeta({
   layout: 'default',
 })
@@ -157,21 +141,6 @@ const formClasses = {
   help: 'text-body',
   message: 'text-red-600',
 }
-
-// const message = {
-//   subject: 'Message To Luxury Ride Service',
-//   body: {
-//     contentType: 'Text',
-//     content: 'This is a test Message',
-//   },
-//   toRecipients: [
-//     {
-//       emailAddress: {
-//         address: 'daveyalexander@outlook.com',
-//       },
-//     },
-//   ],
-// }
 
 const config = useRuntimeConfig()
 

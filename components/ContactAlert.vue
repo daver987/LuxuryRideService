@@ -14,7 +14,7 @@
         leave-to-class="opacity-0"
       >
         <div
-          v-if="store.showAlert"
+          v-if="false"
           class="bg-white rounded-lg max-w-sm shadow-lg ring-black w-full ring-1 ring-opacity-5 pointer-events-auto overflow-hidden"
         >
           <div class="p-4">
@@ -35,7 +35,6 @@
               </div>
               <div class="flex flex-shrink-0 ml-4">
                 <button
-                  @click="store.closeAlert"
                   class="bg-white rounded-md text-gray-400 inline-flex hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50"
                 >
                   <span class="sr-only">Close</span>
@@ -52,9 +51,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { formStore } from '~/stores/formStore'
-
-const store = formStore()
-</script>
