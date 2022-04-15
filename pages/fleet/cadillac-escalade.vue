@@ -2,13 +2,13 @@
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
       <div>
-        <h2 class="text-center pt-8 md:text-left">
+        <h2 class="text-center heading pt-8 md:text-left">
           Cadillac Escalade<br />SUV
         </h2>
       </div>
       <div>
         <img
-          src="/images/Cadillac-Escalade-Car-Service.png"
+          src='/images/Cadillac-Escalade-Car-Service.png'
           alt="Cadillac-Escalade"
           class="object-cover object-center w-full"
           width="1084"
@@ -32,7 +32,7 @@
       </BaseCard>
       <div>
         <img
-          src="/images/cadillac-escalade-interior-fleet-2.jpg"
+          src='/images/cadillac-escalade-interior-fleet-2.jpg'
           alt="Cadillac-Escalade"
           class="object-cover object-center w-full"
           width="828"
@@ -43,7 +43,7 @@
     <div class="mb-12 grid gap-4 grid-cols-1">
       <div class="col-span-1">
         <img
-          src="/images/cadillac-escalade-interior-fleet.jpg"
+          src='/images/cadillac-escalade-interior-fleet.jpg'
           alt="Cadillac-Escalade"
           class="object-cover object-center w-full md:max-w-5xl"
           width="1380"

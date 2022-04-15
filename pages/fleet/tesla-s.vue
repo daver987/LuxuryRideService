@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Tesla S</h2></div>
+      <div><h2 class="text-center heading pt-8">Tesla S</h2></div>
       <div>
         <img
-          src="/images/Tesla-S-Car-Service.png"
+          src='/images/Tesla-S-Car-Service.png'
           alt="Tesla S"
           class="object-cover object-center w-full"
           width="1083"
@@ -27,7 +27,7 @@
       </BaseCard>
       <div>
         <img
-          src="/images/Tesla-Front-Interior-Car-Service.jpg"
+          src='/images/Tesla-Front-Interior-Car-Service.jpg'
           alt="Tesla S"
           class="object-cover object-center w-full"
           width="828"
@@ -38,7 +38,7 @@
     <div class="mb-12 grid gap-4 grid-cols-1">
       <div class="col-span-1">
         <img
-          src="/images/Tesla-Interior-Car-Service.jpg"
+          src='/images/Tesla-Interior-Car-Service.jpg'
           alt="Tesla S"
           class="object-cover object-center w-full md:max-w-5xl"
           width="1380"

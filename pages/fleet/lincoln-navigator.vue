@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Lincoln Navigator SUV</h2></div>
+      <div><h2 class="text-center heading pt-8">Lincoln Navigator SUV</h2></div>
       <div>
         <img
-          src="/images/Lincoln-Navigator-Car-Service.png"
+          src='/images/Lincoln-Navigator-Car-Service.png'
           alt="Lincoln Navigator"
           class="object-cover object-center w-full"
           width="1048"
@@ -27,7 +27,7 @@
       </BaseCard>
       <div>
         <img
-          src="/images/lincoln-navigator-interior-fleet-2.jpg"
+          src='/images/lincoln-navigator-interior-fleet-2.jpg'
           alt="Lincoln Navigator"
           class="object-cover object-center w-full"
           width="828"
@@ -40,7 +40,7 @@
     >
       <div class="mb-6 col-span-1 md:mb-0 md:col-span-4">
         <img
-          src="/images/lincoln-navigator-interior-fleet-3.jpg"
+          src='/images/lincoln-navigator-interior-fleet-3.jpg'
           alt="Lincoln Navigator"
           class="h-full object-cover object-center w-full"
           width="536"
@@ -49,7 +49,7 @@
       </div>
       <div class="col-span-6">
         <img
-          src="/images/lincoln-navigator-interior-fleet.jpg"
+          src='/images/lincoln-navigator-interior-fleet.jpg'
           alt="Lincoln Navigator"
           class="h-full object-cover object-center w-full"
           width="828"

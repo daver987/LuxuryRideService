@@ -34,6 +34,10 @@ body {
   background-color: #ebebeb;
 }
 
+p {
+  color: #aaa;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.3s;
@@ -44,4 +48,8 @@ body {
 }
 .router-link-active {
   color: #a57c52;
+}
+
+html {
+  scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
 }

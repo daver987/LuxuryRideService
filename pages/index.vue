@@ -36,7 +36,7 @@
               kind="btn-light"
               label="View All"
               :nuxtLink="true"
-              to="/fleet"
+              to="/fleet/cadillac-xts"
             />
           </div>
         </div>

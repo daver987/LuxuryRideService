@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Lincoln Continental Sedan</h2></div>
+      <div><h2 class="text-center heading pt-8">Lincoln Continental Sedan</h2></div>
       <div>
         <img
-          src="/images/Lincoln-Continental-Car-Service.png"
+          src='/images/Lincoln-Continental-Car-Service.png'
           alt="Lincoln Continental Sedan"
           width="1011"
           height="506"
@@ -29,7 +29,7 @@
       </BaseCard>
       <div>
         <img
-          src="/images/lincoln-continental-interior-2.jpg"
+          src='/images/lincoln-continental-interior-2.jpg'
           alt="Lincoln Continental Interior"
           class="h-full object-cover object-center w-full"
           width="828"
@@ -40,7 +40,7 @@
     <div class="mb-12 grid gap-4 grid-cols-1">
       <div class="col-span-1">
         <img
-          src="/images/lincoln-continental-interior-fleet.jpg"
+          src='/images/lincoln-continental-interior-fleet.jpg'
           alt="Lincoln Continental Interior"
           class="object-cover object-center w-full md:max-w-5xl"
           width="1380"

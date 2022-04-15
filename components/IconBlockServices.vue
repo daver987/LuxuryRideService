@@ -7,7 +7,7 @@
         </div>
         <div>
           <h3
-            class="font-subheading text-base text-primary tracking-widest uppercase"
+            class="subheading text-base text-primary tracking-widest uppercase"
           >
             {{ title }}
           </h3>

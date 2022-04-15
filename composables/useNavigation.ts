@@ -1,4 +1,5 @@
 const useNavigation = () => [
+  //
   {
     name: 'Home',
     href: '/',
@@ -6,7 +7,7 @@ const useNavigation = () => [
   },
   {
     name: 'Fleet',
-    href: '/fleet',
+    href: '/fleet/cadillac-xts',
     id: 2,
   },
   {
@@ -25,6 +26,6 @@ const useNavigation = () => [
     id: 5,
   },
 ]
-const useOpen = () => useState<boolean>('isOpen', () => false)
 
-export { useNavigation, useOpen }
+
+export { useNavigation }

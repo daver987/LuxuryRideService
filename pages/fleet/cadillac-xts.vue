@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8">Cadillac XTS Sedan</h2></div>
+      <div><h2 class="text-center heading pt-8">Cadillac XTS Sedan</h2></div>
       <div>
         <img
-          src="/images/Cadillac-XTS-Car-Service.png"
+          src='/images/Cadillac-XTS-Car-Service.png'
           alt="XTS"
           width="1242"
           height="543"
@@ -26,7 +26,7 @@
       </BaseCard>
       <div>
         <img
-          src="/images/cadillac-xts-interior-fleet.jpg"
+          src='/images/cadillac-xts-interior-fleet.jpg'
           alt="XTS"
           class="h-full object-cover object-center w-full"
           width="828"
@@ -39,7 +39,7 @@
     >
       <div class="mb-6 col-span-2 md:mb-0 md:col-span-4">
         <img
-          src="/images/cadillac-xts-interior-fleet-3.jpg"
+          src='/images/cadillac-xts-interior-fleet-3.jpg'
           alt="XTS"
           class="h-full object-cover object-center w-full"
           width="536"
@@ -48,7 +48,7 @@
       </div>
       <div class="col-span-6">
         <img
-          src="/images/cadillac-xts-interior-fleet-2.jpg"
+          src='/images/cadillac-xts-interior-fleet-2.jpg'
           alt="XTS"
           class="h-full object-cover object-center w-full"
           width="828"
