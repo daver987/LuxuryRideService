@@ -1,9 +1,6 @@
 <template>
   <div>
-    <Script
-      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
-      config="2"
-    ></Script>
+    <Script src='https://lrs.addons.la/leads/new/forms/resize/expander.php' config='3'></Script>
 
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
@@ -16,8 +13,8 @@
         <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="mb-4 subheading">Tell Us Something</h3>
           <h2 class="text-background-dark heading">Send Us A Message</h2>
-          <div id="section-262-10">
-            <div id="section-8-10">
+          <div id="contact_form_outer">
+            <div id="contact_form_inner">
               <FormKit
                 type="form"
                 class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
