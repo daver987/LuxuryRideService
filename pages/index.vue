@@ -43,7 +43,7 @@ definePageMeta({
         :style="fleetImage"
       >
         <div
-          class="container flex flex-col space-y-4 max-w-7xl justify-between place-items-center lg:flex-row"
+          class="container mx-auto flex flex-col space-y-4 max-w-7xl justify-between place-items-center lg:flex-row"
         >
           <div class="space-y-4">
             <p class="text-center subheading lg:text-left">

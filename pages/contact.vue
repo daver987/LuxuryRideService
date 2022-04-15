@@ -143,37 +143,37 @@ const formClasses = {
 
 const config = useRuntimeConfig()
 
-const sendEmail = async () => {
-  const myHeaders = new Headers()
-  myHeaders.append('Content-Type', 'application/json')
-  myHeaders.append('Authorization', 'Bearer ' + `${config.ACCESS_TOKEN}`)
-
-  const raw = JSON.stringify({
-    message: {
-      subject: 'Message from David',
-      body: {
-        contentType: 'Text',
-        content: 'this is a test email',
-      },
-      toRecipients: [
-        {
-          emailAddress: {
-            address: 'oplholds@hotmail.com',
-          },
-        },
-      ],
-    },
-  })
-
-  const requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-  }
-
-  fetch('https://graph.microsoft.com/v1.0/me/sendMail', requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.log('error', error))
-}
+// const sendEmail = async () => {
+//   const myHeaders = new Headers()
+//   myHeaders.append('Content-Type', 'application/json')
+//   myHeaders.append('Authorization', 'Bearer ' + `${config.ACCESS_TOKEN}`)
+//
+//   const raw = JSON.stringify({
+//     message: {
+//       subject: 'Message from David',
+//       body: {
+//         contentType: 'Text',
+//         content: 'this is a test email',
+//       },
+//       toRecipients: [
+//         {
+//           emailAddress: {
+//             address: 'oplholds@hotmail.com',
+//           },
+//         },
+//       ],
+//     },
+//   })
+//
+//   const requestOptions = {
+//     method: 'POST',
+//     headers: myHeaders,
+//     body: raw,
+//   }
+//
+//   fetch('https://graph.microsoft.com/v1.0/me/sendMail', requestOptions)
+//     .then((response) => response.text())
+//     .then((result) => console.log(result))
+//     .catch((error) => console.log('error', error))
+// }
 </script>
