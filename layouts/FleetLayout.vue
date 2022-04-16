@@ -17,7 +17,7 @@ const headerInfo = {
       :heading="headerInfo.heading"
       :image="headerInfo.image"
     />
-    <main class="container bg-background mx-auto px-6 -mt-20 md:px-0">
+    <main class="container bg-background mx-auto pt-6 px-6 md:-mt-20 md:px-0">
       <div
         class="mx-auto mb-12 grid z-10 gap-1 grid-cols-2 relative md:grid-cols-3 lg:grid-cols-6"
       >
@@ -53,7 +53,7 @@ const headerInfo = {
 }
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 .page-enter,
 .page-leave-to {

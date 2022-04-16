@@ -8,7 +8,7 @@
       :heading='headerInfo.heading'
       :image='headerInfo.image'
     />
-    <section class='bg-background -mt-12 px-6 pb-12 md:-mt-16 md:pb-16'>
+    <section class='bg-background -mt-8 px-6 pb-12 md:-mt-16 md:pb-16'>
       <div class='container bg-white mx-auto shadow-xl z-10 relative'>
         <div class='py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12' id='contact_form_outer'>
           <h3 class='mb-4 subheading'>Tell Us Something</h3>

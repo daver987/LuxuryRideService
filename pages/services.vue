@@ -23,7 +23,7 @@ definePageMeta({
     <section class="mb-8 px-6">
       <div class="container mx-auto max-w-7xl">
         <div
-          class="bg-white mx-auto shadow-xl -mt-12 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-16 md:px-2 lg:grid lg:px-4 lg:grid-cols-7"
+          class="bg-white mx-auto shadow-xl -mt-8 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-16 md:px-2 lg:grid lg:px-4 lg:grid-cols-7"
         >
           <div
             class="flex mt-8 mb-4 justify-center lg:col-span-2 lg:col-start-6 lg:row-start-1 lg:self-center"

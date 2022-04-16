@@ -9,7 +9,7 @@
     <section class="bg-background mb-8 px-4 sm:px-6">
       <div class="container mx-auto md:grid md:grid-cols-2">
         <div
-          class="bg-white shadow-xl -mt-12 py-6 z-10 relative overflow-hidden md:-mt-16"
+          class="bg-white shadow-xl -mt-8 py-6 z-10 relative overflow-hidden md:-mt-16"
         >
           <div class="py-5">
             <p class="text-center subheading">Behind The Wheel</p>
