@@ -79,10 +79,6 @@ export default defineNuxtConfig({
       subheading:
         'font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm',
       heading: 'font-heading text-4xl text-heading uppercase lg:text-5xl',
-      body: 'bg-background',
-      img: 'object-cover object-center',
-      h1: 'font-heading text-heading-light text-4xl uppercase lg:text-5xl',
-      h2: 'font-heading text-4xl uppercase md:text-2xl lg:text-4xl xl:text-5xl',
     },
   },
 

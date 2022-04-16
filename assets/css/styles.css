@@ -38,4 +38,8 @@ html {
   scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
 }
 
+body {
+  background-color: #ebebeb;
+}
+
 
