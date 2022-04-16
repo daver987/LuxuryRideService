@@ -117,6 +117,7 @@
 </template>
 
 <script setup lang="ts">
+
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
   heading: 'CONTACT US',

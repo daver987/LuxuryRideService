@@ -26,8 +26,6 @@ const useNavigation = () => [
     id: 5,
   },
 ]
-function useOpen() {
-  return useState<boolean>('isOpen', () => false)
-}
 
-export { useNavigation, useOpen }
+
+export { useNavigation }

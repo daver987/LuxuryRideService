@@ -1,10 +1,11 @@
 {
   "name": "luxury-ride-service",
-  "version": "1.0.1",
-  "description": "Luxury Ride Service",
+  "version": "1.1.0",
+  "description": "Luxury Ride Service Website",
   "author": "David Robertson",
   "license": "MIT",
   "private": true,
+  "homepage": "https://luxuryrideservice.com",
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
@@ -26,7 +27,7 @@
     "@unocss/reset": "~0.31.2",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/nuxt": "^8.2.5",
-    "nuxt3": "^3.0.0-27497942.c519cee",
+    "nuxt3": "^3.0.0-27500677.83d27bd",
     "prettier": "^2.6.2",
     "vitest": "^0.9.3"
   },
