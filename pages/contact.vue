@@ -13,7 +13,7 @@
         <div class='py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12' id='contact_form_outer'>
           <h3 class='mb-4 subheading'>Tell Us Something</h3>
           <h2 class='text-background-dark heading'>Send Us A Message</h2>
-          <div id='contact_form_inner'>
+          <div id='contact_form_inner' class='w-full'>
             <FormKit
               type='form'
               class='mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2'
