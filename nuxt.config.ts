@@ -37,6 +37,7 @@ export default defineNuxtConfig({
   },
   buildModules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
 
+
   unocss: {
     uno: true,
     icons: true,

@@ -1,7 +1,6 @@
 <template>
   <div>
     <Script src='https://lrs.addons.la/leads/new/forms/resize/expander.php' config='3'></Script>
-
     <TheHeader
       :aboveHeading='headerInfo.aboveHeading'
       :body='headerInfo.body'
@@ -10,6 +9,7 @@
     />
     <section class='bg-background -mt-8 px-6 pb-12 md:-mt-16 md:pb-16'>
       <div class='container bg-white mx-auto shadow-xl z-10 relative'>
+        <keep-alive>
         <div class='py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12' id='contact_form_outer'>
           <h3 class='mb-4 subheading'>Tell Us Something</h3>
           <h2 class='text-background-dark heading'>Send Us A Message</h2>
@@ -77,6 +77,7 @@
             </FormKit>
           </div>
         </div>
+        </keep-alive>
       </div>
     </section>
     <section class='bg-background mt-16 px-6'>
@@ -115,7 +116,7 @@
 </template>
 
 <script setup lang='ts'>
-
+// "dev": "sudo nuxi dev --host lrsmedia.com --port 80",
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
   heading: 'CONTACT US',
@@ -139,37 +140,4 @@ const formClasses = {
 
 const config = useRuntimeConfig()
 
-// const sendEmail = async () => {
-//   const myHeaders = new Headers()
-//   myHeaders.append('Content-Type', 'application/json')
-//   myHeaders.append('Authorization', 'Bearer ' + `${config.ACCESS_TOKEN}`)
-//
-//   const raw = JSON.stringify({
-//     message: {
-//       subject: 'Message from David',
-//       body: {
-//         contentType: 'Text',
-//         content: 'this is a test email',
-//       },
-//       toRecipients: [
-//         {
-//           emailAddress: {
-//             address: 'oplholds@hotmail.com',
-//           },
-//         },
-//       ],
-//     },
-//   })
-//
-//   const requestOptions = {
-//     method: 'POST',
-//     headers: myHeaders,
-//     body: raw,
-//   }
-//
-//   fetch('https://graph.microsoft.com/v1.0/me/sendMail', requestOptions)
-//     .then((response) => response.text())
-//     .then((result) => console.log(result))
-//     .catch((error) => console.log('error', error))
-// }
 </script>

@@ -7,7 +7,7 @@
   "private": true,
   "homepage": "https://luxuryrideservice.com",
   "scripts": {
-    "dev": "sudo nuxi dev --host lrsmedia.com --port 80",
+    "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "nuxi preview",
     "generate": "nuxi generate",
@@ -16,21 +16,20 @@
   },
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.28",
+    "@iconify/json": "^2.1.29",
     "@microsoft/microsoft-graph-client": "^3.0.2",
     "@microsoft/microsoft-graph-types": "^2.19.0",
     "@nuxt/test-utils-edge": "^3.0.0-27501460.04a72f8",
     "@nuxt/types": "^2.15.8",
     "@splidejs/vue-splide": "^0.6.3",
     "@testing-library/vue": "^6.5.1",
-    "@unocss/nuxt": "^0.31.3",
-    "@unocss/reset": "~0.31.3",
+    "@unocss/nuxt": "^0.31.5",
+    "@unocss/reset": "~0.31.5",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/nuxt": "^8.2.6",
     "nuxt3": "^3.0.0-27501460.04a72f8",
     "prettier": "^2.6.2",
-    "vitest": "^0.9.3",
-    "vue-gtag-next": "^1.14.0"
+    "vitest": "^0.9.3"
   },
   "dependencies": {
     "@formkit/nuxt": "^1.0.0-beta.6"

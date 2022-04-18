@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background">
+  <div>
     <TheNavbar />
     <main>
       <slot />
@@ -7,6 +7,7 @@
     <TheFooter />
   </div>
 </template>
+
 <style>
 .page-enter-active,
 .page-leave-active {
