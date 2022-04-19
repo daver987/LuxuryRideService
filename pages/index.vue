@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const fleetImage =
@@ -16,12 +15,14 @@ definePageMeta({
   //   mode: 'out-in',
   // },
 })
-
 </script>
 
 <template>
   <div>
-
+    <Script
+      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
+      config="6"
+    ></Script>
     <HeroSlider />
     <section class="bg-background mb-16 px-6">
       <div
@@ -65,9 +66,9 @@ definePageMeta({
       </div>
       <div class="px-6">
         <div
-          class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl py-8 px-6 md:mx-auto md:px-16"
+          class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl pb-4 px-6 md:mx-auto overflow-hidden lead_banner_outer"
         >
-          <p class="font-body text-sm text-body">
+          <p class="font-body text-sm text-body pt-8">
             <span class="font-bold font-body text-sm text-heading uppercase"
               >Luxury Ride Service</span
             >
@@ -83,11 +84,15 @@ definePageMeta({
             transportation company, we have a wide range of vehicles available
             to accommodate any need.
           </p>
-          <p class="font-body text-sm text-primary">
+          <p class="font-body text-sm text-primary pb-4">
             Special requests are available for Specialty 6+ person vehicles that
             can take larger tour groups. Contact us to learn about the various
             options available from our limo service.
           </p>
+          <h3 class="text-center text-3xl pb-4 text-primary">
+            Get An Online Quote Today
+          </h3>
+          <div id="lead_banner" class="w-full bg-white overflow-hidden"></div>
         </div>
       </div>
     </section>

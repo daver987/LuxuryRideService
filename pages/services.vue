@@ -14,19 +14,25 @@ definePageMeta({
 
 <template>
   <div class="bg-background">
+    <Script
+      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
+      config="6"
+    ></Script>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
       :heading="headerInfo.heading"
       :image="headerInfo.image"
     />
-    <section class="mb-8 px-6">
-      <div class="container mx-auto max-w-7xl">
+    <section class="mt-6 md:mb-20 px-6">
+      <div
+        class="container mx-auto max-w-7xl bg-white shadow-xl mb-12 md:pb-4 pb-16"
+      >
         <div
-          class="bg-white mx-auto shadow-xl -mt-8 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-16 md:px-2 lg:grid lg:px-4 lg:grid-cols-7"
+          class="bg-white mx-auto -mt-8 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-20 md:px-2 lg:grid lg:px-4 lg:grid-cols-7 lead_banner_outer"
         >
           <div
-            class="flex mt-8 mb-4 justify-center lg:col-span-2 lg:col-start-6 lg:row-start-1 lg:self-center"
+            class="flex pt-8 mt-8 mb-4 justify-center lg:col-span-2 lg:col-start-6 lg:row-start-1 lg:self-center"
           >
             <img
               alt="24/7"
@@ -53,9 +59,13 @@ definePageMeta({
             </p>
           </div>
         </div>
+        <h3 class="text-center text-2xl md:text-3xl mb-6 text-primary">
+          Get An Online Quote Today
+        </h3>
+        <div id="lead_banner" class="w-full md:px-6 bg-white"></div>
       </div>
     </section>
-    <section class="mb-8 px-6">
+    <section class="mb-8 mt-12 md:mt-0 px-6">
       <div class="container mx-auto max-w-7xl md:grid md:gap-4 md:grid-cols-2">
         <div
           :class="service.boxPosition"

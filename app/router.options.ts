@@ -5,7 +5,7 @@ export default <RouterConfig>{
   scrollBehavior() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve({left: 0, top: 0})
+        resolve({ left: 0, top: 0 })
       }, 500)
     })
   },
