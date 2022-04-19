@@ -2,7 +2,7 @@
   <div>
     <section class="my-32 w-full">
       <div
-        class="container flex flex-col-reverse mb-8 max-w-7xl md:grid md:grid-cols-10"
+        class="container mx-auto flex flex-col-reverse mb-8 max-w-7xl md:grid md:grid-cols-10"
       >
         <div class="w-full md:col-span-6">
           <BaseCard class="space-y-6 w-full">
@@ -19,25 +19,26 @@
           </BaseCard>
         </div>
         <div
-          class="invisible md:max-w-full md:w-full md:col-span-4 md:visible md:relative"
-        ></div>
-        <img
-          src="/images/12-Passenger-Van-Car-Service.png"
-          alt="12 Passenger Van"
-          class="h-full object-cover object-center w-full max-w-2xl md:max-w-3xl md:top-[8%] md:right-0 md:-bottom-12 md:absolute"
-          width="1049"
-          height="696"
-        />
+          class="md:w-full md:col-span-4"
+        >
+          <img
+            src="/images/12-Passenger-Van-Car-Service.png"
+            alt="12 Passenger Van"
+            class="object-cover object-center w-full max-w-2xl md:w-5xl md:-ml-40 md:-mt-32"
+            width="1049"
+            height="696"
+          />
+        </div>
       </div>
       <Luggage :peopleAmount="12" :luggageAmount="12" />
     </section>
-    <section class="mb-32 w-full">
+    <section class="mb-16 md:mb-32 w-full">
       <div class="flex flex-col md:grid md:grid-cols-10">
         <div class="w-full md:col-span-4 md:relative">
           <img
             src="/images/Chevy-Suburban-Car-Service.png"
             alt="GMC Yukon XL"
-            class="object-cover object-center w-full md:max-w-3xl md:max-w-2xl md:right-0 md:bottom-[55%] md:-bottom-12 md:left-0 md:absolute"
+            class="object-cover object-center w-full md:w-5xl w-2xl md:right-0 md:bottom-[55%] md:-bottom-12 md:left-0"
             width="1079"
             height="570"
           />
@@ -61,7 +62,7 @@
         </div>
       </div>
     </section>
-    <section class="mb-24 w-full">
+    <section class="mb-16 md:mb-24 w-full">
       <div class="flex flex-col-reverse md:grid md:grid-cols-10">
         <div class="mb-8 md:col-span-6">
           <BaseCard class="container space-y-6 md:col-span-6">
@@ -89,3 +90,15 @@
     </section>
   </div>
 </template>
+
+<!--<style scoped>-->
+<!--.breakout {-->
+<!--  left: 50%;-->
+<!--  margin-left: -50vw;-->
+<!--  margin-right: -50vw;-->
+<!--  max-width: 100vw;-->
+<!--  position: relative;-->
+<!--  right: 50%;-->
+<!--  width: 100vw;-->
+<!--}-->
+<!--</style>-->
