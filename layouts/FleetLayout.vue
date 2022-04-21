@@ -10,7 +10,6 @@ const headerInfo = {
 
 <template>
   <div class="bg-background">
-    <TheNavbar />
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"

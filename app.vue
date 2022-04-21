@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 useHead({
   title: 'Toronto Car Service | Luxury Ride Service',
   meta: [
@@ -24,14 +24,9 @@ useHead({
 </script>
 
 <template>
-    <TheNavbar />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-    <TheFooter />
+  <TheNavbar />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <TheFooter />
 </template>
-
-
-<style>
-
-</style>
