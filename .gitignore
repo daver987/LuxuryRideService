@@ -7,3 +7,4 @@ nuxt.d.ts
 .idea
 wrangler.toml
 .DS_Store
+dist
