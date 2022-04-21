@@ -37,7 +37,6 @@ const headerInfo = {
       </div>
       <slot />
     </main>
-    <TheFooter />
   </div>
 </template>
 
