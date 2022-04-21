@@ -16,7 +16,7 @@ definePageMeta({
   <div class="bg-background">
     <Script
       src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
-      config="6"
+      config="7"
     ></Script>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
