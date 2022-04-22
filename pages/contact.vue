@@ -13,78 +13,76 @@
     />
     <section class="bg-background -mt-8 px-6 pb-12 md:-mt-16 md:pb-16">
       <div class="container bg-white mx-auto shadow-xl z-10 relative">
-        <KeepAlive>
-          <div
-            class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12"
-            id="contact_form_outer"
-          >
-            <h3 class="mb-4 subheading">Tell Us Something</h3>
-            <h2 class="text-background-dark heading">Send Us A Message</h2>
-            <div id="contact_form_inner" class="w-full">
-              <FormKit
-                type="form"
-                class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
-                submit-label="Send Message"
-              >
-                <div>
-                  <FormKit
-                    label="Full Name"
-                    type="text"
-                    name="full-name"
-                    id="full-name"
-                    autocomplete="full-name"
-                    :classes="formClasses"
-                    validation="required"
-                  />
-                </div>
-                <div>
-                  <FormKit
-                    label="Email Address"
-                    id="email"
-                    name="from_email"
-                    type="email"
-                    autocomplete="email"
-                    :classes="formClasses"
-                    validation="required"
-                  />
-                </div>
-                <div>
-                  <FormKit
-                    label="Phone Number"
-                    type="text"
-                    name="phone_number"
-                    id="phone"
-                    autocomplete="tel"
-                    :classes="formClasses"
-                    aria-describedby="phone-optional"
-                  />
-                </div>
-                <div class="sm:col-span-2">
-                  <FormKit
-                    label="Subject"
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    :classes="formClasses"
-                    validation="required"
-                    maxlength="500"
-                  />
-                </div>
+        <div
+          class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12"
+          id="contact_form_outer"
+        >
+          <h3 class="mb-4 subheading">Tell Us Something</h3>
+          <h2 class="text-background-dark heading">Send Us A Message</h2>
+          <div id="contact_form_inner" class="w-full">
+            <FormKit
+              type="form"
+              class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
+              submit-label="Send Message"
+            >
+              <div>
                 <FormKit
-                  label="Message"
-                  type="textarea"
-                  id="message"
-                  name="message"
-                  rows="4"
+                  label="Full Name"
+                  type="text"
+                  name="full-name"
+                  id="full-name"
+                  autocomplete="full-name"
                   :classes="formClasses"
-                  aria-describedby="message-max"
+                  validation="required"
+                />
+              </div>
+              <div>
+                <FormKit
+                  label="Email Address"
+                  id="email"
+                  name="from_email"
+                  type="email"
+                  autocomplete="email"
+                  :classes="formClasses"
+                  validation="required"
+                />
+              </div>
+              <div>
+                <FormKit
+                  label="Phone Number"
+                  type="text"
+                  name="phone_number"
+                  id="phone"
+                  autocomplete="tel"
+                  :classes="formClasses"
+                  aria-describedby="phone-optional"
+                />
+              </div>
+              <div class="sm:col-span-2">
+                <FormKit
+                  label="Subject"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  :classes="formClasses"
                   validation="required"
                   maxlength="500"
                 />
-              </FormKit>
-            </div>
+              </div>
+              <FormKit
+                label="Message"
+                type="textarea"
+                id="message"
+                name="message"
+                rows="4"
+                :classes="formClasses"
+                aria-describedby="message-max"
+                validation="required"
+                maxlength="500"
+              />
+            </FormKit>
           </div>
-        </KeepAlive>
+        </div>
       </div>
     </section>
     <section class="bg-background mt-16 px-6">
