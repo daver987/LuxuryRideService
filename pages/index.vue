@@ -2,6 +2,7 @@
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const { data: logos } = useFetch('/api/logos')
+const { data: info } = useFetch('/api/company-info')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 
@@ -70,9 +71,9 @@ definePageMeta({
           class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl pb-4 px-6 md:mx-auto overflow-hidden lead_banner_outer"
         >
           <p class="font-body text-sm text-body pt-8">
-            <span class="font-bold font-body text-sm text-heading uppercase"
-              >Luxury Ride Service</span
-            >
+            <span class="font-bold font-body text-sm text-heading uppercase">{{
+              info.companyName
+            }}</span>
             puts you or your business at the forefront of Toronto car service.
             For nearly a decade, we have maintained a fleet of new model
             vehicles. We have constantly upgraded to meet the Toronto GTA car
@@ -145,8 +146,8 @@ definePageMeta({
       <div
         class="bg-white mx-auto space-y-4 shadow-xl max-w-7xl p-8 lg:p-x-8 lg:pt-32 lg:pb-8"
       >
-        <p class="text-center subheading">
-          WHAT LUXURY RIDE SERVICE OFFERS YOU
+        <p class="text-center subheading uppercase">
+          WHAT {{ info.companyName }} OFFERS YOU
         </p>
         <h2 class="text-center heading text-heading">We Offer</h2>
       </div>
@@ -165,7 +166,9 @@ definePageMeta({
     </section>
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
-        <p class="text-center subheading">LUXURY RIDE SERVICE PARTNERS</p>
+        <p class="text-center uppercase subheading">
+          {{ info.companyName }} PARTNERS
+        </p>
         <h2 class="text-center text-heading heading">They Trust Us</h2>
       </div>
       <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 bg-background">
