@@ -29,18 +29,20 @@
       <div
         class="tracking-wide pt-8 col-span-1 col-start-1 row-start-6 md:transform md:top-0 md:left-[-6.75rem] md:row-start-4 md:-rotate-90 md:absolute"
       >
-        <a href="tel:2894009408" class="font-body text-sm text-center text-body"
-          >CALL 289.400 .9408</a
+        <a
+          :href="`tel:${companyPhone}`"
+          class="font-body text-sm text-center text-body"
+          >CALL: {{ companyPhone }}</a
         >
       </div>
       <div
         class="pt-16 col-span-1 col-start-1 row-start-6 md:transform md:top-0 md:right-[-12.5rem] md:col-start-2 md:row-start-4 md:rotate-90 md:absolute"
       >
         <a
-          href="mailto:info@luxuryrideservice.com"
-          class="font-body text-sm text-center text-body tracking-wide"
+          :href="`mailto:${companyEmail}`"
+          class="font-body text-sm text-center text-body uppercase tracking-wide"
         >
-          EMAIL: INFO@LUXURYRIDESERVICE.COM
+          EMAIL: {{ companyEmail }}
         </a>
       </div>
     </div>
@@ -64,6 +66,16 @@ defineProps({
   image: {
     type: String,
     required: false,
+  },
+  companyPhone: {
+    type: String,
+    required: false,
+    default: '289.400.9408',
+  },
+  companyEmail: {
+    type: String,
+    required: false,
+    default: 'info@luxuryrideservice.com',
   },
 })
 </script>
