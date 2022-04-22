@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-export function uesTours() {
+export const uesTours = () => {
   return [
     {
       id: 1,
