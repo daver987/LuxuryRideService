@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
+const { data: logos } = useFetch('/api/logos')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 
@@ -167,7 +168,22 @@ definePageMeta({
         <p class="text-center subheading">LUXURY RIDE SERVICE PARTNERS</p>
         <h2 class="text-center text-heading heading">They Trust Us</h2>
       </div>
-      <TheLogoCloud />
+      <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 bg-background">
+        <div class="grid gap-8 grid-cols-2 md:grid-cols-6 lg:grid-cols-5">
+          <div
+            class="flex col-span-1 justify-center md:col-span-2 lg:col-span-1"
+            v-for="logo in logos"
+            :key="logo.id"
+          >
+            <TheLogoCloud
+              :src="logo.src"
+              :alt-text="logo.altText"
+              :width="logo.width"
+              :height="logo.height"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
