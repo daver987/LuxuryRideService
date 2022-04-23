@@ -7,10 +7,10 @@ useHead({
       content:
         'Luxury Ride Service a premier Toronto car service. Luxury cars for hire, Tour Services, Limousine services and airport transfers at affordable prices.',
     },
-    {
-      name: 'google-site-verification',
-      content: 'vxHnCltMFx06rPY1w0vXooUDj8NjRfXmIHbOREMUxrQ',
-    },
+    // {
+    //   name: 'google-site-verification',
+    //   content: 'vxHnCltMFx06rPY1w0vXooUDj8NjRfXmIHbOREMUxrQ',
+    // },
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
