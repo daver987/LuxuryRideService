@@ -7,11 +7,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  nitro: {
-    prerender: {
-      routes: ['/', '/contact/', '/services/'],
-    },
-  },
+  ssr: false,
   buildModules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
 
   unocss: {
