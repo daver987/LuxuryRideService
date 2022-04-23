@@ -379,20 +379,6 @@
     "@formkit/utils" "1.0.0-beta.6"
     "@formkit/validation" "1.0.0-beta.6"
 
-"@gtm-support/core@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@gtm-support/core/-/core-1.2.0.tgz#fbc5cfe37f3962762b9cc8b9d79c2ed0ceb761bc"
-  integrity sha512-zBXBkQAmC5+cUyyHDy8syiiqRLnPV1hspFVncSaRhf62IQ0sn2opLr696uHvNmuD/+dup4IIB6qBu7F/NBqdgg==
-
-"@gtm-support/vue-gtm@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@gtm-support/vue-gtm/-/vue-gtm-1.4.0.tgz#e73d0f097dd8111b2bb71e0b4d3f4ef222571407"
-  integrity sha512-X5MgJbkxZLPV6SVtjgfJ4b3o/W/kqJvFrcK6nw4E0DxWI7H7SXwYAkSnNpfTAkp6POAF9d1w/4iPCll8OB6bvA==
-  dependencies:
-    "@gtm-support/core" "1.2.0"
-  optionalDependencies:
-    vue-router "^4.0.0"
-
 "@headlessui/vue@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.5.0.tgz#8cd4877d3d344e482073a04ae8e3b7f987bb267c"
@@ -5829,7 +5815,12 @@ vue-demi@*:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.5.tgz#8eeed566a7d86eb090209a11723f887d28aeb2d1"
   integrity sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==
 
-vue-router@^4.0.0, vue-router@^4.0.14:
+vue-gtag-next@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/vue-gtag-next/-/vue-gtag-next-1.14.0.tgz#793aef0b90dff4213b9f3a79827cd99b06e678dd"
+  integrity sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw==
+
+vue-router@^4.0.14:
   version "4.0.14"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.14.tgz#ce2028c1c5c33e30c7287950c973f397fce1bd65"
   integrity sha512-wAO6zF9zxA3u+7AkMPqw9LjoUCjSxfFvINQj3E/DceTt6uEz1XZLraDhdg2EYmvVwTBSGlLYsUw8bDmx0754Mw==

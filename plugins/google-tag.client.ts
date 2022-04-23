@@ -1,7 +1,9 @@
-import { createGtm } from '@gtm-support/vue-gtm'
+import VueGtag from 'vue-gtag-next'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(createGtm({
-    id: 'GTM-WX8FCS7',
-  }))
+  nuxtApp.vueApp.use(VueGtag, {
+    property: {
+      id: 'GTM-WX8FCS7',
+    },
+  })
 })
