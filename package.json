@@ -15,20 +15,20 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@formkit/nuxt": "^1.0.0-beta.6",
     "@gtm-support/vue-gtm": "^1.4.0",
     "@headlessui/vue": "^1.5.0",
-    "@iconify/json": "^2.1.30",
-    "@nuxt/test-utils-edge": "^3.0.0-rc.0-27508091.78fcbcf",
+    "@iconify/json": "^2.1.31",
+    "@nuxt/test-utils-edge": "^3.0.0-rc.1-27510703.46ecbc5",
     "@nuxt/types": "^2.15.8",
     "@splidejs/vue-splide": "^0.6.3",
     "@testing-library/vue": "^6.5.1",
-    "@unocss/nuxt": "^0.31.12",
-    "@unocss/reset": "^0.31.12",
+    "@unocss/nuxt": "^0.31.13",
+    "@unocss/reset": "^0.31.13",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/nuxt": "^8.3.1",
     "nuxt": "^3.0.0-rc.1",
     "prettier": "^2.6.2",
-    "vitest": "^0.9.4",
-    "@formkit/nuxt": "^1.0.0-beta.6"
+    "vitest": "^0.9.4"
   }
 }

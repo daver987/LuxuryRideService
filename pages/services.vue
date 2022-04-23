@@ -17,6 +17,7 @@ definePageMeta({
     <Script
       src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
       config="7"
+      defer
     ></Script>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
