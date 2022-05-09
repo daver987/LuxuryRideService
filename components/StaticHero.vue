@@ -16,7 +16,7 @@
           class="h-full object-center object-cover w-full"
         />
       </div>
-      <div class="col-span-1 md:pl-16">
+      <div class="col-span-1 md:pl-24">
         <LeadForm />
       </div>
     </div>
@@ -34,4 +34,8 @@ const slide = {
   id: '1',
   style: 'transform rotate-y-180',
 }
+// const leadForm = ref(null)
+// onMounted(() => {
+//   console.log(leadForm.value)
+// })
 </script>
