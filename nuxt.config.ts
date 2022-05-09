@@ -7,8 +7,10 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  // ssr: false,
-  buildModules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
+  nitro: {
+    preset: 'cloudflare',
+  },
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
 
   unocss: {
     icons: true,

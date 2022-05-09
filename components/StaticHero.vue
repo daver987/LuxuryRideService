@@ -1,12 +1,12 @@
 <template>
   <div
-    class="bg-center bg-cover bg-no-repeat h-screen px-6 z-10 overflow-hidden relative"
+    class="bg-center bg-cover bg-no-repeat h-[150vh] md:h-screen px-6 z-10 overflow-hidden relative"
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <div
-      class="grid grid-cols-2 items-center justify-center h-full max-w-7xl mx-auto"
+      class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full max-w-7xl mx-auto"
     >
-      <div class="col-span-1 p-4">
+      <div class="col-span-1 p-4 space-y-4">
         <h1 class="heading text-white">{{ slide.heading }}</h1>
         <p class="subheading">{{ slide.subHeading }}</p>
         <img
@@ -16,7 +16,7 @@
           class="h-full object-center object-cover w-full"
         />
       </div>
-      <div class="col-span-1 pl-16">
+      <div class="col-span-1 md:pl-16">
         <LeadForm />
       </div>
     </div>
