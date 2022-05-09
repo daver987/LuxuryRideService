@@ -64,29 +64,35 @@ definePageMeta({
       </div>
       <div class="px-6">
         <div
-          class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl p-10 md:mx-auto overflow-hidden lead_banner_outer"
+          class="flex flex-col md:flex-row place-items-center bg-white shadow-xl -mt-16 max-w-7xl p-10 md:mx-auto overflow-hidden"
         >
-          <p class="font-body text-sm text-body max-w-[65ch]">
-            <span class="font-bold font-body text-sm text-heading uppercase">{{
-              info.companyName
-            }}</span>
-            puts you or your business at the forefront of Toronto car service.
-            For nearly a decade, we have maintained a fleet of new model
-            vehicles. We have constantly upgraded to meet the Toronto GTA car
-            service market demands. We are ensuring that our clients receive
-            only the very best chauffeur service available in Toronto, Canada.
-            Our car service includes the safe and reliable Cadillac XTS, Lincoln
-            Navigator SUV, Cadillac Escalade SUV, and Lincoln Continental. Our
-            thoroughly trained drivers provide the highest level of service for
-            even the most discriminating clientele. As a full-service
-            transportation company, we have a wide range of vehicles available
-            to accommodate any need.
-          </p>
-          <p class="font-body text-sm text-primary max-w-[65ch]">
-            Special requests are available for Specialty 6+ person vehicles that
-            can take larger tour groups. Contact us to learn about the various
-            options available from our limo service.
-          </p>
+          <div class="space-y-2 w-full mb-4">
+            <p class="font-body text-sm text-body max-w-[65ch]">
+              <span
+                class="font-bold font-body text-sm text-heading uppercase"
+                >{{ info.companyName }}</span
+              >
+              puts you or your business at the forefront of Toronto car service.
+              For nearly a decade, we have maintained a fleet of new model
+              vehicles. We have constantly upgraded to meet the Toronto GTA car
+              service market demands. We are ensuring that our clients receive
+              only the very best chauffeur service available in Toronto, Canada.
+              Our car service includes the safe and reliable Cadillac XTS,
+              Lincoln Navigator SUV, Cadillac Escalade SUV, and Lincoln
+              Continental. Our thoroughly trained drivers provide the highest
+              level of service for even the most discriminating clientele. As a
+              full-service transportation company, we have a wide range of
+              vehicles available to accommodate any need.
+            </p>
+            <p class="font-body text-sm text-primary max-w-[65ch]">
+              Special requests are available for Specialty 6+ person vehicles
+              that can take larger tour groups. Contact us to learn about the
+              various options available from our limo service.
+            </p>
+          </div>
+          <div class="w-full h-full justify-center flex flex-row">
+            <img alt="24/7" class="h-40 w-40" src="/icons/24-hours.svg" />
+          </div>
         </div>
       </div>
     </section>

@@ -14,11 +14,6 @@ definePageMeta({
 
 <template>
   <div class="bg-background">
-    <Script
-      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
-      config="7"
-      defer
-    ></Script>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
@@ -26,26 +21,15 @@ definePageMeta({
       :image="headerInfo.image"
     />
     <section class="mt-6 md:mb-20 px-6">
-      <div
-        class="container mx-auto max-w-7xl bg-white shadow-xl mb-12 md:pb-4 pb-16"
-      >
+      <div class="container mx-auto max-w-7xl bg-white shadow-xl">
         <div
-          class="bg-white mx-auto -mt-8 max-w-7xl py-6 z-20 relative overflow-hidden md:-mt-20 md:px-2 lg:grid lg:px-4 lg:grid-cols-7 lead_banner_outer"
+          class="bg-white mx-auto -mt-8 py-6 z-20 relative overflow-hidden md:-mt-20 md:px-2 grid lg:px-4 md:grid-cols-2 grid-cols-1"
         >
-          <div
-            class="flex pt-8 mt-8 mb-4 justify-center lg:col-span-2 lg:col-start-6 lg:row-start-1 lg:self-center"
-          >
-            <img
-              alt="24/7"
-              class="h-32 fill-primary w-32"
-              src="/icons/24-hours.svg"
-            />
-          </div>
-          <div class="p-4 lg:col-span-5 lg:col-start-1 lg:row-start-1">
+          <div class="p-4 col-span-1">
             <h2 class="text-center mb-4 subheading lg:text-left">
               CHECK OUT OUR SERVICES
             </h2>
-            <p class="text-body text-sm">
+            <p class="text-body text-sm max-w-[65ch]">
               Luxury Ride Service puts you or your business at the forefront of
               Toronto car service. For nearly a decade, we have maintained a
               fleet of new model vehicles. We have constantly upgraded to meet
@@ -59,11 +43,14 @@ definePageMeta({
               wide range of vehicles available to accommodate any need.
             </p>
           </div>
+          <div class="col-span-1">
+            <LeadForm
+              :config="2"
+              inner="micro_form_inner"
+              outer="micro_form_outer"
+            />
+          </div>
         </div>
-        <h3 class="text-center text-2xl md:text-3xl mb-6 text-primary">
-          Get An Online Quote Today
-        </h3>
-        <div id="lead_banner" class="w-full md:px-6 bg-white"></div>
       </div>
     </section>
     <section class="mb-8 mt-12 md:mt-0 px-6">
