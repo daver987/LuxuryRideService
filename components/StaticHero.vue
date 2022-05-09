@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-center bg-cover bg-no-repeat h-[150vh] md:h-screen px-6 z-10 overflow-hidden relative"
+    class="bg-center bg-cover bg-no-repeat h-[150vh] md:h-screen px-6 z-10 pt-20 overflow-hidden relative"
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <div
