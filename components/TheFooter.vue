@@ -77,11 +77,12 @@ import FooterCta from '~/components/FooterCta.vue'
 defineProps({
   companyName: { type: String, default: 'Luxury Ride Service' },
   companyEmail: { type: String, default: 'info@luxuryrideservice.com' },
-  companyPhone: { type: String, default: '289.400.9408' },
+  companyPhone: { type: String, default: '289.640.1876' },
   companyLogo: {
     type: String,
     default: '/images/Luxury-Ride-Service-Logo.png',
   },
 })
 const nav = useNavigation()
+
 </script>

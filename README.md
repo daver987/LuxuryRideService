@@ -1,6 +1,6 @@
 # Luxury Ride Service Nuxt 3
 
-This Project Includes Unocss, Pinia for State Management, VueSplide for the Slider, Iconify for Icons, and
+This Project Includes Unocss, VueSplide for the Slider, Iconify for Icons, and
 headlessUI from tailwind. Site was deployed to Cloudflare Workers.
 More to come
 

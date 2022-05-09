@@ -21,14 +21,10 @@ definePageMeta({
 
 <template>
   <div>
-    <Script
-      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
-      config="6"
-    ></Script>
-    <HeroSlider />
-    <section class="bg-background mb-16 px-6">
+    <StaticHero />
+    <section class="bg-background pt-16 mb-16 px-6">
       <div
-        class="bg-white mx-auto shadow-xl -mt-16 max-w-4xl grid py-4 z-20 grid-cols-1 relative md:py-8 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-4"
+        class="bg-white mx-auto shadow-xl max-w-4xl grid py-4 z-20 grid-cols-1 relative md:py-8 md:grid-cols-2 lg:max-w-7xl lg:grid-cols-4"
       >
         <IconBlockAbout
           v-for="iconBlocks in iconBlock"
@@ -68,9 +64,9 @@ definePageMeta({
       </div>
       <div class="px-6">
         <div
-          class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl pb-4 px-6 md:mx-auto overflow-hidden lead_banner_outer"
+          class="bg-white space-y-2 shadow-xl -mt-16 max-w-7xl p-10 md:mx-auto overflow-hidden lead_banner_outer"
         >
-          <p class="font-body text-sm text-body pt-8">
+          <p class="font-body text-sm text-body max-w-[65ch]">
             <span class="font-bold font-body text-sm text-heading uppercase">{{
               info.companyName
             }}</span>
@@ -86,15 +82,11 @@ definePageMeta({
             transportation company, we have a wide range of vehicles available
             to accommodate any need.
           </p>
-          <p class="font-body text-sm text-primary pb-4">
+          <p class="font-body text-sm text-primary max-w-[65ch]">
             Special requests are available for Specialty 6+ person vehicles that
             can take larger tour groups. Contact us to learn about the various
             options available from our limo service.
           </p>
-          <h3 class="text-center text-3xl pb-4 text-primary">
-            Get An Online Quote Today
-          </h3>
-          <div id="lead_banner" class="w-full bg-white overflow-hidden"></div>
         </div>
       </div>
     </section>

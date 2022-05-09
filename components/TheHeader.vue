@@ -70,7 +70,7 @@ defineProps({
   companyPhone: {
     type: String,
     required: false,
-    default: '289.400.9408',
+    default: '289.640.1876',
   },
   companyEmail: {
     type: String,

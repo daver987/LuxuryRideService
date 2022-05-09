@@ -106,11 +106,11 @@
             >
           </div>
           <div class="col-span-4 col-start-7 row-start-1">
-            <a href="tel:2894009408" class="text-lg tracking-wide text-heading">
+            <a href="tel:2896401876" class="text-lg tracking-wide text-heading">
               <div
                 class="mx-auto text-center text-body mb-6 text-9xl i-carbon-phone"
               />
-              289.400.9408</a
+              289.640.1876</a
             >
           </div>
         </div>

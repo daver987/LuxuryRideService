@@ -3,8 +3,12 @@
     :options="options"
     style="background-image: url('/icons/gradient-background.svg')"
     class="bg-center bg-cover bg-no-repeat h-screen px-6 z-10 overflow-hidden relative"
+    id="lead_form_inner"
   >
-    <SplideSlide v-for="slide in slider" :key="slide.id">
+    <SplideSlide
+      v-for="slide in slider"
+      :key="slide.id"
+    >
       <div
         class="container mx-auto h-full max-w-7xl grid py-8 grid-cols-1 grid-rows-6 place-items-center md:grid-rows-3 md:grid-cols-2"
       >
@@ -14,7 +18,10 @@
           <h1 class="text-center text-white leading-tight heading md:text-left">
             {{ slide.heading }}
           </h1>
-          <p class="text-center subheading md:text-left" id="subheading">
+          <p
+            class="text-center subheading md:text-left"
+            id="subheading"
+          >
             {{ slide.subHeading }}
           </p>
           <BaseButton
@@ -40,24 +47,27 @@
   </Splide>
 </template>
 
-<script setup lang="ts">
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-import { Options } from '@splidejs/splide'
-import '@splidejs/splide/dist/css/splide.min.css'
+<script
+  setup
+  lang="ts"
+>
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import { Options } from "@splidejs/splide";
+import "@splidejs/splide/dist/css/splide.min.css";
 
-const slider = useSlider()
+const slider = useSlider();
 const options: Options = {
   rewind: false,
   perPage: 1,
-  gap: '1rem',
-  height: '100vh',
-  type: 'loop',
+  gap: "1rem",
+  height: "100vh",
+  type: "fade",
   autoplay: true,
   pauseOnHover: false,
   arrows: false,
   interval: 5000,
-  speed: 750,
+  speed: 1050,
   cover: true,
-  fixedHeight: '100vh',
-}
+  fixedHeight: "100vh"
+};
 </script>
