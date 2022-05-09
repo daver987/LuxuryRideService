@@ -9,7 +9,7 @@ const headerInfo = {
 </script>
 
 <template>
-  <div class="bg-background">
+  <div>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
@@ -48,13 +48,5 @@ const headerInfo = {
 }
 .router-link-active span:hover {
   color: #fff;
-}
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-.page-enter,
-.page-leave-to {
-  opacity: 0;
 }
 </style>

@@ -2,7 +2,7 @@
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const { data: logos } = useFetch('/api/logos')
-const { data: info } = useFetch('/api/company-info')
+const { data: info } = useFetch('/api/companyInfo')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 

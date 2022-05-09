@@ -11,7 +11,7 @@ const toggleMenu = () => {
   >
     <nav class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
       <div class="col-span-1 col-start-1">
-        <NuxtLink to="/" class="max-w-[200px] block">
+        <NuxtLink to="/" class="max-w-[200px] block cursor-pointer">
           <img
             src="/images/Luxury-Ride-Service-Logo.png"
             alt="Luxury-Ride-Service"
