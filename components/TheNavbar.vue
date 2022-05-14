@@ -6,10 +6,10 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <div
+  <nav
     class="-mb-[5.05rem] w-full px-6 z-30 row-start-1 self-start justify-self-stretch relative md:col-span-2"
   >
-    <nav class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
+    <div class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
       <div class="col-span-1 col-start-1">
         <NuxtLink to="/" class="max-w-[200px] block cursor-pointer">
           <img
@@ -30,6 +30,6 @@ const toggleMenu = () => {
         <span class="sr-only">Open main menu</span>
       </div>
       <SlideOutMenu />
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>

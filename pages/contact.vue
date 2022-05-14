@@ -129,6 +129,7 @@ const headerInfo = {
 }
 
 definePageMeta({
+  title: 'Contact Us',
   layout: 'default',
 })
 

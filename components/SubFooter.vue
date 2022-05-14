@@ -6,8 +6,6 @@
   </div>
 </template>
 <script setup lang="ts">
-
-// function that return's the current year
 const getYear = () => new Date().getFullYear()
 
 defineProps({
@@ -15,5 +13,4 @@ defineProps({
     default: '© LUXURY RIDE SERVICE - ALL RIGHTS RESERVED',
   },
 })
-
 </script>

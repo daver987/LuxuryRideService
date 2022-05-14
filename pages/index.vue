@@ -8,14 +8,15 @@ const fleetImage =
 
 definePageMeta({
   layout: 'default',
-  // pageTransition: {
-  //   appear: true,
-  //   enterFromClass: 'opacity-0 translate-x-10',
-  //   enterActiveClass: 'duration-[2000ms]',
-  //   leaveToClass: 'opacity-0 translate-x-10',
-  //   leaveActiveClass: 'duration-[2000ms]',
-  //   mode: 'out-in',
-  // },
+  title: 'Luxury Ride Service | Toronto Car Service',
+  pageTransition: {
+    appear: true,
+    enterFromClass: 'opacity-0 translate-x-10',
+    enterActiveClass: 'duration-[2000ms]',
+    leaveToClass: 'opacity-0 translate-x-10',
+    leaveActiveClass: 'duration-[2000ms]',
+    mode: 'out-in',
+  },
 })
 </script>
 

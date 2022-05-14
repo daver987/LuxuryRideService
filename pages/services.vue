@@ -8,6 +8,7 @@ const headerInfo = {
   body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
 }
 definePageMeta({
+  title: 'Services',
   layout: 'default',
 })
 </script>

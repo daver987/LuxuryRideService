@@ -6,6 +6,7 @@ const headerInfo = {
   image: 'background-image: url("/images/Waiting-For-Car-Service.jpg");',
 }
 definePageMeta({
+  title: 'Reservations',
   layout: 'default',
 })
 </script>
