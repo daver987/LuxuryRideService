@@ -1,0 +1,9 @@
+name = "luxuryrideservice"
+compatibility_date = "2022-05-14"
+main = ".output/server/index.mjs"
+account_id = "9daf554a647e8485085e1bfe6244c8a3"
+workers_dev = true
+
+[site]
+bucket = ".output/public"
+
