@@ -27,7 +27,7 @@ const headerInfo = {
           >
             <img :src="`/icons/${tab.icon}.svg`" alt="icon" class="w-16" />
             <span
-              class="text-sm text-center text-body tracking-widest uppercase"
+              class="text-sm text-center text-body tracking-widest uppercase hover:text-white"
             >
               {{ tab.title }}
             </span>

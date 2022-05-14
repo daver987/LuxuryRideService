@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Luxury Ride Service Fleet',
+  title: 'Luxury Ride Service | Cadillac XTS',
+  key: (route) => route.fullPath,
   pageTransition: {
     appear: true,
     enterFromClass: 'opacity-0',

@@ -8,6 +8,14 @@ const headerInfo = {
 definePageMeta({
   title: 'Reservations',
   layout: 'default',
+  layoutTransition: {
+    appear: true,
+    enterFromClass: 'opacity-0',
+    enterActiveClass: 'duration-[500ms]',
+    leaveToClass: 'opacity-0',
+    leaveActiveClass: 'duration-[500ms]',
+    mode: 'out-in',
+  },
 })
 </script>
 
