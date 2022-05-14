@@ -6,7 +6,7 @@ export default <RouterConfig>{
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ left: 0, top: 0 })
-      }, 400)
+      }, 500)
     })
   },
 }
