@@ -1,12 +1,4 @@
 <script setup lang="ts">
-const { data: tours } = useFetch('/api/tours')
-const { data: services } = useFetch('/api/service')
-const headerInfo = {
-  aboveHeading: 'WHAT WE OFFER YOU',
-  heading: 'OUR SERVICES',
-  image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
-  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
-}
 definePageMeta({
   title: 'Services',
   layout: 'default',
@@ -19,6 +11,23 @@ definePageMeta({
     mode: 'out-in',
   },
 })
+useHead({
+  title: 'Luxury Ride Service | Services',
+  script: [
+    {
+      src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
+      config: 2,
+    },
+  ],
+})
+const { data: tours } = useFetch('/api/tours')
+const { data: services } = useFetch('/api/service')
+const headerInfo = {
+  aboveHeading: 'WHAT WE OFFER YOU',
+  heading: 'OUR SERVICES',
+  image: 'background-image: url("/images/Toronto-City-Tour.jpg")',
+  body: "Luxury Ride Service is here to help you get from place to place. It's our job to provide you with the means of transportation, and we won't stop until it's done right.",
+}
 </script>
 
 <template>
@@ -53,11 +62,7 @@ definePageMeta({
             </p>
           </div>
           <div class="col-span-1">
-            <LeadForm
-              :config="2"
-              inner="micro_form_inner"
-              outer="micro_form_outer"
-            />
+            <LeadForm inner="micro_form_inner" outer="micro_form_outer" />
           </div>
         </div>
       </div>

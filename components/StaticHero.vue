@@ -34,8 +34,4 @@ const slide = {
   id: '1',
   style: 'transform rotate-y-180',
 }
-// const leadForm = ref(null)
-// onMounted(() => {
-//   console.log(leadForm.value)
-// })
 </script>

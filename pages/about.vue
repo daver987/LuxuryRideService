@@ -142,6 +142,9 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'Luxury Ride Service | About Us',
+})
 const headerInfo = {
   aboveHeading: 'DISCOVER LUXURY RIDE SERVICE',
   heading: 'ABOUT US',

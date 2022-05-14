@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+  title: 'Luxury Ride Service | Reservations',
+})
 const headerInfo = {
   aboveHeading: 'GET IN TOUCH',
   heading: 'BOOK TODAY',

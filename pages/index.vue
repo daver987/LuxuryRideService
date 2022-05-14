@@ -1,11 +1,4 @@
 <script setup lang="ts">
-const { data: services } = useFetch('/api/services')
-const { data: iconBlock } = useFetch('/api/features')
-const { data: logos } = useFetch('/api/logos')
-const { data: info } = useFetch('/api/companyInfo')
-const fleetImage =
-  'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
-
 definePageMeta({
   layout: 'default',
   title: 'Luxury Ride Service | Toronto Car Service',
@@ -18,6 +11,20 @@ definePageMeta({
     mode: 'out-in',
   },
 })
+useHead({
+  script: [
+    {
+      src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
+      config: 9,
+    },
+  ],
+})
+const { data: services } = useFetch('/api/services')
+const { data: iconBlock } = useFetch('/api/features')
+const { data: logos } = useFetch('/api/logos')
+const { data: info } = useFetch('/api/companyInfo')
+const fleetImage =
+  'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 </script>
 
 <template>

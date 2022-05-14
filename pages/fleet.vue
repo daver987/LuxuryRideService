@@ -5,6 +5,9 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'Luxury Ride Service | Fleet',
+})
 definePageMeta({
   layout: 'fleet-layout',
   keepalive: true,
