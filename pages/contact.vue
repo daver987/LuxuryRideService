@@ -1,10 +1,5 @@
 <template>
   <div>
-    <Script
-      async
-      src="https://lrs.addons.la/leads/new/forms/resize/expander.php"
-      config="3"
-    ></Script>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"
