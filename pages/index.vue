@@ -11,10 +11,10 @@ definePageMeta({
   title: 'Luxury Ride Service | Toronto Car Service',
   pageTransition: {
     appear: true,
-    enterFromClass: 'opacity-0 translate-x-10',
-    enterActiveClass: 'duration-[2000ms]',
-    leaveToClass: 'opacity-0 translate-x-10',
-    leaveActiveClass: 'duration-[2000ms]',
+    enterFromClass: 'opacity-0',
+    enterActiveClass: 'duration-[500ms]',
+    leaveToClass: 'opacity-0',
+    leaveActiveClass: 'duration-[500ms]',
     mode: 'out-in',
   },
 })

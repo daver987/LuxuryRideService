@@ -3,7 +3,7 @@
 
   "compilerOptions": {
     "allowJs": true,
-    "types": ["@nuxt/types", "@microsoft/microsoft-graph-types"],
+    "types": ["@nuxt/types"],
 
   }
 }
