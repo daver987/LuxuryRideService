@@ -13,6 +13,11 @@ definePageMeta({
     mode: 'out-in',
   },
 })
+const router = useRouter()
+const { options } = router
+options.scrollBehavior = (to, from, savedPosition) => {}
+
+console.log(options.scrollBehavior)
 </script>
 
 <template>
