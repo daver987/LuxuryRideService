@@ -1,3 +1,20 @@
+<script setup lang="ts">
+definePageMeta({
+  title: 'Luxury Ride Service | Other Vehicles',
+  key: (route) => route.fullPath,
+  pageTransition: {
+    appear: true,
+    enterFromClass: 'opacity-0 translate-x-[-100vw]',
+    enterToClass: 'opacity-100 translate-x-0',
+    enterActiveClass: 'duration-[400ms]',
+    leaveFromClass: 'opacity-100 translate-x-0',
+    leaveToClass: 'opacity-0 translate-x-[-100vw]',
+    leaveActiveClass: 'duration-[400ms]',
+    mode: 'out-in',
+  },
+})
+</script>
+
 <template>
   <div>
     <section class="my-32 w-full">
@@ -18,9 +35,7 @@
             </p>
           </BaseCard>
         </div>
-        <div
-          class="md:w-full md:col-span-4"
-        >
+        <div class="md:w-full md:col-span-4">
           <img
             src="/images/12-Passenger-Van-Car-Service.png"
             alt="12 Passenger Van"

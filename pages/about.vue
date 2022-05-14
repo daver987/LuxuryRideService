@@ -153,7 +153,7 @@ const { data: quality } = useFetch('/api/qualities')
 definePageMeta({
   title: 'About Us',
   layout: 'default',
-  layoutTransition: {
+  pageTransition: {
     appear: true,
     enterFromClass: 'opacity-0',
     enterActiveClass: 'duration-[500ms]',

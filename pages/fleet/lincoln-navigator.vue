@@ -1,3 +1,20 @@
+<script setup lang="ts">
+definePageMeta({
+  title: 'Luxury Ride Service | Lincoln Navigator',
+  key: (route) => route.fullPath,
+  pageTransition: {
+    appear: true,
+    enterFromClass: 'opacity-0 translate-x-[-100vw]',
+    enterToClass: 'opacity-100 translate-x-0',
+    enterActiveClass: 'duration-[400ms]',
+    leaveFromClass: 'opacity-100 translate-x-0',
+    leaveToClass: 'opacity-0 translate-x-[-100vw]',
+    leaveActiveClass: 'duration-[400ms]',
+    mode: 'out-in',
+  },
+})
+</script>
+
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">

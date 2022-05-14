@@ -8,7 +8,7 @@ const headerInfo = {
 definePageMeta({
   title: 'Reservations',
   layout: 'default',
-  layoutTransition: {
+  pageTransition: {
     appear: true,
     enterFromClass: 'opacity-0',
     enterActiveClass: 'duration-[500ms]',

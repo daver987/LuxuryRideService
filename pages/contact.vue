@@ -131,7 +131,7 @@ const headerInfo = {
 definePageMeta({
   title: 'Contact Us',
   layout: 'default',
-  layoutTransition: {
+  pageTransition: {
     appear: true,
     enterFromClass: 'opacity-0',
     enterActiveClass: 'duration-[500ms]',

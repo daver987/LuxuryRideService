@@ -10,7 +10,7 @@ const headerInfo = {
 definePageMeta({
   title: 'Services',
   layout: 'default',
-  layoutTransition: {
+  pageTransition: {
     appear: true,
     enterFromClass: 'opacity-0',
     enterActiveClass: 'duration-[500ms]',
