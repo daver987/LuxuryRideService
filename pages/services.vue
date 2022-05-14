@@ -31,7 +31,7 @@ const headerInfo = {
 </script>
 
 <template>
-  <div class="bg-background">
+  <div>
     <TheHeader
       :aboveHeading="headerInfo.aboveHeading"
       :body="headerInfo.body"

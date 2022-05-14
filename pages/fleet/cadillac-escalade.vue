@@ -1,3 +1,25 @@
+<script setup lang="ts">
+definePageMeta({
+  title: 'Cadillac Escalade SUV',
+  key: (route) => route.fullPath,
+  pageTransition: {
+    appear: true,
+    enterFromClass: 'opacity-0 translate-x-[-100vw]',
+    enterToClass: 'opacity-100 translate-x-0',
+    enterActiveClass: 'duration-[400ms]',
+    leaveFromClass: 'opacity-100 translate-x-0',
+    leaveToClass: 'opacity-0 translate-x-[-100vw]',
+    leaveActiveClass: 'duration-[400ms]',
+    mode: 'out-in',
+  },
+})
+const router = useRouter()
+const { options } = router
+options.scrollBehavior = (to, from, savedPosition) => {}
+
+console.log(options.scrollBehavior)
+</script>
+
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
@@ -60,25 +82,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({
-  title: 'Cadillac Escalade SUV',
-  key: (route) => route.fullPath,
-  pageTransition: {
-    appear: true,
-    enterFromClass: 'opacity-0 translate-x-[-100vw]',
-    enterToClass: 'opacity-100 translate-x-0',
-    enterActiveClass: 'duration-[400ms]',
-    leaveFromClass: 'opacity-100 translate-x-0',
-    leaveToClass: 'opacity-0 translate-x-[-100vw]',
-    leaveActiveClass: 'duration-[400ms]',
-    mode: 'out-in',
-  },
-})
-const router = useRouter()
-const { options } = router
-options.scrollBehavior = (to, from, savedPosition) => {}
-
-console.log(options.scrollBehavior)
-</script>
