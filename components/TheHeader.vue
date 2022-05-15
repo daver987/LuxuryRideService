@@ -16,9 +16,9 @@
           <p class="text-center subheading md:text-left">
             {{ aboveHeading }}
           </p>
-          <h2 class="text-center text-white leading-tight heading md:text-left">
+          <h1 class="text-center text-white leading-tight heading md:text-left">
             {{ heading }}
-          </h2>
+          </h1>
           <p
             class="font-body max-w-xs text-sm text-center text-white tracking-wider md:max-w-sm md:text-left"
           >

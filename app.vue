@@ -1,5 +1,8 @@
 <script setup lang="ts">
 useHead({
+  html: {
+    lang: 'en_CA',
+  },
   title: 'Toronto Car Service | Luxury Ride Service',
   meta: [
     {
