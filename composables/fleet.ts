@@ -1,5 +1,4 @@
 // noinspection JSUnusedGlobalSymbols
-
 export const useFleet = () => [
   {
     id: 1,
@@ -19,7 +18,7 @@ export const useFleet = () => [
     altText: 'Cadillac XTS',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 2,
@@ -40,7 +39,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 3,
@@ -54,7 +53,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 4,
@@ -68,7 +67,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 5,
@@ -83,7 +82,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 6,
@@ -97,7 +96,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 7,
@@ -111,7 +110,7 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
   {
     id: 8,
@@ -125,6 +124,6 @@ export const useFleet = () => [
     altText: '',
     gallery: [{ image: '', altText: '' }],
     buttonText: 'contact us',
-    buttonLink: '/fleet/cadillac-xts',
+    buttonLink: '/fleet',
   },
 ]

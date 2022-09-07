@@ -1,4 +1,4 @@
-export default defineEventHandler(() => {
+export default defineEventHandler((_event) => {
   return [
     {
       name: 'Home',
@@ -7,7 +7,7 @@ export default defineEventHandler(() => {
     },
     {
       name: 'Fleet',
-      href: '/fleet/cadillac-xts',
+      href: '/fleet',
       id: 2,
     },
     {
@@ -23,6 +23,11 @@ export default defineEventHandler(() => {
     {
       name: 'Contact',
       href: '/contact',
+      id: 5,
+    },
+    {
+      name: 'Checkout',
+      href: '/checkout',
       id: 5,
     },
   ]

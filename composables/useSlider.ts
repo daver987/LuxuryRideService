@@ -1,4 +1,4 @@
-export function useSlider() {
+export const useSlider = () => {
   return [
     {
       heading: 'Experience Luxury Rides and Tours',

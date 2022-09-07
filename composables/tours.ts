@@ -1,5 +1,4 @@
 // noinspection JSUnusedGlobalSymbols
-
 export const uesTours = () => {
   return [
     {

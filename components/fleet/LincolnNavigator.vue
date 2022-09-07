@@ -23,7 +23,9 @@ console.log(options.scrollBehavior)
 <template>
   <div>
     <div class="mb-12 grid grid-cols-1 place-items-center md:grid-cols-2">
-      <div><h2 class="text-center pt-8 heading">Lincoln Navigator SUV</h2></div>
+      <div>
+        <h2 class="text-center pt-8 heading">Lincoln Navigator SUV</h2>
+      </div>
       <div>
         <img
           src="/images/Lincoln-Navigator-Car-Service.png"

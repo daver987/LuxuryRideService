@@ -148,6 +148,4 @@ const formClasses = {
   help: 'text-body',
   message: 'text-red-600',
 }
-
-// const config = useRuntimeConfig()
 </script>

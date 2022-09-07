@@ -1,4 +1,4 @@
-export default defineEventHandler(() => {
+export default defineEventHandler((_event) => {
   return [
     {
       title: 'Niagara Falls',

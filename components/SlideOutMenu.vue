@@ -29,7 +29,7 @@
           leave-to="-translate-x-full"
         >
           <div
-            class="bg-background-dark flex flex-col max-w-sm shadow-xl w-full pb-12 relative overflow-y-auto md:max-w-lg"
+            class="bg-background-dark flex flex-col max-w-[375px] shadow-xl w-full pb-12 relative overflow-y-auto md:max-w-lg"
           >
             <div class="flex px-4 pt-5 pb-4">
               <button

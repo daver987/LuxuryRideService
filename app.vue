@@ -53,11 +53,9 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
     <TheNavbar />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <NuxtPage />
     <TheFooter />
-  </div>
+  </NuxtLayout>
 </template>

@@ -7,7 +7,7 @@ const useNavigation = () => [
   },
   {
     name: 'Fleet',
-    href: '/fleet/cadillac-xts',
+    href: '/fleet',
     id: 2,
   },
   {
@@ -26,6 +26,5 @@ const useNavigation = () => [
     id: 5,
   },
 ]
-
 
 export { useNavigation }

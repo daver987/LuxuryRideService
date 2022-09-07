@@ -4,9 +4,9 @@ import { transformerDirectives } from 'unocss'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  typescript: {
-    shim: false,
-  },
+  // typescript: {
+  //   shim: false,
+  // },
   nitro: {
     preset: 'cloudflare',
   },
@@ -57,4 +57,8 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
+  components: {
+    global: true,
+    dirs: ['~/components'],
+  },
 })

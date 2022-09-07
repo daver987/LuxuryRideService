@@ -11,18 +11,10 @@ definePageMeta({
     mode: 'out-in',
   },
 })
-useHead({
-  script: [
-    {
-      src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
-      config: 9,
-    },
-  ],
-})
+
 const { data: services } = useFetch('/api/services')
 const { data: iconBlock } = useFetch('/api/features')
 const { data: logos } = useFetch('/api/logos')
-const { data: info } = useFetch('/api/companyInfo')
 const fleetImage =
   'background-image: url("/images/Cadillac-XTS-Interior-Car-Service.jpg")'
 </script>
@@ -65,7 +57,7 @@ const fleetImage =
               kind="btn-light"
               label="View All"
               :nuxtLink="true"
-              to="/fleet/cadillac-xts"
+              to="/fleet"
             />
           </div>
         </div>
@@ -76,10 +68,10 @@ const fleetImage =
         >
           <div class="space-y-2 w-full mb-4">
             <p class="font-body text-sm text-body max-w-[65ch]">
-              <span
-                class="font-bold font-body text-sm text-heading uppercase"
-                >{{ info.companyName }}</span
-              >
+              <!--              <span-->
+              <!--                class="font-bold font-body text-sm text-heading uppercase"-->
+              <!--                >{{ info.companyName }}</span-->
+              <!--              >-->
               puts you or your business at the forefront of Toronto car service.
               For nearly a decade, we have maintained a fleet of new model
               vehicles. We have constantly upgraded to meet the Toronto GTA car
@@ -153,7 +145,7 @@ const fleetImage =
         class="bg-white mx-auto space-y-4 shadow-xl max-w-7xl p-8 lg:p-x-8 lg:pt-32 lg:pb-8"
       >
         <p class="text-center subheading uppercase">
-          WHAT {{ info.companyName }} OFFERS YOU
+          WHAT Luxury Ride Service OFFERS YOU
         </p>
         <h2 class="text-center heading text-heading">We Offer</h2>
       </div>
@@ -173,7 +165,7 @@ const fleetImage =
     <section class="bg-background py-8 px-6 md:py-20">
       <div class="space-y-8">
         <p class="text-center uppercase subheading">
-          {{ info.companyName }} PARTNERS
+          Luxury Ride Service PARTNERS
         </p>
         <h2 class="text-center text-heading heading">They Trust Us</h2>
       </div>

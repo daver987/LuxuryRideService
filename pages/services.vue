@@ -13,12 +13,6 @@ definePageMeta({
 })
 useHead({
   title: 'Luxury Ride Service | Services',
-  script: [
-    {
-      src: 'https://lrs.addons.la/leads/new/forms/resize/expander.php',
-      config: 2,
-    },
-  ],
 })
 const { data: tours } = useFetch('/api/tours')
 const { data: services } = useFetch('/api/service')

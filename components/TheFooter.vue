@@ -1,7 +1,11 @@
 <template>
   <footer>
-    <FooterCta />
-    <div class="bg-background-dark w-full px-8 pt-24 pb-8 lg:pt-16 lg:pb-4">
+    <div class="px-6 lg:px-10">
+      <FooterCta />
+    </div>
+    <div
+      class="bg-background-dark w-full px-6 lg:px-10 pt-24 pb-8 lg:pt-16 lg:pb-4"
+    >
       <div
         class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:gap-8 lg:grid-cols-3"
       >

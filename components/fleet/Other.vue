@@ -110,15 +110,3 @@ console.log(options.scrollBehavior)
     </section>
   </div>
 </template>
-
-<!--<style scoped>-->
-<!--.breakout {-->
-<!--  left: 50%;-->
-<!--  margin-left: -50vw;-->
-<!--  margin-right: -50vw;-->
-<!--  max-width: 100vw;-->
-<!--  position: relative;-->
-<!--  right: 50%;-->
-<!--  width: 100vw;-->
-<!--}-->
-<!--</style>-->

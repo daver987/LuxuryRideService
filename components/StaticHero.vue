@@ -1,14 +1,14 @@
 <template>
   <div
-    class="bg-center bg-cover bg-no-repeat h-[150vh] md:h-screen px-6 z-10 pt-20 overflow-hidden relative"
+    class="bg-center bg-cover bg-no-repeat h-[130vh] sm:h-[120vh] md:h-screen px-6 lg:px-10 z-10 pt-20 overflow-hidden relative"
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <div
-      class="grid grid-cols-1 md:grid-cols-2 items-center justify-center h-full max-w-7xl mx-auto"
+      class="grid grid-cols-1 lg:grid-cols-2 items-center justify-center mb-6 lg:mb-0 max-w-7xl mx-auto"
     >
-      <div class="col-span-1 p-4 space-y-4">
-        <h1 class="heading text-white">{{ slide.heading }}</h1>
-        <p class="subheading">{{ slide.subHeading }}</p>
+      <div class="col-span-1 px-4 pt-8 pb-4 space-y-4">
+        <h1 class="heading text-white text-center md:text-left">{{ slide.heading }}</h1>
+        <p class="subheading text-center md:text-left">{{ slide.subHeading }}</p>
         <img
           :alt="slide.altText"
           :class="slide.style"
@@ -16,8 +16,10 @@
           class="h-full object-center object-cover w-full"
         />
       </div>
-      <div class="col-span-1 md:pl-24">
-        <LeadForm />
+      <div
+        class="col-span-1 flex flex-col place-content-center mx-auto w-full sm:pl-16 md:pl-32 lg:pl-0 xl:pl-20"
+      >
+        <LeadForm v-once />
       </div>
     </div>
   </div>
