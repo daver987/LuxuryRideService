@@ -25,6 +25,11 @@ const useNavigation = () => [
     href: '/contact',
     id: 5,
   },
+  {
+    name: 'Login',
+    href: '/login',
+    id: 5,
+  },
 ]
 
 export { useNavigation }

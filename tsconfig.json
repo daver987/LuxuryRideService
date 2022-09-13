@@ -4,6 +4,7 @@
   "compilerOptions": {
     "allowJs": true,
     "types": ["@nuxt/types"],
+    "strict": false,
 
   }
 }

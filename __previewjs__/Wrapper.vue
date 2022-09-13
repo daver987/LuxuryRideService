@@ -1,5 +1,7 @@
 <template>
-  <slot />
+  <div class="wrapped">
+    <slot />
+  </div>
 </template>
 <style scoped>
 @import '../assets/css/styles.css';

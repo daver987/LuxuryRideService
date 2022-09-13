@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { ItemCount, BaseButton, BaseCard } from '#components'
 defineProps({
   people: {
     type: String,

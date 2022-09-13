@@ -15,67 +15,63 @@
           <h3 class="mb-4 subheading">Tell Us Something</h3>
           <h2 class="text-background-dark heading">Send Us A Message</h2>
           <div id="contact_form_inner" class="w-full">
-            <FormKit
-              type="form"
-              class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"
-              submit-label="Send Message"
-            >
-              <div>
-                <FormKit
-                  label="Full Name"
-                  type="text"
-                  name="full-name"
-                  id="full-name"
-                  autocomplete="full-name"
-                  :classes="formClasses"
-                  validation="required"
-                />
-              </div>
-              <div>
-                <FormKit
-                  label="Email Address"
-                  id="email"
-                  name="from_email"
-                  type="email"
-                  autocomplete="email"
-                  :classes="formClasses"
-                  validation="required"
-                />
-              </div>
-              <div>
-                <FormKit
-                  label="Phone Number"
-                  type="text"
-                  name="phone_number"
-                  id="phone"
-                  autocomplete="tel"
-                  :classes="formClasses"
-                  aria-describedby="phone-optional"
-                />
-              </div>
-              <div class="sm:col-span-2">
-                <FormKit
-                  label="Subject"
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  :classes="formClasses"
-                  validation="required"
-                  maxlength="500"
-                />
-              </div>
-              <FormKit
-                label="Message"
-                type="textarea"
-                id="message"
-                name="message"
-                rows="4"
-                :classes="formClasses"
-                aria-describedby="message-max"
-                validation="required"
-                maxlength="500"
-              />
-            </FormKit>
+            <ContactForm />
+            <!--            <FormKit-->
+            <!--              type="form"-->
+            <!--              class="mt-6 grid gap-y-6 grid-cols-1 sm:gap-x-8 sm:grid-cols-2"-->
+            <!--              submit-label="Send Message"-->
+            <!--            >-->
+            <!--              <div>-->
+            <!--                <FormKit-->
+            <!--                  label="Full Name"-->
+            <!--                  type="text"-->
+            <!--                  name="full-name"-->
+            <!--                  id="full-name"-->
+            <!--                  autocomplete="full-name"-->
+            <!--                  validation="required"-->
+            <!--                />-->
+            <!--              </div>-->
+            <!--              <div>-->
+            <!--                <FormKit-->
+            <!--                  label="Email Address"-->
+            <!--                  id="email"-->
+            <!--                  name="from_email"-->
+            <!--                  type="email"-->
+            <!--                  autocomplete="email"-->
+            <!--                  validation="required"-->
+            <!--                />-->
+            <!--              </div>-->
+            <!--              <div>-->
+            <!--                <FormKit-->
+            <!--                  label="Phone Number"-->
+            <!--                  type="text"-->
+            <!--                  name="phone_number"-->
+            <!--                  id="phone"-->
+            <!--                  autocomplete="tel"-->
+            <!--                  aria-describedby="phone-optional"-->
+            <!--                />-->
+            <!--              </div>-->
+            <!--              <div class="sm:col-span-2">-->
+            <!--                <FormKit-->
+            <!--                  label="Subject"-->
+            <!--                  type="text"-->
+            <!--                  name="subject"-->
+            <!--                  id="subject"-->
+            <!--                  validation="required"-->
+            <!--                  maxlength="500"-->
+            <!--                />-->
+            <!--              </div>-->
+            <!--              <FormKit-->
+            <!--                label="Message"-->
+            <!--                type="textarea"-->
+            <!--                id="message"-->
+            <!--                name="message"-->
+            <!--                rows="4"-->
+            <!--                aria-describedby="message-max"-->
+            <!--                validation="required"-->
+            <!--                maxlength="500"-->
+            <!--              />-->
+            <!--            </FormKit>-->
           </div>
         </div>
       </div>

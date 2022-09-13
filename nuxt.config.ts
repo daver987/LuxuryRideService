@@ -7,10 +7,17 @@ export default defineNuxtConfig({
   // typescript: {
   //   shim: false,
   // },
+  ssr: false,
   nitro: {
     preset: 'cloudflare',
   },
+  // ssr: false,
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
+  formkit: {
+    defaultConfig: true,
+    // configFile: './formkit.config.ts',
+    // ^ this is now a full config replacement, not override.
+  },
 
   unocss: {
     icons: true,
@@ -23,7 +30,6 @@ export default defineNuxtConfig({
         heading: ['campton-thin'],
         body: ['campton-light'],
       },
-
       colors: {
         primary: {
           DEFAULT: '#BB880F',
