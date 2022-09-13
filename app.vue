@@ -50,12 +50,20 @@ useHead({
     },
   ],
 })
+const router = useRoute()
+console.dir(router)
+const isLoginPage = computed(() => {
+  return router.path === '/login'
+})
+watch(isLoginPage, (val) => {
+  console.log(val)
+})
 </script>
 
 <template>
   <NuxtLayout>
-    <TheNavbar />
+    <TheNavbar v-show="!isLoginPage" />
     <NuxtPage />
-    <TheFooter />
+    <TheFooter v-show="!isLoginPage" />
   </NuxtLayout>
 </template>

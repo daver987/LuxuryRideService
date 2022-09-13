@@ -24,7 +24,7 @@ useScriptTag(
         href="https://book.mylimobiz.com/v4/luxridesvc/widget/login"
         data-ores-widget="login"
         data-ores-alias="luxridesvc"
-        data-redirect-url="http://localhost:3000/login"
+        data-redirect-url="https://luxuryrideservice.info5767.workers.dev/login"
         class="uppercase block"
         >Login</a
       >

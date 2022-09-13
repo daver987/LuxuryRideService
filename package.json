@@ -8,7 +8,7 @@
   "homepage": "https://luxuryrideservice.com",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npx nuxi build",
+    "build": "npx nuxi build && npx wrangler publish",
     "start": "nuxt preview",
     "generate": "nuxt generate",
     "publish": "wrangler publish",
