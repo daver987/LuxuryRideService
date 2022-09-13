@@ -3,6 +3,14 @@ const isOpen = useOpen()
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
+
+defineProps({
+  showMenuButton: {
+    type: Boolean,
+    default: true,
+    required: false,
+  },
+})
 </script>
 
 <template>
@@ -11,7 +19,10 @@ const toggleMenu = () => {
   >
     <div class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
       <div class="col-span-1 col-start-1">
-        <NuxtLink to="/" class="max-w-[175px] md:max-w-[200px] block cursor-pointer">
+        <NuxtLink
+          to="/"
+          class="max-w-[175px] md:max-w-[200px] block cursor-pointer"
+        >
           <img
             src="/images/Luxury-Ride-Service-Logo.png"
             alt="Luxury-Ride-Service"
@@ -26,6 +37,7 @@ const toggleMenu = () => {
         <button
           class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
           @click="toggleMenu"
+          v-show="showMenuButton"
         />
         <span class="sr-only">Open main menu</span>
       </div>

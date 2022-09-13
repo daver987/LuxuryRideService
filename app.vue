@@ -62,8 +62,10 @@ watch(isLoginPage, (val) => {
 
 <template>
   <NuxtLayout>
-    <TheNavbar v-show="!isLoginPage" />
-    <NuxtPage />
+    <TheNavbar :showMenuButton="!isLoginPage" />
+    <main>
+      <NuxtPage />
+    </main>
     <TheFooter v-show="!isLoginPage" />
   </NuxtLayout>
 </template>
