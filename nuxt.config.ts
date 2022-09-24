@@ -1,28 +1,34 @@
 /// <reference types="vitest" />
-import { defineNuxtConfig } from 'nuxt'
-import { transformerDirectives } from 'unocss'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  // typescript: {
-  //   shim: false,
-  // },
+  typescript: {
+    shim: false,
+  },
   ssr: false,
+
   nitro: {
     preset: 'cloudflare',
   },
-  // ssr: false,
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@formkit/nuxt'],
-  formkit: {
-    defaultConfig: true,
-    // configFile: './formkit.config.ts',
-    // ^ this is now a full config replacement, not override.
+
+  modules: [
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@formkit/nuxt',
+    '@nuxt/image-edge',
+    'nuxt-font-metrics',
+  ],
+
+  runtimeConfig: {
+    public: {
+      MAPS_API_KEY: process.env.MAPS_API_KEY,
+    },
   },
 
   unocss: {
     icons: true,
-    transformers: [transformerDirectives()],
-    attributify: true,
+    preflight: true,
     theme: {
       fontFamily: {
         sans: ['caviar-dreams'],
@@ -62,7 +68,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/css/styles.css', '@unocss/reset/tailwind.css'],
+  css: ['@/assets/css/styles.css'],
   components: {
     global: true,
     dirs: ['~/components'],

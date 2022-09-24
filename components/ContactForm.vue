@@ -1,42 +1,67 @@
 <script setup lang="ts">
 import { FormKitSchema } from '@formkit/vue'
-import { ref, reactive } from 'vue'
-
-// const options = [
-//   { label: 'Every page load', value: 'refresh' },
-//   { label: 'Ever hour', value: 'hourly' },
-//   { label: 'Every day', value: 'daily' },
-// ]
 
 const schema = [
   {
-    $formkit: 'text',
-    name: 'name',
-    label: 'Full Name',
-    placeholder: 'Enter your name...',
+    $el: 'h2',
+    attrs: { class: 'text-background-dark heading' },
+    children: 'Send Us A Message',
   },
   {
-    $formkit: 'checkbox',
-    name: 'hasEmail',
-    label: 'Has Email?',
+    $el: 'div',
+    attrs: { class: 'grid grid-cols-2 gap-4' },
+    children: [
+      {
+        $formkit: 'text',
+        name: 'first_name',
+        label: 'First Name:',
+        placeholder: 'Enter your first name...',
+        classes: {
+          outer: 'col-span-1',
+          label: 'text-background-dark',
+          input: 'border-2 border-gray-200 rounded-md p-2',
+        },
+      },
+      {
+        $formkit: 'text',
+        name: 'last_name',
+        label: 'Last Name:',
+        placeholder: 'Enter your last name...',
+      },
+    ],
   },
   {
-    $el: 'p',
-    children: ['Email enabled? ', '$hasEmail'],
+    $el: 'div',
+    attrs: { class: 'flex flex-row gap-4' },
+    children: [
+      {
+        $formkit: 'text',
+        name: 'email_address',
+        label: 'Email Address:',
+        placeholder: 'Enter your email...',
+      },
+      {
+        $formkit: 'tel',
+        name: 'phone_number',
+        label: 'Phone Number:',
+        placeholder: 'Enter your phone number...',
+      },
+    ],
   },
   {
-    $formkit: 'email',
-    name: 'email',
-    label: 'Email',
-    if: '$hasEmail',
-    validation: 'required|email',
+    $formkit: 'textarea',
+    name: 'message',
+    label: 'Message:',
+    placeholder: 'Enter your message...',
   },
 ]
 
-const data = ref({
-  name: null,
+
+const data = reactive({
+  firstname: null,
+  lastname: null,
   email: null,
-  hasEmail: false,
+  message: null,
 })
 
 const handleSubmit = () => alert('Valid submit!')
@@ -49,25 +74,11 @@ const handleSubmit = () => alert('Valid submit!')
 <template>
   <div>
     <div class="myFormkit">
-      <!--      <FormKit-->
-      <!--        id="form"-->
-      <!--        v-model="data"-->
-      <!--        type="form"-->
-      <!--        :submit-attrs="{-->
-      <!--          inputClass: 'btn',-->
-      <!--        }"-->
-      <!--        @submit="handleSubmit"-->
-      <!--      >-->
-      <FormKit type="form" v-model="data" @submit="handleSubmit">
+      <FormKit type="form" @:submit="handleSubmit" >
         <FormKitSchema :schema="schema" :data="data" />
       </FormKit>
-
-      <!--        <FormKitSchema :schema="schema" :data="data" />-->
-      <!--      </FormKit>-->
     </div>
     <h4>Data</h4>
     <pre>{{ data }}</pre>
   </div>
 </template>
-
-<style scoped></style>

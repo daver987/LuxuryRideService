@@ -134,7 +134,7 @@ const fleetImage =
       </div>
     </section>
     <section class="bg-background p-6">
-      <img
+      <nuxt-img
         alt="Toronto Skyline"
         class="object-cover object-center lg:mx-auto lg:-mb-20 lg:max-w-6xl"
         src="/images/Toronto-Skyline-2.jpg"

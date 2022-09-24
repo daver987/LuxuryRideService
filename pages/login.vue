@@ -7,13 +7,11 @@ useHead(() => ({
 }))
 onMounted(() => {
   useScriptTag(
-    'https://book.mylimobiz.com/v4/widgets/widget-loader.js',
-    // on script tag loaded.
+    'https://book.mylimobiz.com/v4/luxridesvc/widget/login',
     (el: HTMLScriptElement) => {
       console.log('script loaded')
     }
   )
-  console.log(useScriptTag)
 })
 </script>
 
@@ -27,7 +25,7 @@ onMounted(() => {
         href="https://book.mylimobiz.com/v4/luxridesvc/widget/login"
         data-ores-widget="login"
         data-ores-alias="luxridesvc"
-        data-redirect-url="https://luxuryrideservice.info5767.workers.dev/login"
+        data-redirect-url="http://localhost:3000/reservations"
         class="uppercase block"
         >Login</a
       >

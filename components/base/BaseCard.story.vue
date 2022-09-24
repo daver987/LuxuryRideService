@@ -7,5 +7,3 @@ import BaseCard from './BaseCard.vue'
     <BaseCard></BaseCard>
   </Story>
 </template>
-
-<style scoped></style>
