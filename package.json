@@ -8,7 +8,7 @@
   "homepage": "https://luxuryrideservice.com",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "npx nuxi build && npx wrangler publish",
+    "build": "npx nuxi build",
     "start": "nuxt preview",
     "generate": "nuxt generate",
     "publish": "wrangler publish",
@@ -20,25 +20,29 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
-    "@headlessui/vue": "^1.7.1",
+    "@formkit/icons": "^1.0.0-beta.11-c95e605",
+    "@formkit/nuxt": "^1.0.0-beta.11-1c50a05",
+    "@formkit/themes": "^1.0.0-beta.11-c95e605",
+    "@googlemaps/js-api-loader": "^1.14.3",
+    "@headlessui/vue": "^1.7.2",
     "@histoire/plugin-nuxt": "^0.10.7",
-    "@iconify/json": "^2.1.106",
-    "@nuxt/image-edge": "^1.0.0-27716498.4c23770",
-    "@nuxt/test-utils-edge": "^3.0.0-rc.10-27716896.3753ea0",
+    "@iconify/json": "^2.1.108",
+    "@julr/unocss-preset-forms": "^0.0.2",
+    "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
+    "@nuxt/test-utils-edge": "^3.0.0-rc.11-27722816.abd0feb",
     "@splidejs/vue-splide": "^0.6.10",
     "@testing-library/vue": "^6.6.1",
+    "@types/google.maps": "^3.50.1",
     "@unocss/nuxt": "^0.45.21",
     "@unocss/reset": "^0.45.21",
+    "@vuepic/vue-datepicker": "^3.4.8",
     "@vueuse/nuxt": "^9.2.0",
-    "add": "^2.0.6",
     "jsdom": "^20.0.0",
-    "nuxt": "^3.0.0-rc.9",
+    "nuxt": "npm:nuxt3@latest",
+    "nuxt-font-metrics": "^0.1.2",
     "prettier": "^2.7.1",
     "vitest": "^0.23.2",
-    "wrangler": "^2.1.1"
+    "wrangler": "^2.1.4"
   },
-  "dependencies": {
-    "@formkit/nuxt": "^1.0.0-beta.11-1c50a05",
-    "prisma": "^4.3.1"
-  }
+  "dependencies": {}
 }

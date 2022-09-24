@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSelectedVehicle } from '~/composables/useSelectedVehicle'
+// import { useSelectedVehicle } from '~/composables/useSelectedVehicle'
 import { Ref } from 'vue'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
@@ -27,12 +27,12 @@ const headerInfo = {
 interface Vehicles {
   icon: string
   title: string
-  id: number
+  id: string
   tag: string
   to: string
 }
 const selectedTab: Ref<number> = ref(0)
-function changeTab(index) {
+function changeTab(index: number) {
   selectedTab.value = index
   console.log(selectedTab.value)
 }
@@ -41,64 +41,46 @@ const tabs = [
   {
     icon: 'Fleet-XTS-Continental',
     title: 'Cadillac XTS',
-    id: 0,
+    id: '0',
     tag: resolveComponent('FleetCadillacXts'),
     to: '/fleet',
   },
   {
     icon: 'Fleet-XTS-Continental',
     title: 'Lincoln Continental',
-    id: 1,
+    id: '1',
     tag: resolveComponent('FleetLincolnContinental'),
     to: '/fleet/lincoln-continental',
   },
   {
     icon: 'Fleet-Navigator-Escalade',
     title: 'Cadillac Escalade',
-    id: 2,
+    id: '2',
     tag: resolveComponent('FleetCadillacEscalade'),
     to: '/fleet/cadillac-escalade',
   },
   {
     icon: 'Fleet-Navigator-Escalade',
     title: 'Lincoln Navigator',
-    id: 3,
+    id: '3',
     tag: resolveComponent('FleetLincolnNavigator'),
     to: '/fleet/lincoln-navigator',
   },
   {
     icon: 'Fleet-Tesla',
     title: 'Tesla S',
-    id: 4,
+    id: '4',
     tag: resolveComponent('FleetTeslaS'),
     to: '/fleet/tesla-s',
   },
   {
     icon: 'Fleet-Other',
     title: 'Other',
-    id: 6,
+    id: '6',
     tag: resolveComponent('FleetOther'),
     to: '/fleet/other',
   },
 ] as Vehicles[]
-
-// const id = ref(1) as Ref<number>
-// const vehicle = resolveComponent('FleetCadillacXts') as Ref<string>
-// const tabRef = ref(null) as Ref<HTMLElement>
-// const selectedVehicle = ref() as Ref<Vehicles>
-
-// onMounted(() => {
-//   if (tabRef.value) {
-//     console.dir(tabRef.value)
-//     vehicle.value = tabRef.value[0].dataset.vehicle
-//   }
-// })
-//write a function that changes the vehicle value to the selected vehicle and uses the useSelectedVehicle hook to set the selected vehicle
-// const setVehicle = () => {
-//   selectedVehicle.value = useSelectedVehicle(tabs, id.value) as Vehicles
-//   console.log(selectedVehicle.value.tag)
-//   return (vehicle.value = selectedVehicle.value.tag)
-// }
 </script>
 
 <template>
@@ -144,7 +126,16 @@ const tabs = [
       </TabList>
       <TabPanels as="div">
         <TabPanel v-for="tab in tabs" :key="tab.id">
-          <component :is="tab.tag" />
+          <transition
+            enter-active-class="transition duration-200 ease-out"
+            enter-from-class="translate-y-1 opacity-0"
+            enter-to-class="translate-y-0 opacity-100"
+            leave-active-class="transition duration-150 ease-in"
+            leave-from-class="translate-y-0 opacity-100"
+            leave-to-class="translate-y-1 opacity-0"
+          >
+            <component :is="tab.tag" />
+          </transition>
         </TabPanel>
       </TabPanels>
     </TabGroup>
@@ -154,5 +145,16 @@ const tabs = [
 <style scoped>
 .exact-active-class {
   background-color: #bb880f;
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

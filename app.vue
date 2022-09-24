@@ -1,71 +1,50 @@
-<script setup lang="ts">
-useHead({
-  html: {
-    lang: 'en_CA',
-  },
-  title: 'Toronto Car Service | Luxury Ride Service',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Luxury Ride Service is a premier Toronto car service. Tour Services, Limousine services and airport transfers at affordable prices.',
-    },
-    {
-      name: 'robots',
-      content:
-        'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-    },
-    {
-      property: 'og:locale',
-      content: 'en_CA',
-    },
-    {
-      property: 'og:type',
-      content: 'website',
-    },
-    {
-      property: 'og:title',
-      content: 'Toronto Car Service | Luxury Ride Service',
-    },
-    {
-      property: 'og:description',
-      content:
-        'Luxury Ride Service is a premier Toronto car service. Tour Services, Limousine services and airport transfers at affordable prices.',
-    },
-    {
-      property: 'og:url',
-      content: 'https://luxuryrideservice.com/',
-    },
-    {
-      property: 'og:site_name',
-      content: 'Luxury Ride Service | Toronto Car Service',
-    },
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.png' },
-    {
-      rel: 'canonical',
-      href: 'https://luxuryrideservice.com',
-      crossorigin: true,
-    },
-  ],
-})
-const router = useRoute()
-console.dir(router)
-const isLoginPage = computed(() => {
-  return router.path === '/login'
-})
-watch(isLoginPage, (val) => {
-  console.log(val)
-})
-</script>
-
 <template>
   <NuxtLayout>
-    <TheNavbar :showMenuButton="!isLoginPage" />
-    <main>
-      <NuxtPage />
-    </main>
-    <TheFooter v-show="!isLoginPage" />
-  </NuxtLayout>
+<NuxtPage/>  
+</NuxtLayout>
 </template>
+<style>
+.dp__theme_light {
+  --dp-background-color: #ffffff;
+  --dp-text-color: #212121;
+  --dp-hover-color: #f3f3f3;
+  --dp-hover-text-color: #212121;
+  --dp-hover-icon-color: #959595;
+  --dp-primary-color: #bb880f;
+  --dp-primary-text-color: #f8f5f5;
+  --dp-secondary-color: #c0c4cc;
+  --dp-border-color: #ddd;
+  --dp-menu-border-color: #ddd;
+  --dp-border-color-hover: #aaaeb7;
+  --dp-disabled-color: #f6f6f6;
+  --dp-scroll-bar-background: #f3f3f3;
+  --dp-scroll-bar-color: #959595;
+  --dp-success-color: #bb880f;
+  --dp-success-color-disabled: #a3d9b1;
+  --dp-icon-color: #959595;
+  --dp-danger-color: #ff6f60;
+  --dp-highlight-color: rgba(25, 118, 210, 0.1);
+}
+
+.dp__theme_dark {
+  --dp-background-color: #212121;
+  --dp-text-color: #ffffff;
+  --dp-hover-color: #bb880f;
+  --dp-hover-text-color: #ffffff;
+  --dp-hover-icon-color: #959595;
+  --dp-primary-color: #bb880f;
+  --dp-primary-text-color: #ffffff;
+  --dp-secondary-color: #a9a9a9;
+  --dp-border-color: #2d2d2d;
+  --dp-menu-border-color: #2d2d2d;
+  --dp-border-color-hover: #aaaeb7;
+  --dp-disabled-color: #737373;
+  --dp-scroll-bar-background: #212121;
+  --dp-scroll-bar-color: #484848;
+  --dp-success-color: #bb880f;
+  --dp-success-color-disabled: #428f59;
+  --dp-icon-color: #959595;
+  --dp-danger-color: #e53935;
+  --dp-highlight-color: rgba(0, 92, 178, 0.2);
+}
+</style>

@@ -5,12 +5,6 @@ export interface Vehicles {
   tag: string
   to: string
 }
-// const FleetCadillacXts = resolveComponent('FleetCadillacXts')
-// const FleetCadillacEscalade = resolveComponent('FleetCadillacEscalade')
-// const FleetLincolnNavigator = resolveComponent('FleetLincolnNavigator')
-// const FleetLincolnContinental = resolveComponent('FleetLincolnContinental')
-// const FleetTeslaS = resolveComponent('FleetTeslaS')
-// const FleetOther = resolveComponent('FleetOther')
 
 export const useFleetTabs = () =>
   [
