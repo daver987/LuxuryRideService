@@ -8,3 +8,7 @@ nuxt.d.ts
 wrangler.toml
 .DS_Store
 dist
+.yarnrc.yml
+yarn.lock
+.yarn
+__previewjs__

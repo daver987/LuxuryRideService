@@ -1,8 +1,9 @@
 <template>
   <NuxtLayout>
-<NuxtPage/>  
-</NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
 <style>
 .dp__theme_light {
   --dp-background-color: #ffffff;

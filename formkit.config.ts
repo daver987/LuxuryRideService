@@ -1,7 +1,7 @@
 import { DefaultConfigOptions } from '@formkit/vue'
 import { generateClasses } from '@formkit/themes'
 
-export default {
+const config: DefaultConfigOptions = {
   theme: 'genesis',
   config: {
     classes: generateClasses({
@@ -32,3 +32,5 @@ export default {
     }),
   },
 }
+
+export default config

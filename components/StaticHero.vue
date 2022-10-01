@@ -21,27 +21,28 @@
         />
       </div>
       <div class="col-span-1 flex flex-col place-content-center mx-auto w-full">
-        <FormKit
-          type="form"
-          id="quote_form"
-          form-class="bg-black p-5 border-1 border-gray-50 shadow-md"
-          v-model="formData"
-          :onSubmit="handleSubmit"
-          submit-label="Check Prices and Availability"
-          submit-class="$reset
-          block
-          align-center
-          bg-red-600
-          py-3
-          px-5
-          rounded-md
-          text-sm
-          text-white
-          uppercase
-          tracking-wider"
-        >
-          <QuoteForm />
-        </FormKit>
+        <OnlineQuoteForm />
+        <!--        <FormKit-->
+        <!--          type="form"-->
+        <!--          id="quote_form"-->
+        <!--          form-class="bg-black p-5 border-1 border-gray-50 shadow-md"-->
+        <!--          v-model="formData"-->
+        <!--          :onSubmit="handleSubmit"-->
+        <!--          submit-label="Check Prices and Availability"-->
+        <!--          submit-class="$reset-->
+        <!--          block-->
+        <!--          align-center-->
+        <!--          bg-red-600-->
+        <!--          py-3-->
+        <!--          px-5-->
+        <!--          rounded-md-->
+        <!--          text-sm-->
+        <!--          text-white-->
+        <!--          uppercase-->
+        <!--          tracking-wider"-->
+        <!--        >-->
+        <!--          <QuoteForm />-->
+        <!--        </FormKit>-->
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FormKitSchema } from '@formkit/vue'
+// import { FormKitSchema } from '@formkit/vue'
 
 const schema = [
   {
@@ -56,7 +56,6 @@ const schema = [
   },
 ]
 
-
 const data = reactive({
   firstname: null,
   lastname: null,
@@ -64,7 +63,7 @@ const data = reactive({
   message: null,
 })
 
-const handleSubmit = () => alert('Valid submit!')
+// const handleSubmit = () => alert('Valid submit!')
 // const submitHandler = async () => {
 //   // Lets pretend this is an ajax request:
 //   await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -74,9 +73,9 @@ const handleSubmit = () => alert('Valid submit!')
 <template>
   <div>
     <div class="myFormkit">
-      <FormKit type="form" @:submit="handleSubmit" >
-        <FormKitSchema :schema="schema" :data="data" />
-      </FormKit>
+      <!--      <FormKit type="form" @:submit="handleSubmit" >-->
+      <!--        <FormKitSchema :schema="schema" :data="data" />-->
+      <!--      </FormKit>-->
     </div>
     <h4>Data</h4>
     <pre>{{ data }}</pre>

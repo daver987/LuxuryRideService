@@ -2,9 +2,13 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+
 export default defineNuxtConfig({
-  typescript: {
-    shim: false,
+  // typescript: {
+  //   shim: false,
+  // },
+  experimental: {
+    reactivityTransform: true,
   },
   ssr: false,
 
@@ -14,10 +18,11 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@formkit/nuxt',
     '@nuxt/image-edge',
     'nuxt-font-metrics',
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@formkit/nuxt',
   ],
 
   runtimeConfig: {
@@ -26,49 +31,17 @@ export default defineNuxtConfig({
     },
   },
 
-  unocss: {
-    icons: true,
-    preflight: true,
-    theme: {
-      fontFamily: {
-        sans: ['caviar-dreams'],
-        subheading: ['caviar-dreams-bold'],
-        heading: ['campton-thin'],
-        body: ['campton-light'],
-      },
-      colors: {
-        primary: {
-          DEFAULT: '#BB880F',
-        },
-        background: {
-          light: '#fff',
-          DEFAULT: '#EBEBEB',
-          dark: '#262626',
-        },
-        body: {
-          light: '#fff',
-          DEFAULT: '#AAAAAA',
-        },
-        heading: {
-          light: '#fff',
-          DEFAULT: '#2B2B2B',
-        },
-        icon: {
-          DEFAULT: '#C0C0C0',
-        },
-      },
-      container: {
-        center: true,
-      },
-    },
-    shortcuts: {
-      subheading:
-        'font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm',
-      heading: 'font-heading text-4xl text-heading uppercase lg:text-5xl',
-    },
+  build: {
+    transpile: ['vue-tel-input'],
   },
-
-  css: ['@/assets/css/styles.css'],
+  tailwindcss: {
+    cssPath: 'assets/css/main.css',
+  },
+  css: [
+    '@vuepic/vue-datepicker/dist/main.css',
+    'vue-tel-input/dist/vue-tel-input.css',
+    'assets/css/main.css',
+  ],
   components: {
     global: true,
     dirs: ['~/components'],

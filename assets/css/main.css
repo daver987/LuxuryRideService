@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'caviar-dreams';
   font-style: normal;
@@ -29,6 +33,20 @@
   src: local('campton-thin'),
     url('assets/fonts/campton-thin.woff') format('woff');
 }
+@layer components {
+  .subheading {
+    @apply font-subheading text-primary text-xs leading-relaxed tracking-[0.5em] uppercase md:text-sm;
+  }
+  .heading {
+    @apply font-heading text-4xl text-heading uppercase lg:text-5xl;
+  }
+  .font-subheading {
+    @apply text-4xl uppercase lg:text-5xl;
+  }
+  .font-heading {
+    @apply text-4xl uppercase lg:text-5xl;
+  }
+}
 
 .router-link-active {
   color: rgba(187, 136, 15);
@@ -36,11 +54,8 @@
 
 html {
   scroll-behavior: smooth; /* set scroll-behaviour to smooth here */
-  font-family: var(--maz-font-family);
-  line-height: 1.5;
 }
 
 body {
   background-color: #ebebeb;
 }
-

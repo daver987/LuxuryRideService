@@ -3,8 +3,8 @@
     class="bg-center bg-cover bg-no-repeat h-screen px-6 md:px-12 z-10 overflow-hidden relative"
     style="background-image: url('/icons/gradient-background.svg')"
   >
-    <div
-      class="container h-full mx-auto max-w-7xl grid py-8 grid-cols-1 grid-rows-6 relative md:grid-cols-2"
+    <BaseContainer
+      class="h-full grid py-8 grid-cols-1 grid-rows-6 relative md:grid-cols-2"
     >
       <div
         :style="image"
@@ -45,7 +45,7 @@
           EMAIL: {{ companyEmail }}
         </a>
       </div>
-    </div>
+    </BaseContainer>
   </header>
 </template>
 
