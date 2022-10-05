@@ -21,17 +21,18 @@
         />
       </div>
       <div class="flex flex-col w-full col-span-1 mx-auto place-content-center">
-        <div class="p-6 bg-black border border-white rounded-md">
-        <FormKit type="form" 
-        id="lrs-quote-form"
-        :actions="false"
-        name="lrs-quote-form"
-        #default="{ value }"
-        >
-          <QuoteForm />
-          <pre wrap>{{ value }}</pre>
-        </FormKit>
-      </div>
+        <div class="p-6 bg-black border border-white rounded-lg shadow-xl">
+          <FormKit
+            type="form"
+            id="lrs-quote-form"
+            :actions="false"
+            name="lrs-quote-form"
+            #default="{ value }"
+          >
+            <QuoteForm />
+            <pre wrap>{{ value }}</pre>
+          </FormKit>
+        </div>
       </div>
     </div>
   </div>

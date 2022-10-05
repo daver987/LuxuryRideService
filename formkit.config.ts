@@ -2,8 +2,10 @@ import { DefaultConfigOptions } from '@formkit/vue'
 // import { defaultConfig } from '@formkit/vue'
 import { generateClasses } from '@formkit/themes'
 // import { createProPlugin, autocomplete, rating, dropdown } from '@formkit/pro'
+// import '@formkit/themes/genesis'
+// import '@formkit/pro/genesis'
 
-// const proPlugin = createProPlugin('fk-9d667f1c43', {
+// const pro = createProPlugin('fk-66f40b8a84', {
 //   autocomplete,
 //   rating,
 //   dropdown,
@@ -42,6 +44,6 @@ const config: DefaultConfigOptions = {
 }
 
 export default {
-  // plugins: [proPlugin],
+  // plugins: [pro],
   config,
 }

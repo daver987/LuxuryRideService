@@ -3,7 +3,9 @@
     <slot />
   </div>
 </template>
-<style scoped>
-@import '../assets/assets/css/styles.css';
-@import '../node_modules/@unocss/reset/tailwind.css';
+
+<style>
+@import '@vuepic/vue-datepicker/dist/main.css';
+@import 'vue-tel-input/dist/vue-tel-input.css';
+@import 'assets/css/main.css';
 </style>

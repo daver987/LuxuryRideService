@@ -753,12 +753,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/vue@npm:^2.0.11":
-  version: 2.0.11
-  resolution: "@heroicons/vue@npm:2.0.11"
+"@heroicons/vue@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "@heroicons/vue@npm:2.0.12"
   peerDependencies:
     vue: ">= 3"
-  checksum: 9b706008a5a9feff656a5479490e73bb4c21b8432b25732a76ec5ca01816ccf9d66d82d75bcbd26f89efbc6d5a1e12205ecfec16ef384a194d9285702eeef3da
+  checksum: 227bfd4f49e45ee57f731751d7a6e74a21562bd551ae9c36f77aa15cc4df0a05265171ecd157056adab23accf1b9638286d7ac9a032687895759036bc8dd7e6d
   languageName: node
   linkType: hard
 
@@ -782,13 +782,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/json@npm:^2.1.117":
-  version: 2.1.117
-  resolution: "@iconify/json@npm:2.1.117"
+"@iconify/json@npm:^2.1.118":
+  version: 2.1.118
+  resolution: "@iconify/json@npm:2.1.118"
   dependencies:
     "@iconify/types": "*"
     pathe: ^0.3.0
-  checksum: 6fa286789a862ab0815a2ce610d40bc8d6834eaaaeba629aba9370b510b6b6682eda2374a819d572fe6a37a837141f4fb7cc20335eefb03741f87750ea6103ff
+  checksum: 68716de404b00734707bf3b2dd06ffbdfdb2393c42738944a14fa81df9e7c224ca242e13fcc5a7dd977c2ae9ae9102ae60f4ac0d12ba8c42ea678894b3289ebb
   languageName: node
   linkType: hard
 
@@ -6378,9 +6378,9 @@ __metadata:
     "@googlemaps/js-api-loader": ^1.14.3
     "@headlessui/tailwindcss": ^0.1.1
     "@headlessui/vue": ^1.7.3
-    "@heroicons/vue": ^2.0.11
+    "@heroicons/vue": ^2.0.12
     "@histoire/plugin-nuxt": ^0.11.0
-    "@iconify/json": ^2.1.117
+    "@iconify/json": ^2.1.118
     "@nuxt/image-edge": ^1.0.0-27719579.87dcdf2
     "@nuxt/test-utils-edge": ^3.0.0-rc.12-27746784.92ff066
     "@nuxtjs/tailwindcss": ^5.3.3

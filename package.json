@@ -23,9 +23,9 @@
     "@googlemaps/js-api-loader": "^1.14.3",
     "@headlessui/tailwindcss": "^0.1.1",
     "@headlessui/vue": "^1.7.3",
-    "@heroicons/vue": "^2.0.11",
+    "@heroicons/vue": "^2.0.12",
     "@histoire/plugin-nuxt": "^0.11.0",
-    "@iconify/json": "^2.1.117",
+    "@iconify/json": "^2.1.118",
     "@nuxt/image-edge": "^1.0.0-27719579.87dcdf2",
     "@nuxt/test-utils-edge": "^3.0.0-rc.12-27746784.92ff066",
     "@nuxtjs/tailwindcss": "^5.3.3",
@@ -50,6 +50,7 @@
   "dependencies": {
     "@formkit/icons": "latest",
     "@formkit/nuxt": "latest",
+    "@formkit/pro": "^1.0.0-alpha.19",
     "@formkit/themes": "latest"
   }
 }

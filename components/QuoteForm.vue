@@ -2,6 +2,10 @@
 import { Loader } from '@googlemaps/js-api-loader'
 import Datepicker from '@vuepic/vue-datepicker'
 import { VueTelInput } from 'vue-tel-input'
+import { createInput } from '@formkit/vue'
+
+const myDatePicker = createInput(Datepicker)
+const myTelInput = createInput(VueTelInput)
 
 const library = markRaw({
   Datepicker,
@@ -102,37 +106,47 @@ function initMap(): void {
         console.log(placeName)
         console.log(lat)
         console.log(lng)
-        if (mode === 'ORIG') {
-          autocompleteData.origin_address_components = addressComponents
-          autocompleteData.origin_formatted_address = formattedAddress
-          autocompleteData.origin_place_name = placeName
-          autocompleteData.origin_lat = lat
-          autocompleteData.origin_lng = lng
-        } else {
-          autocompleteData.destination_address_components = addressComponents
-          autocompleteData.destination_formatted_address = formattedAddress
-          autocompleteData.destination_place_name = placeName
-          autocompleteData.destination_lat = lat
-          autocompleteData.destination_lng = lng
+        switch (mode) {
+          case 'ORIG':
+            autocompleteData.origin_address_components = addressComponents
+            autocompleteData.origin_formatted_address = formattedAddress
+            autocompleteData.origin_place_name = placeName
+            autocompleteData.origin_lat = lat
+            autocompleteData.origin_lng = lng
+            break
+          default:
+            autocompleteData.destination_address_components = addressComponents
+            autocompleteData.destination_formatted_address = formattedAddress
+            autocompleteData.destination_place_name = placeName
+            autocompleteData.destination_lat = lat
+            autocompleteData.destination_lng = lng
+            break
         }
 
-        if (!place.place_id) {
+        if (place.place_id) {
+        } else {
           window.alert('Please select an option from the dropdown list.')
           return
         }
 
-        if (mode === 'ORIG') {
-          this.originPlaceId = place.place_id
-        } else {
-          this.destinationPlaceId = place.place_id
+        switch (mode) {
+          case 'ORIG':
+            this.originPlaceId = place.place_id
+            break
+          default:
+            this.destinationPlaceId = place.place_id
+            break
         }
         this.route()
-        if (autocompleteData.destination_lat && autocompleteData.origin_lat) {
+        if (
+          !(autocompleteData.destination_lat && autocompleteData.origin_lat)
+        ) {
+          return
         }
       })
     }
 
-    route() {
+    route(): void {
       if (!this.originPlaceId || !this.destinationPlaceId) {
         return
       }
@@ -143,23 +157,24 @@ function initMap(): void {
           destination: { placeId: this.destinationPlaceId },
           travelMode: this.travelMode,
         },
-        (response, status) => {
+        (response, status): void => {
           console.log(response)
-          if (status === 'OK') {
-            this.directionsRenderer.setDirections(response)
-            autocompleteData.distance_traveled = (response.routes[0].legs[0]
-              .distance.value / 1000) as number
-            autocompleteData.duration_traveled = (response.routes[0].legs[0]
-              .duration.value / 60) as number
-            autocompleteData.origin_location =
-              response.routes[0].legs[0].start_address
-            autocompleteData.destination_location =
-              response.routes[0].legs[0].end_address
-            autocompleteData.origin_location_type = response
-              .geocoded_waypoints[0].types[0] as string
-            autocompleteData.destination_location_type = response
-              .geocoded_waypoints[1].types[0] as string
-            return
+          switch (status) {
+            case 'OK':
+              this.directionsRenderer.setDirections(response)
+              autocompleteData.distance_traveled = (response.routes[0].legs[0]
+                .distance.value / 1000) as number
+              autocompleteData.duration_traveled = (response.routes[0].legs[0]
+                .duration.value / 60) as number
+              autocompleteData.origin_location =
+                response.routes[0].legs[0].start_address
+              autocompleteData.destination_location =
+                response.routes[0].legs[0].end_address
+              autocompleteData.origin_location_type = response
+                .geocoded_waypoints[0].types[0] as string
+              autocompleteData.destination_location_type = response
+                .geocoded_waypoints[1].types[0] as string
+              return
           }
           window.alert(`Directions request failed due to ${status}`)
         }
@@ -169,9 +184,8 @@ function initMap(): void {
 }
 
 onMounted(() => {
-  if (myMap.value) {
-    initMap()
-  }
+  if (!myMap.value) return
+  initMap()
 })
 
 const autocompleteData = reactive({
@@ -262,7 +276,8 @@ const schema = [
     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
     children: [
       {
-        $cmp: 'Datepicker',
+        $cmp: 'FormKit',
+        type: 'myDatePicker',
         attrs: {
           id: 'pickup-time',
           name: 'pickup_time',
@@ -280,7 +295,7 @@ const schema = [
         $cmp: 'Datepicker',
         attrs: {
           id: 'pickup-date',
-          placeholder: 'Enter Pickup Time...',
+          placeholder: `Enter Pickup Time...`,
         },
         props: {
           enableTimePicker: false,

@@ -107,18 +107,21 @@ const initMap = (): void => {
         console.log(placeName)
         console.log(lat)
         console.log(lng)
-        if (mode === 'ORIG') {
-          origin_address_components.value = addressComponents
-          origin_formatted_address.value = formattedAddress
-          origin_place_name.value = placeName
-          origin_lat.value = lat
-          origin_lng.value = lng
-        } else {
-          destination_address_components.value = addressComponents
-          destination_formatted_address.value = formattedAddress
-          destination_place_name.value = placeName
-          destination_lat.value = lat
-          destination_lng.value = lng
+        switch (mode) {
+          case 'ORIG':
+            origin_address_components.value = addressComponents
+            origin_formatted_address.value = formattedAddress
+            origin_place_name.value = placeName
+            origin_lat.value = lat
+            origin_lng.value = lng
+            break;
+          default:
+            destination_address_components.value = addressComponents
+            destination_formatted_address.value = formattedAddress
+            destination_place_name.value = placeName
+            destination_lat.value = lat
+            destination_lng.value = lng
+            break;
         }
 
         if (!place.place_id) {
@@ -126,10 +129,13 @@ const initMap = (): void => {
           return
         }
 
-        if (mode === 'ORIG') {
-          this.originPlaceId = place.place_id
-        } else {
-          this.destinationPlaceId = place.place_id
+        switch (mode) {
+          case 'ORIG':
+            this.originPlaceId = place.place_id
+            break;
+          default:
+            this.destinationPlaceId = place.place_id
+            break;
         }
         this.route()
         if (destination_lat.value && origin_lat.value) {
@@ -354,12 +360,15 @@ const numberOfHours = ref(1) as Ref<number>
 const isItHourly = ref(false) as Ref<boolean>
 
 watch(service_type, () => {
-  if (service_type.value.value === 4) {
-    isItHourly.value = true
-    numberOfHours.value = 2
-  } else {
-    isItHourly.value = false
-    numberOfHours.value = null
+  switch (service_type.value.value) {
+    case 4:
+      isItHourly.value = true
+      numberOfHours.value = 2
+      break;
+    default:
+      isItHourly.value = false
+      numberOfHours.value = null
+      break;
   }
   console.log(
     service_type.value.label,
@@ -397,9 +406,8 @@ const onSubmit = async (evt: Event) => {
     baseRate,
     surcharges
   )
-  const sumOfSurcharges = ref(baseRate + fuelSurcharge + gratuity + HST)
   total_cost.value = usePrecision(
-    sumOfSurcharges as unknown as number,
+    ref(baseRate + fuelSurcharge + gratuity + HST),
     2
   ) as unknown as number
 
@@ -412,18 +420,7 @@ const onSubmit = async (evt: Event) => {
   gratuity_rate.value = gratuity
   hst.value = HST
 
-  const vehicleImages = () => {
-    if (vehicleType.value.label === 'Standard Sedan') {
-      return 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/8c7c6a8d-06ad-4278-1c70-9d497b1cb200/1024'
-    } else if (vehicleType.value.label === 'Premium Sedan') {
-      return 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d171f30-de2f-447c-a602-95ccf248c600/1024'
-    } else if (vehicleType.value.label === 'Standard SUV') {
-      return 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/b4bf6461-ba55-48bd-e0ba-d613ae383000/1024'
-    } else {
-      return 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d80107f-4800-45ae-8e20-c4adf2792f00/1024'
-    }
-  }
-  vehicle_image.value = vehicleImages()
+  vehicle_image.value = vehicleType.value.label === 'Standard Sedan' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/8c7c6a8d-06ad-4278-1c70-9d497b1cb200/1024' : vehicleType.value.label === 'Premium Sedan' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d171f30-de2f-447c-a602-95ccf248c600/1024' : vehicleType.value.label === 'Standard SUV' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/b4bf6461-ba55-48bd-e0ba-d613ae383000/1024' : 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d80107f-4800-45ae-8e20-c4adf2792f00/1024'
   console.log(vehicle_image.value)
   const timestamp = evt.timeStamp
   const {
