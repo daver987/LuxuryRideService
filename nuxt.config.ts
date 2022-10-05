@@ -4,9 +4,9 @@ import { defineNuxtConfig } from 'nuxt/config'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 
 export default defineNuxtConfig({
-  // typescript: {
-  //   shim: false,
-  // },
+  typescript: {
+    shim: false,
+  },
   experimental: {
     reactivityTransform: true,
   },

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const isOpen = useOpen()
+import { Ref } from 'vue'
+const isOpen = useOpen() as Ref<boolean>
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }

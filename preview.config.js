@@ -1,4 +1,5 @@
 /** @type {import("@previewjs/config").PreviewConfig} */
+
 module.exports = {
   /**
    * Configure custom aliases (auto-detected if you use TypeScript).
@@ -19,7 +20,6 @@ module.exports = {
    */
   wrapper: {
     path: '__previewjs__/Wrapper.vue',
-    componentName: 'Wrapper',
   },
 
   /**

@@ -1,48 +1,37 @@
 <template>
   <div
-    class="bg-center bg-cover bg-no-repeat h-screen px-6 lg:px-10 z-10 pt-20 overflow-hidden relative"
+    class="relative z-10 h-screen px-6 pt-20 overflow-hidden bg-center bg-no-repeat bg-cover lg:px-10"
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <div
-      class="grid grid-cols-1 lg:grid-cols-2 place-items-center mb-6 lg:mb-0 max-w-7xl mx-auto"
+      class="grid grid-cols-1 mx-auto mb-6 lg:grid-cols-2 place-items-center lg:mb-0 max-w-7xl"
     >
       <div class="col-span-1 px-4 pt-8 pb-4 space-y-4">
-        <h1 class="heading text-white text-center md:text-left">
+        <h1 class="text-center text-white heading md:text-left">
           {{ slide.heading }}
         </h1>
-        <p class="subheading text-center md:text-left">
+        <p class="text-center subheading md:text-left">
           {{ slide.subHeading }}
         </p>
         <nuxt-img
           :alt="slide.altText"
           :class="slide.style"
           :src="slide.image"
-          class="h-full object-center object-cover w-full"
+          class="object-cover object-center w-full h-full"
         />
       </div>
-      <div class="col-span-1 flex flex-col place-content-center mx-auto w-full">
-        <OnlineQuoteForm />
-        <!--        <FormKit-->
-        <!--          type="form"-->
-        <!--          id="quote_form"-->
-        <!--          form-class="bg-black p-5 border-1 border-gray-50 shadow-md"-->
-        <!--          v-model="formData"-->
-        <!--          :onSubmit="handleSubmit"-->
-        <!--          submit-label="Check Prices and Availability"-->
-        <!--          submit-class="$reset-->
-        <!--          block-->
-        <!--          align-center-->
-        <!--          bg-red-600-->
-        <!--          py-3-->
-        <!--          px-5-->
-        <!--          rounded-md-->
-        <!--          text-sm-->
-        <!--          text-white-->
-        <!--          uppercase-->
-        <!--          tracking-wider"-->
-        <!--        >-->
-        <!--          <QuoteForm />-->
-        <!--        </FormKit>-->
+      <div class="flex flex-col w-full col-span-1 mx-auto place-content-center">
+        <div class="p-6 bg-black border border-white rounded-md">
+        <FormKit type="form" 
+        id="lrs-quote-form"
+        :actions="false"
+        name="lrs-quote-form"
+        #default="{ value }"
+        >
+          <QuoteForm />
+          <pre wrap>{{ value }}</pre>
+        </FormKit>
+      </div>
       </div>
     </div>
   </div>
@@ -61,7 +50,7 @@ const slide = {
 }
 const formData = ref({})
 console.log(formData.value)
-const handleSubmit = (e) => {
+const handleSubmit = (e: any) => {
   console.log(e)
 }
 </script>

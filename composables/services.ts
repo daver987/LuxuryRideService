@@ -1,4 +1,4 @@
-export function useServices() {
+export const useServices = () => {
   return [
     {
       id: 1,

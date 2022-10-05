@@ -2,11 +2,7 @@
   <div class="bg-white">
     <!-- Mobile menu -->
     <TransitionRoot as="template" :show="isOpen">
-      <Dialog
-        as="div"
-        class="flex inset-0 z-40 fixed"
-        @close="isOpen = false"
-      >
+      <Dialog as="div" class="flex inset-0 z-40 fixed" @close="isOpen = false">
         <TransitionChild
           as="template"
           enter="transition-opacity ease-linear duration-500"
@@ -81,9 +77,10 @@ import {
   DialogOverlay,
   Dialog,
 } from '@headlessui/vue'
+import { Ref } from 'vue'
 
 const navigation = useNavigation()
-const isOpen = useOpen()
+const isOpen = useOpen() as Ref<boolean>
 </script>
 
 <style scoped>

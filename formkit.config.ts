@@ -1,5 +1,13 @@
 import { DefaultConfigOptions } from '@formkit/vue'
+// import { defaultConfig } from '@formkit/vue'
 import { generateClasses } from '@formkit/themes'
+// import { createProPlugin, autocomplete, rating, dropdown } from '@formkit/pro'
+
+// const proPlugin = createProPlugin('fk-9d667f1c43', {
+//   autocomplete,
+//   rating,
+//   dropdown,
+// })
 
 const config: DefaultConfigOptions = {
   theme: 'genesis',
@@ -8,8 +16,8 @@ const config: DefaultConfigOptions = {
       global: {
         outer: 'mt-2',
         wrapper: 'w-full rounded-0',
-        // label: 'block text-sm text-gray-200 hidden',
-        inner: 'max-w-md mt-1 bg-white p-0 rounded-0',
+        label: 'block text-sm text-gray-200 hidden',
+        inner: 'w-lg mt-1 bg-white p-0 rounded-0',
         input:
           'block w-full rounded-0 focus:border-primary focus:ring-primary sm:text-sm placeholder-gray-400',
         help: 'text-sm text-gray-50',
@@ -33,4 +41,7 @@ const config: DefaultConfigOptions = {
   },
 }
 
-export default config
+export default {
+  // plugins: [proPlugin],
+  config,
+}
