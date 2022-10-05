@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { Loader } from '@googlemaps/js-api-loader'
 import Datepicker from '@vuepic/vue-datepicker'
-
+import { VueTelInput } from 'vue-tel-input'
 
 const library = markRaw({
-  Datepicker: Datepicker,
+  Datepicker,
+  VueTelInput,
 })
 console.dir(Datepicker)
 const config = useRuntimeConfig()
@@ -136,8 +137,6 @@ function initMap(): void {
         return
       }
 
-      const me = this
-
       this.directionsService.route(
         {
           origin: { placeId: this.originPlaceId },
@@ -147,7 +146,7 @@ function initMap(): void {
         (response, status) => {
           console.log(response)
           if (status === 'OK') {
-            me.directionsRenderer.setDirections(response)
+            this.directionsRenderer.setDirections(response)
             autocompleteData.distance_traveled = (response.routes[0].legs[0]
               .distance.value / 1000) as number
             autocompleteData.duration_traveled = (response.routes[0].legs[0]
@@ -160,9 +159,9 @@ function initMap(): void {
               .geocoded_waypoints[0].types[0] as string
             autocompleteData.destination_location_type = response
               .geocoded_waypoints[1].types[0] as string
-          } else {
-            window.alert('Directions request failed due to ' + status)
+            return
           }
+          window.alert(`Directions request failed due to ${status}`)
         }
       )
     }
@@ -192,7 +191,7 @@ const autocompleteData = reactive({
   destination_location: '',
   origin_location_type: '',
   destination_location_type: '',
-})
+}) as any
 
 const data = reactive({
   origin_input: null,
@@ -211,7 +210,16 @@ const data = reactive({
   phone_number: null,
   isDisabled: true,
   time: null,
+  inputOptions: {
+    id: 'phone-number',
+    required: true,
+    showDialCode: true,
+    name: 'phone_number',
+    autocomplete: true,
+    type: 'tel',
+  },
 })
+
 console.log(data)
 watch(data, () => {
   console.log(data)
@@ -220,26 +228,32 @@ watch(data, () => {
 const schema = [
   {
     $el: 'h2',
-    attrs: { class: 'text-2xl uppercase text-center text-white' },
+    attrs: { class: 'text-2xl uppercase text-center text-white mb-4' },
     children: 'Instant Quote',
   },
   {
     $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+    attrs: { class: 'grid grid-cols-1 gap-4' },
     children: [
       {
         $formkit: 'text',
         name: 'origin_input',
         id: 'origin-input',
         placeholder: 'Enter Address or Airport Code...',
-        label: 'Pickup Location:',
+        // label: 'Pickup Location:',
       },
+    ],
+  },
+  {
+    $el: 'div',
+    attrs: { class: 'grid grid-cols-1 gap-4' },
+    children: [
       {
         $formkit: 'text',
         id: 'destination-input',
         name: 'destination_input',
         placeholder: 'Enter Address or Airport Code...',
-        label: 'Drop-off Location:',
+        // label: 'Drop-off Location:',
       },
     ],
   },
@@ -249,38 +263,47 @@ const schema = [
     children: [
       {
         $cmp: 'Datepicker',
-        attrs: {},
+        attrs: {
+          id: 'pickup-time',
+          name: 'pickup_time',
+          placeholder: 'Enter Pickup Time...',
+        },
         props: {
-          dark: true,
+          dark: false,
           timePicker: true,
-          modelValue: "$time"
+          modelValue: `$pickup_time`,
+          inputClassName:
+            'rounded-md w-full placeholder-gray-500 text-gray-400',
         },
       },
-      // {
-      //   $formkit: 'date',
-      //   id: 'pickup-date',
-      //   prefixIcon: 'date',
-      //   name: 'pickup_date',
-      //   label: 'Pick Up Date:',
-      // },
-      // {
-      //   $formkit: 'time',
-      //   id: 'pickup-time',
-      //   prefixIcon: 'time',
-      //   name: 'pickup_time',
-      //   label: 'Pickup Time:',
-      // },
+      {
+        $cmp: 'Datepicker',
+        attrs: {
+          id: 'pickup-date',
+          placeholder: 'Enter Pickup Time...',
+        },
+        props: {
+          enableTimePicker: false,
+          closeOnAutoApply: true,
+          is24: false,
+          name: 'pickup_date',
+          dark: false,
+          modelValue: `$pickup_date`,
+          inputClassName:
+            'rounded-md w-full placeholder-gray-500 text-gray-400',
+        },
+      },
     ],
   },
   {
     $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4' },
     children: [
       {
         $cmp: 'FormKit',
         props: {
           type: 'select',
-          id: 'serviceType',
+          id: 'service-type',
           name: 'service_type',
           placeholder: 'Pick the Service Type',
           // label: 'Service Type:',
@@ -471,26 +494,30 @@ const schema = [
         placeholder: 'Enter your email...',
         validation: 'required|email',
       },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'max-w-[400px] mb-4' },
-    children: [
       {
-        $cmp: 'TelInput',
+        $cmp: 'VueTelInput',
+        bind: `$inputOptions`,
         props: {
           id: 'phone_number',
           placeholder: 'Enter your phone number...',
-          color: 'info',
           size: 'sm',
-          modelValue: '$data.phone_number',
+          modelValue: `$phone_number`,
+          styleClasses: 'h-11',
         },
         attrs: {
           label: 'Phone Number:',
         },
       },
     ],
+  },
+  {
+    $formkit: 'submit',
+    id: 'submit',
+    label: 'Get Pricing and Availability',
+    classes: {
+      outer: 'w-full',
+      input: 'uppercase bg-red-700',
+    },
   },
 ]
 </script>
@@ -500,6 +527,4 @@ const schema = [
   <div id="myMap" ref="myMap"></div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

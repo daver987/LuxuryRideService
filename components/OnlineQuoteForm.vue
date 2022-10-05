@@ -566,8 +566,10 @@ const onSubmit = async (evt: Event) => {
     error,
   }
 }
-const telInput = ref(null)
-console.log(telInput)
+const telInput = ref<HTMLElement | null>(null)
+if (telInput) {
+  await console.dir(telInput)
+}
 </script>
 
 <template>
@@ -583,7 +585,7 @@ console.log(telInput)
     >
       <h2 class="text-center text-white uppercase">Instant Quote</h2>
       <div class="grid grid-cols-12 gap-4">
-        <div class="col-span-6 mt-1">
+        <div class="col-span-12 mt-1">
           <InputText
             v-model.trim="origin"
             type="text"
@@ -593,7 +595,7 @@ console.log(telInput)
             validation-error-message="Please enter a Pickup Location"
           />
         </div>
-        <div class="col-span-6 mt-1">
+        <div class="col-span-12 mt-1">
           <InputText
             v-model.trim="destination"
             type="text"
@@ -667,8 +669,8 @@ console.log(telInput)
             <ListboxLabel
               v-if="false"
               class="block text-sm font-medium text-gray-700"
-              >Service Types</ListboxLabel
-            >
+              >Service Types
+            </ListboxLabel>
             <div class="relative mt-1">
               <ListboxButton
                 class="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 shadow-sm cursor-default focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
@@ -692,7 +694,7 @@ console.log(telInput)
                 leave-to-class="opacity-0"
               >
                 <ListboxOptions
-                  class="list-none absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                  class="absolute z-10 w-full py-1 mt-1 overflow-auto text-base list-none bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
                 >
                   <ListboxOption
                     as="template"
@@ -738,11 +740,11 @@ console.log(telInput)
             <ListboxLabel
               v-if="false"
               class="block text-sm font-medium text-gray-700"
-              >Vehicle Types</ListboxLabel
-            >
+              >Vehicle Types
+            </ListboxLabel>
             <div class="relative mt-1">
               <ListboxButton
-                class="list-none relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 shadow-sm cursor-default focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
+                class="relative w-full py-2 pl-3 pr-10 text-left list-none bg-white border border-gray-300 shadow-sm cursor-default focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
               >
                 <span class="block truncate"
                   >{{ selectedVehicleType.name }}
@@ -763,7 +765,7 @@ console.log(telInput)
                 leave-to-class="opacity-0"
               >
                 <ListboxOptions
-                  class="z-50 list-none absolute mt-1 max-h-72 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+                  class="absolute z-50 w-full py-1 mt-1 overflow-auto text-base list-none bg-white rounded-md shadow-lg max-h-72 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
                 >
                   <ListboxOption
                     as="template"
@@ -802,10 +804,7 @@ console.log(telInput)
             </div>
           </Listbox>
         </div>
-      </div>
 
-      <!--Personal information section-->
-      <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
           <InputText
             v-model.trim="first_name"
@@ -827,6 +826,7 @@ console.log(telInput)
           />
         </div>
       </div>
+
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
           <InputText
@@ -849,13 +849,15 @@ console.log(telInput)
               name: 'phone_number',
               autocomplete: true,
               type: 'tel',
-              styleClasses: 'rounded-none input input-md input-bordered w-full',
+              styleClasses: 'rounded-none w-full',
             }"
             :dropdownOptions="{
               showDialCodeInList: true,
               showFlags: true,
               showCountryCodeInList: true,
             }"
+            invalidMsg="Please enter a valid phone number"
+            parsedPlaceholder="Enter Your Phone Number..."
           />
         </div>
       </div>
@@ -870,18 +872,18 @@ console.log(telInput)
   </div>
 </template>
 
-<style scoped>
-.vti__dropdown {
-  width: 100%;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  padding: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #4a5568;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-</style>
+<!-- <style scoped>
+//.vti__dropdown {
+//  width: 100%;
+//  border: 1px solid #e2e8f0;
+//  border-radius: 0.25rem;
+//  background-color: #fff;
+//  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+//  padding: 0.5rem;
+//  font-size: 1rem;
+//  line-height: 1.5;
+//  color: #4a5568;
+//  outline: none;
+//  transition: all 0.2s ease-in-out;
+//}
+</style> -->
