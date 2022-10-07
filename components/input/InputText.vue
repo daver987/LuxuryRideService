@@ -3,12 +3,12 @@
     <label v-show="showLabel" :for="name" class="label"
       ><span class="label-text">{{ label }}</span></label
     >
-    <div class="relative max-w-lg">
+    <div class="relative max-w-xl">
       <input
         :name="name"
         :id="id"
         :type="type"
-        class="w-full rounded-none input input-md input-bordered placeholder-gray-500"
+        class="w-full rounded-none placeholder-gray-500 shadow-md focus:outline-none focus-visible:border-primary focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-1 focus-visible:ring-offset-primary sm:text-sm"
         :placeholder="placeholder"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target)"
