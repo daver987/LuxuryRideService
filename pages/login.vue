@@ -1,18 +1,9 @@
 <script setup lang="ts">
-import { useScriptTag } from '@vueuse/core'
-
 useHead(() => ({
   title: 'LRS Login',
   meta: [{ name: 'description', content: 'My App' }],
+  script: [{ src: 'https://book.mylimobiz.com/v4/luxridesvc/widget/login' }],
 }))
-onMounted(() => {
-  useScriptTag(
-    'https://book.mylimobiz.com/v4/luxridesvc/widget/login',
-    (el: HTMLScriptElement) => {
-      console.log('script loaded')
-    }
-  )
-})
 </script>
 
 <template>

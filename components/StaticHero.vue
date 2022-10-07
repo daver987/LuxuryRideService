@@ -20,25 +20,22 @@
           class="object-cover object-center w-full h-full"
         />
       </div>
-      <div class="flex flex-col w-full col-span-1 mx-auto place-content-center">
-        <div class="p-6 bg-black border border-white rounded-lg shadow-xl">
-          <FormKit
-            type="form"
-            id="lrs-quote-form"
-            :actions="false"
-            name="lrs-quote-form"
-            #default="{ value }"
-          >
-            <QuoteForm />
-            <pre wrap>{{ value }}</pre>
-          </FormKit>
-        </div>
+      <div class="w-full col-span-1 mx-auto place-content-center">
+        <OnlineQuoteForm />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const options = [
+  { id: 0, name: 'Choose Service Type' },
+  { id: 1, name: 'Point-to-Point' },
+  { id: 2, name: 'To Airport' },
+  { id: 3, name: 'From Airport' },
+  { id: 4, name: 'Hourly/As Directed' },
+]
+const selectedOption = ref(options[0])
 const slide = {
   heading: 'Experience Luxury Rides and Tours',
   subHeading: 'In Toronto',

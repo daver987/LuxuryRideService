@@ -34,10 +34,20 @@ definePageMeta({
       <div
         class="container mx-auto h-[125vh] -mt-16 mb-16 w-full max-w-7xl z-20 relative md:-mt-20"
       >
-        <iframe
-          src="https://book.mylimobiz.com/v4/luxridesvc"
-          class="h-[130vh] shadow-xl w-full md:h-[120vh]"
-        />
+        <NuxtLink
+          href="https://book.mylimobiz.com/v4/luxridesvc"
+          data-ores-widget="website"
+          data-ores-alias="luxridesvc"
+          >Online Reservations</NuxtLink
+        >
+        <Script
+          type="text/javascript"
+          src="https://book.mylimobiz.com/v4/widgets/widget-loader.js"
+        ></Script>
+        <!--        <iframe-->
+        <!--          src="https://book.mylimobiz.com/v4/luxridesvc"-->
+        <!--          class="h-[130vh] shadow-xl w-full md:h-[120vh]"-->
+        <!--        />-->
       </div>
     </section>
   </div>

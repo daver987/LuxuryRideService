@@ -6,14 +6,6 @@ import { storeToRefs } from 'pinia'
 import { useMapStore } from '~~/stores/useMapStore'
 import { FormOptions } from '~~/types/FormOptions'
 import { Loader } from '@googlemaps/js-api-loader'
-import {
-  Listbox,
-  ListboxButton,
-  ListboxLabel,
-  ListboxOption,
-  ListboxOptions,
-} from '@headlessui/vue'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 
 const config = useRuntimeConfig()
 const loader = new Loader({
@@ -114,14 +106,14 @@ const initMap = (): void => {
             origin_place_name.value = placeName
             origin_lat.value = lat
             origin_lng.value = lng
-            break;
+            break
           default:
             destination_address_components.value = addressComponents
             destination_formatted_address.value = formattedAddress
             destination_place_name.value = placeName
             destination_lat.value = lat
             destination_lng.value = lng
-            break;
+            break
         }
 
         if (!place.place_id) {
@@ -132,10 +124,10 @@ const initMap = (): void => {
         switch (mode) {
           case 'ORIG':
             this.originPlaceId = place.place_id
-            break;
+            break
           default:
             this.destinationPlaceId = place.place_id
-            break;
+            break
         }
         this.route()
         if (destination_lat.value && origin_lat.value) {
@@ -186,6 +178,10 @@ onMounted(() => {
 
 const passengerCountOptions = [
   {
+    name: 'Select Passenger Count',
+    id: 0,
+  },
+  {
     name: '1 Passenger',
     id: 1,
   },
@@ -214,7 +210,7 @@ const passengerCountOptions = [
     id: 7,
   },
 ] as FormOptions[]
-const selectedPassengerCount = ref(passengerCountOptions[0].value)
+const selectedPassengerCount = ref(passengerCountOptions[0])
 
 const serviceTypeOptions = [
   { name: 'Pick A Service Type..', id: 0 },
@@ -235,6 +231,10 @@ const vehicleTypeOptions = [
 const selectedVehicleType = ref(vehicleTypeOptions[0])
 
 const hoursRequiredOptions = [
+  {
+    name: 'Select Hours Required',
+    id: 0,
+  },
   {
     name: '2 hrs',
     id: 2,
@@ -329,7 +329,7 @@ console.log(passengerCount.value)
 const hoursCount = ref(null)
 console.log(hoursCount.value)
 // const phone_number = ref(null)
-// const email_address = ref('')
+// const email_address = ref(null)
 // const service_type = ref('')
 // const vehicle_type = ref('')
 // const first_name = ref('')
@@ -364,11 +364,11 @@ watch(service_type, () => {
     case 4:
       isItHourly.value = true
       numberOfHours.value = 2
-      break;
+      break
     default:
       isItHourly.value = false
       numberOfHours.value = null
-      break;
+      break
   }
   console.log(
     service_type.value.label,
@@ -420,7 +420,14 @@ const onSubmit = async (evt: Event) => {
   gratuity_rate.value = gratuity
   hst.value = HST
 
-  vehicle_image.value = vehicleType.value.label === 'Standard Sedan' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/8c7c6a8d-06ad-4278-1c70-9d497b1cb200/1024' : vehicleType.value.label === 'Premium Sedan' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d171f30-de2f-447c-a602-95ccf248c600/1024' : vehicleType.value.label === 'Standard SUV' ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/b4bf6461-ba55-48bd-e0ba-d613ae383000/1024' : 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d80107f-4800-45ae-8e20-c4adf2792f00/1024'
+  vehicle_image.value =
+    vehicleType.value.label === 'Standard Sedan'
+      ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/8c7c6a8d-06ad-4278-1c70-9d497b1cb200/1024'
+      : vehicleType.value.label === 'Premium Sedan'
+      ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d171f30-de2f-447c-a602-95ccf248c600/1024'
+      : vehicleType.value.label === 'Standard SUV'
+      ? 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/b4bf6461-ba55-48bd-e0ba-d613ae383000/1024'
+      : 'https://imagedelivery.net/9mQjskQ9vgwm3kCilycqww/5d80107f-4800-45ae-8e20-c4adf2792f00/1024'
   console.log(vehicle_image.value)
   const timestamp = evt.timeStamp
   const {
@@ -576,11 +583,14 @@ if (telInput) {
       id="quote_form"
       ref="formData"
       @submit.prevent="onSubmit"
-      class="max-w-2xl p-6 mx-auto space-y-4 prose bg-black border border-white form-control"
+      class="max-w-2xl p-6 mx-auto space-y-4 prose bg-black border border-white rounded-lg shadow-lg"
       method="POST"
       action="https://formspree.io/f/xnqkzqjy"
     >
       <h2 class="text-center text-white uppercase">Instant Quote</h2>
+
+      <!--      Pick-Up Location and Drop-Off Location Section-->
+
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-12 mt-1">
           <InputText
@@ -603,6 +613,9 @@ if (telInput) {
           />
         </div>
       </div>
+
+      <!--      Pickup Date and Time Section-->
+
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
           <Datepicker
@@ -632,176 +645,46 @@ if (telInput) {
           </Datepicker>
         </div>
       </div>
+
+      <!--      Hours Required and Passenger Count Section-->
+
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
-          <InputSelect
-            v-model="vehicle_type.value"
-            type="select"
-            id="vehicle-type"
-            name="vehicle_type"
-            placeholder="Pick A Vehicle Type"
-            validation-error-message="Please Pick A Vehicle Type"
-            :options="vehicleTypeOptions"
+          <InputListbox
+            :options="hoursRequiredOptions"
+            v-model="selectedHours"
           />
         </div>
         <div class="col-span-6 mt-1">
-          <InputSelect
-            v-model="service_type.value"
-            type="select"
-            id="service-type"
-            name="service_type"
-            placeholder="Pick A Service Type"
-            validation-error-message="Please Pick A Service Type"
-            :options="serviceTypeOptions"
+          <InputListbox
+            :options="passengerCountOptions"
+            v-model="selectedPassengerCount"
           />
         </div>
       </div>
 
       <!--    Vehicle and Service Type Input Sections-->
 
-      <!--      Service Type ComboBox Input-->
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
-          <Listbox v-model="selectedServiceType" name="vehicle_type" by="id">
-            <ListboxLabel
-              v-if="false"
-              class="block text-sm font-medium text-gray-700"
-              >Service Types
-            </ListboxLabel>
-            <div class="relative mt-1">
-              <ListboxButton
-                class="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 shadow-sm cursor-default focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
-              >
-                <span class="block truncate"
-                  >{{ selectedServiceType.name }}
-                </span>
-                <span
-                  class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
-                >
-                  <ChevronUpDownIcon
-                    class="w-5 h-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                </span>
-              </ListboxButton>
-
-              <transition
-                leave-active-class="transition duration-200 ease-in"
-                leave-from-class="opacity-100"
-                leave-to-class="opacity-0"
-              >
-                <ListboxOptions
-                  class="absolute z-10 w-full py-1 mt-1 overflow-auto text-base list-none bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-                >
-                  <ListboxOption
-                    as="template"
-                    v-for="option in serviceTypeOptions"
-                    :key="option.id"
-                    :value="option"
-                    v-slot="{ active, selected }"
-                  >
-                    <li
-                      :class="[
-                        active ? 'text-white bg-primary' : 'text-gray-900',
-                        'relative cursor-default select-none p-4',
-                      ]"
-                    >
-                      <span
-                        :class="[
-                          selected ? 'font-semibold' : 'font-normal',
-                          'block truncate',
-                        ]"
-                        >{{ option.name }}</span
-                      >
-
-                      <span
-                        v-if="selected"
-                        :class="[
-                          active ? 'text-white' : 'text-primary',
-                          'absolute inset-y-0 left-0 flex items-center pl-1.5',
-                        ]"
-                      >
-                        <CheckIcon class="w-5 h-5" aria-hidden="true" />
-                      </span>
-                    </li>
-                  </ListboxOption>
-                </ListboxOptions>
-              </transition>
-            </div>
-          </Listbox>
+          <InputListbox
+            :options="serviceTypeOptions"
+            v-model="selectedServiceType"
+          />
         </div>
 
-        <!--        Vehicle Type ComboBox Input-->
         <div class="col-span-6 mt-1">
-          <Listbox v-model="selectedVehicleType" name="vehicle_type" by="id">
-            <ListboxLabel
-              v-if="false"
-              class="block text-sm font-medium text-gray-700"
-              >Vehicle Types
-            </ListboxLabel>
-            <div class="relative mt-1">
-              <ListboxButton
-                class="relative w-full py-2 pl-3 pr-10 text-left list-none bg-white border border-gray-300 shadow-sm cursor-default focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
-              >
-                <span class="block truncate"
-                  >{{ selectedVehicleType.name }}
-                </span>
-                <span
-                  class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
-                >
-                  <ChevronUpDownIcon
-                    class="w-5 h-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                </span>
-              </ListboxButton>
-
-              <transition
-                leave-active-class="transition duration-100 ease-in"
-                leave-from-class="opacity-100"
-                leave-to-class="opacity-0"
-              >
-                <ListboxOptions
-                  class="absolute z-50 w-full py-1 mt-1 overflow-auto text-base list-none bg-white rounded-md shadow-lg max-h-72 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
-                >
-                  <ListboxOption
-                    as="template"
-                    v-for="option in vehicleTypeOptions"
-                    :key="option.id"
-                    :value="option"
-                    v-slot="{ active, selected }"
-                  >
-                    <li
-                      :class="[
-                        active ? 'bg-primary/75 text-white' : 'text-gray-900',
-                        'relative cursor-default select-none py-2 pl-8 pr-4',
-                      ]"
-                    >
-                      <span
-                        :class="[
-                          selected ? 'font-medium' : 'font-normal',
-                          'block truncate',
-                        ]"
-                        >{{ option.name }}</span
-                      >
-
-                      <span
-                        v-if="selected"
-                        :class="[
-                          active ? 'text-white' : 'text-primary',
-                          'absolute inset-y-0 left-0 flex items-center pl-3',
-                        ]"
-                      >
-                        <CheckIcon class="w-5 h-5" aria-hidden="true" />
-                      </span>
-                    </li>
-                  </ListboxOption>
-                </ListboxOptions>
-              </transition>
-            </div>
-          </Listbox>
+          <InputListbox
+            :options="vehicleTypeOptions"
+            v-model="selectedVehicleType"
+          />
         </div>
+      </div>
 
+      <!--      Contact Information Section-->
+      <!--      First and last name section-->
+
+      <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
           <InputText
             v-model.trim="first_name"
@@ -824,6 +707,8 @@ if (telInput) {
         </div>
       </div>
 
+      <!--      Email and phone number section-->
+
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-6 mt-1">
           <InputText
@@ -835,6 +720,7 @@ if (telInput) {
             validation-error-message="Please enter a valid email address"
           />
         </div>
+
         <div class="col-span-6 mt-1">
           <VueTelInput
             ref="telInput"
@@ -858,6 +744,8 @@ if (telInput) {
           />
         </div>
       </div>
+
+      <!--      Submit Button -->
       <button
         type="submit"
         class="w-full px-5 py-2 text-white uppercase bg-red-700"
@@ -869,18 +757,18 @@ if (telInput) {
   </div>
 </template>
 
-<!-- <style scoped>
-//.vti__dropdown {
-//  width: 100%;
-//  border: 1px solid #e2e8f0;
-//  border-radius: 0.25rem;
-//  background-color: #fff;
-//  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-//  padding: 0.5rem;
-//  font-size: 1rem;
-//  line-height: 1.5;
-//  color: #4a5568;
-//  outline: none;
-//  transition: all 0.2s ease-in-out;
-//}
-</style> -->
+<style scoped>
+.vti__dropdown {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+</style>
