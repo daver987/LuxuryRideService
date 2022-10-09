@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     'nuxt-font-metrics',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@formkit/nuxt',
+    'nuxt-histoire',
   ],
 
   runtimeConfig: {

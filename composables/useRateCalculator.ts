@@ -17,38 +17,33 @@ export interface Surcharges {
 
 //Function that takes the Rates array of rate objects and returns the
 // correct rate object by the id passed in from the selected vehicle
-const getRateFromId = (id: number, rates: Rates[]) => {
-  return rates.find((rate) => rate.id === id)
-}
+const getRateFromId = (id: number, rates: Rates[]) =>
+  rates.find((rate) => rate.id === id)
 
 //Function that takes the rate object checks to see if the pricing is hourly
 // based or is distance based then calculates the base rate
-function getBaseRate(
+const getBaseRate = (
   isHourly: boolean,
   numHours: number,
   numKms: number,
   rate: Rates
-) {
-  if (isHourly) {
-    return numHours < rate.minimumHoursHourly
+): number =>
+  isHourly
+    ? numHours < rate.minimumHoursHourly
       ? rate.minimumRateHourly
       : round(rate.perHour * numHours)
-  }
-  return numKms < rate.minimumDistance
+    : numKms < rate.minimumDistance
     ? rate.minimumRateDistance
     : round(
         rate.minimumRateDistance + (numKms - rate.minimumDistance) * rate.perKm
       )
-}
 
 //Function that takes the surcharge object, destructures it and calculates the surcharges individually
-const getSurchargeAmounts = (baseRate: number, surcharges: Surcharges) => {
-  return {
-    fuelSurcharge: round(baseRate * surcharges.fuelSurcharge),
-    gratuity: round(baseRate * surcharges.gratuity),
-    HST: round(baseRate * surcharges.HST),
-  }
-}
+const getSurchargeAmounts = (baseRate: number, surcharges: Surcharges) => ({
+  fuelSurcharge: round(baseRate * surcharges.fuelSurcharge),
+  gratuity: round(baseRate * surcharges.gratuity),
+  HST: round(baseRate * surcharges.HST),
+})
 
 //custom rounding function for rounding to the nearest cent with high precision
 const round = (num: number) => {

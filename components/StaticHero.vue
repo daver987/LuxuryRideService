@@ -21,7 +21,7 @@
         />
       </div>
       <div class="w-full col-span-1 mx-auto place-content-center">
-        <OnlineQuoteForm />
+        <QuoteForm />
       </div>
     </div>
   </div>

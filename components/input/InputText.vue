@@ -8,7 +8,7 @@
         :name="name"
         :id="id"
         :type="type"
-        class="w-full rounded-none placeholder-gray-500 shadow-md focus:outline-none focus-visible:border-primary focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-1 focus-visible:ring-offset-primary sm:text-sm"
+        class="w-full placeholder-gray-500 rounded-none shadow-md focus:outline-none focus-visible:border-primary focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-1 focus-visible:ring-offset-primary sm:text-sm"
         :placeholder="placeholder"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target)"
@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+import { useField } from 'vee-validate';
 defineProps({
   showLabel: {
     type: Boolean,

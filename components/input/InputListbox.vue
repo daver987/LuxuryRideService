@@ -11,13 +11,13 @@ defineProps({
   options: {
     type: Object,
     required: true,
-    default(rawProps) {
+    default(_rawProps): { id: number; name: string; }[] {
       return [{ id: 0, name: '' }]
     },
   },
   modelValue: {
     type: Object,
-    default(rawProps) {
+    default(_rawProps): { id: number; name: string; }[] {
       return [{ id: 0, name: '' }]
     },
   },
@@ -32,13 +32,13 @@ const emit = defineEmits(['update:modelValue'])
   >
     <div class="relative mt-1">
       <ListboxButton
-        class="w-full cursor-default rounded-none bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:text-sm"
+        class="w-full py-2 pl-3 pr-10 text-left bg-white rounded-none shadow-md cursor-default focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:text-sm"
       >
         <span class="block truncate">{{ modelValue.name }}</span>
         <span
-          class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
+          class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
         >
-          <ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <ChevronUpDownIcon class="w-5 h-5 text-gray-400" aria-hidden="true" />
         </span>
       </ListboxButton>
 
@@ -52,7 +52,7 @@ const emit = defineEmits(['update:modelValue'])
       >
         <ListboxOptions
           as="div"
-          class="absolute z-50 mt-1 max-h-72 w-full overflow-auto rounded-none bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+          class="absolute z-50 w-full py-1 mt-1 overflow-auto text-base bg-white rounded-none shadow-lg max-h-72 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
         >
           <ListboxOption
             v-slot="{ active, selected }"
@@ -76,9 +76,9 @@ const emit = defineEmits(['update:modelValue'])
               >
               <span
                 v-if="selected"
-                class="absolute inset-y-0 left-0 flex items-center pl-3 text-primary bg-white"
+                class="absolute inset-y-0 left-0 flex items-center pl-3 bg-white text-primary"
               >
-                <CheckIcon class="h-5 w-5" aria-hidden="true" />
+                <CheckIcon class="w-5 h-5" aria-hidden="true" />
               </span>
             </div>
           </ListboxOption>

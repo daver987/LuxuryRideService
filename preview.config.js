@@ -19,7 +19,7 @@ module.exports = {
    * Useful to set up context providers and global CSS.
    */
   wrapper: {
-    path: '__previewjs__/Wrapper.vue',
+    path: `__previewjs__/Wrapper.vue`,
   },
 
   /**

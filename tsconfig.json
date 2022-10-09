@@ -4,6 +4,10 @@
   "compilerOptions": {
     "allowJs": true,
     "types": ["@nuxt/types"],
-    "strict": false
+    "strict": false,
+    "sourceMap": true,
+    "outDir": "dist",
+    "lib": ["esnext", "DOM"],
+    "esModuleInterop": true
   }
 }

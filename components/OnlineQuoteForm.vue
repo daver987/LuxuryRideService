@@ -6,6 +6,9 @@ import { storeToRefs } from 'pinia'
 import { useMapStore } from '~~/stores/useMapStore'
 import { FormOptions } from '~~/types/FormOptions'
 import { Loader } from '@googlemaps/js-api-loader'
+import { Field, Form, ErrorMessage } from 'vee-validate'
+import { toFieldValidator } from '@vee-validate/zod'
+import * as zod from 'zod'
 
 const config = useRuntimeConfig()
 const loader = new Loader({
@@ -19,13 +22,14 @@ const myMap = ref<HTMLElement>(null)
 
 const initMap = (): void => {
   loader.load().then(() => {
-    const map = new google.maps.Map(myMap.value, {
-      mapTypeControl: false,
-      fullscreenControl: false,
-      center: { lat: 43.65107, lng: -79.347015 },
-      zoom: 9,
-    })
-    new AutocompleteDirectionsHandler(map)
+    new AutocompleteDirectionsHandler(
+      new google.maps.Map(myMap.value, {
+        mapTypeControl: false,
+        fullscreenControl: false,
+        center: { lat: 43.65107, lng: -79.347015 },
+        zoom: 9,
+      })
+    )
   })
 
   class AutocompleteDirectionsHandler {
@@ -45,8 +49,15 @@ const initMap = (): void => {
       this.directionsRenderer = new google.maps.DirectionsRenderer()
       this.directionsRenderer.setMap(map)
 
-      const originInputOne = ref('origin-input')
-      const destinationInputOne = ref('destination-input')
+      // const originInputOne = ref('origin-input')
+      // const destinationInputOne = ref('destination-input')
+
+      const originInputOne = ref(
+        'pick_up_location-a1eb527b-3c3d-4923-ab3c-f10c34e2b6cf'
+      )
+      const destinationInputOne = ref(
+        'drop_off_location-a1eb527b-3c3d-4923-ab3c-f10c34e2b6cf'
+      )
       const originInput = document.getElementById(
         originInputOne.value as string
       ) as HTMLInputElement
@@ -78,7 +89,7 @@ const initMap = (): void => {
     setupPlaceChangedListener(
       autocomplete: google.maps.places.Autocomplete,
       mode: string
-    ) {
+    ): void {
       autocomplete.bindTo('bounds', this.map)
 
       autocomplete.addListener('place_changed', () => {
@@ -135,7 +146,7 @@ const initMap = (): void => {
       })
     }
 
-    route() {
+    route(): void {
       if (!this.originPlaceId || !this.destinationPlaceId) {
         return
       }
@@ -148,19 +159,21 @@ const initMap = (): void => {
         },
         (response, status) => {
           console.log(response)
-          if (status === 'OK') {
-            this.directionsRenderer.setDirections(response)
-            distance_traveled.value = (response.routes[0].legs[0].distance
-              .value / 1000) as number
-            duration_traveled.value = (response.routes[0].legs[0].duration
-              .value / 60) as number
-            origin_location.value = response.routes[0].legs[0].start_address
-            destination_location.value = response.routes[0].legs[0].end_address
-            origin_location_type.value = response.geocoded_waypoints[0]
-              .types[0] as string
-            destination_location_type.value = response.geocoded_waypoints[1]
-              .types[0] as string
-            return
+          switch (status) {
+            case 'OK':
+              this.directionsRenderer.setDirections(response)
+              distance_traveled.value = (response.routes[0].legs[0].distance
+                .value / 1000) as number
+              duration_traveled.value = (response.routes[0].legs[0].duration
+                .value / 60) as number
+              origin_location.value = response.routes[0].legs[0].start_address
+              destination_location.value =
+                response.routes[0].legs[0].end_address
+              origin_location_type.value = response.geocoded_waypoints[0]
+                .types[0] as string
+              destination_location_type.value = response.geocoded_waypoints[1]
+                .types[0] as string
+              return
           }
           window.alert(`Directions request failed due to ${status}`)
         }
@@ -571,8 +584,9 @@ const onSubmit = async (evt: Event) => {
   }
 }
 const telInput = ref<HTMLElement | null>(null)
+
 if (telInput) {
-  await console.dir(telInput)
+  console.dir(telInput)
 }
 </script>
 
@@ -583,11 +597,11 @@ if (telInput) {
       id="quote_form"
       ref="formData"
       @submit.prevent="onSubmit"
-      class="max-w-2xl p-6 mx-auto space-y-4 prose bg-black border border-white rounded-lg shadow-lg"
+      class="mx-auto max-w-2xl rounded-lg border border-white bg-black p-6 shadow-lg space-y-4 prose"
       method="POST"
       action="https://formspree.io/f/xnqkzqjy"
     >
-      <h2 class="text-center text-white uppercase">Instant Quote</h2>
+      <h2 class="text-center uppercase text-white">Instant Quote</h2>
 
       <!--      Pick-Up Location and Drop-Off Location Section-->
 
@@ -748,7 +762,7 @@ if (telInput) {
       <!--      Submit Button -->
       <button
         type="submit"
-        class="w-full px-5 py-2 text-white uppercase bg-red-700"
+        class="w-full bg-red-700 px-5 py-2 uppercase text-white"
       >
         Check Pricing And Availability
       </button>

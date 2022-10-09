@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { FormOptions } from "~~/types/FormOptions";
-const handleInputChange = (event: Event) =>
+const handleInputChange = (event: _Event): any =>
   (event.target as HTMLInputElement).value
 
 interface Props {

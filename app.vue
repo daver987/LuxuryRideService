@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import '@formkit/themes/genesis'
+//scripts
 </script>
-
 
 <template>
   <NuxtLayout>

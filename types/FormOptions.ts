@@ -1,6 +1,6 @@
 export interface FormOptions {
-  label: string
-  value: number | string
-  name: string
-  id: number
+  label?: string
+  value?: number | string
+  name?: string
+  id?: number
 }

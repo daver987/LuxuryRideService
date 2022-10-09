@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { Loader } from '@googlemaps/js-api-loader'
-import Datepicker from '@vuepic/vue-datepicker'
-import { VueTelInput } from 'vue-tel-input'
-import { createInput } from '@formkit/vue'
+// import Datepicker from '@vuepic/vue-datepicker'
+// import { VueTelInput } from 'vue-tel-input'
 
-const myDatePicker = createInput(Datepicker)
-const myTelInput = createInput(VueTelInput)
+// const myDatePicker = createInput(Datepicker)
+// const myTelInput = createInput(VueTelInput)
 
-const library = markRaw({
-  Datepicker,
-  VueTelInput,
-})
-console.dir(Datepicker)
+// const library = markRaw({
+//   Datepicker,
+//   VueTelInput,
+// })
+// console.dir(Datepicker)
+
 const config = useRuntimeConfig()
 
 const loader = new Loader({
@@ -51,8 +51,13 @@ function initMap(): void {
       this.directionsRenderer = new google.maps.DirectionsRenderer()
       this.directionsRenderer.setMap(map)
 
-      const originInputOne = ref('origin-input')
-      const destinationInputOne = ref('destination-input')
+      const originInputOne = ref(
+        'pick_up_location-a1eb527b-3c3d-4923-ab3c-f10c34e2b6cf'
+      )
+
+      const destinationInputOne = ref(
+        'drop_off_location-a1eb527b-3c3d-4923-ab3c-f10c34e2b6cf'
+      )
       const originInput = document.getElementById(
         originInputOne.value as string
       ) as HTMLInputElement
@@ -183,11 +188,6 @@ function initMap(): void {
   }
 }
 
-onMounted(() => {
-  if (!myMap.value) return
-  initMap()
-})
-
 const autocompleteData = reactive({
   origin_address_components: [],
   origin_formatted_address: '',
@@ -239,307 +239,341 @@ watch(data, () => {
   console.log(data)
 })
 
-const schema = [
-  {
-    $el: 'h2',
-    attrs: { class: 'text-2xl uppercase text-center text-white mb-4' },
-    children: 'Instant Quote',
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 gap-4' },
-    children: [
-      {
-        $formkit: 'text',
-        name: 'origin_input',
-        id: 'origin-input',
-        placeholder: 'Enter Address or Airport Code...',
-        // label: 'Pickup Location:',
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 gap-4' },
-    children: [
-      {
-        $formkit: 'text',
-        id: 'destination-input',
-        name: 'destination_input',
-        placeholder: 'Enter Address or Airport Code...',
-        // label: 'Drop-off Location:',
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
-    children: [
-      {
-        $cmp: 'FormKit',
-        type: 'myDatePicker',
-        attrs: {
-          id: 'pickup-time',
-          name: 'pickup_time',
-          placeholder: 'Enter Pickup Time...',
-        },
-        props: {
-          dark: false,
-          timePicker: true,
-          modelValue: `$pickup_time`,
-          inputClassName:
-            'rounded-md w-full placeholder-gray-500 text-gray-400',
-        },
-      },
-      {
-        $cmp: 'Datepicker',
-        attrs: {
-          id: 'pickup-date',
-          placeholder: `Enter Pickup Time...`,
-        },
-        props: {
-          enableTimePicker: false,
-          closeOnAutoApply: true,
-          is24: false,
-          name: 'pickup_date',
-          dark: false,
-          modelValue: `$pickup_date`,
-          inputClassName:
-            'rounded-md w-full placeholder-gray-500 text-gray-400',
-        },
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4' },
-    children: [
-      {
-        $cmp: 'FormKit',
-        props: {
-          type: 'select',
-          id: 'service-type',
-          name: 'service_type',
-          placeholder: 'Pick the Service Type',
-          // label: 'Service Type:',
-          options: [
-            {
-              label: 'Point-to-Point',
-              value: 1,
-            },
-            {
-              label: 'To Airport',
-              value: 2,
-            },
-            {
-              label: 'From Airport',
-              value: 3,
-            },
-            {
-              label: 'Hourly/As Directed',
-              value: 4,
-            },
-          ],
-        },
-      },
-      {
-        $formkit: 'select',
-        id: 'passenger-count',
-        name: 'passenger_count',
-        // label: 'Number of Passengers:',
-        placeholder: 'Number of Passengers:',
-        options: [
-          {
-            label: '1 passenger',
-            value: 1,
-          },
-          {
-            label: '2 passengers',
-            value: 2,
-          },
-          {
-            label: '3 passengers',
-            value: 3,
-          },
-          {
-            label: '4 passengers',
-            value: 4,
-          },
-          {
-            label: '5 passengers',
-            value: 5,
-          },
-          {
-            label: '6 passengers',
-            value: 6,
-          },
-          {
-            label: '7 passengers',
-            value: 7,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
-    children: [
-      {
-        $cmp: 'FormKit',
-        props: {
-          type: 'select',
-          id: 'vehicleType',
-          name: 'vehicle_type',
-          // label: 'Vehicle Type:',
-          placeholder: 'Pick The Vehicle Type',
-          options: [
-            {
-              label: 'Standard Sedan',
-              value: 1,
-            },
-            {
-              label: 'Premium Sedan',
-              value: 2,
-            },
-            {
-              label: 'Standard SUV',
-              value: 3,
-            },
-            {
-              label: 'Premium SUV',
-              value: 4,
-            },
-          ],
-        },
-      },
-      {
-        $cmp: 'FormKit',
-        props: {
-          type: 'select',
-          id: 'number-of-hours',
-          name: 'number_of_hours',
-          // label: 'Number Of Hours:',
-          placeholder: '*For Hourly/As Directed Service',
-          disabled: {
-            if: '$get(serviceType).value === 4',
-            then: false,
-            else: true,
-          },
-          options: [
-            {
-              label: '2 hrs',
-              value: 2,
-            },
-            {
-              label: '3 hrs',
-              value: 3,
-            },
-            {
-              label: '4 hrs',
-              value: 4,
-            },
-            {
-              label: '5 hrs',
-              value: 5,
-            },
-            {
-              label: '6 hrs',
-              value: 6,
-            },
-            {
-              label: '7 hrs',
-              value: 7,
-            },
-            {
-              label: '8 hrs',
-              value: 8,
-            },
-            {
-              label: '9 hrs',
-              value: 9,
-            },
-            {
-              label: '10 hrs',
-              value: 10,
-            },
-            {
-              label: '11 hrs',
-              value: 11,
-            },
-            {
-              label: '12 hrs',
-              value: 12,
-            },
-          ],
-        },
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
-    children: [
-      {
-        $formkit: 'text',
-        id: 'first-name',
-        name: 'first_name',
-        // label: 'First Name:',
-        placeholder: 'Enter your First Name...',
-      },
-      {
-        $formkit: 'text',
-        id: 'last-name',
-        name: 'last_name',
-        // label: 'Last Name:',
-        placeholder: 'Enter your Last Name...',
-      },
-    ],
-  },
-  {
-    $el: 'div',
-    attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
-    children: [
-      {
-        $formkit: 'email',
-        id: 'email',
-        prefixIcon: 'email',
-        name: 'email_address',
-        // label: 'Email Address:',
-        placeholder: 'Enter your email...',
-        validation: 'required|email',
-      },
-      {
-        $cmp: 'VueTelInput',
-        bind: `$inputOptions`,
-        props: {
-          id: 'phone_number',
-          placeholder: 'Enter your phone number...',
-          size: 'sm',
-          modelValue: `$phone_number`,
-          styleClasses: 'h-11',
-        },
-        attrs: {
-          label: 'Phone Number:',
-        },
-      },
-    ],
-  },
-  {
-    $formkit: 'submit',
-    id: 'submit',
-    label: 'Get Pricing and Availability',
-    classes: {
-      outer: 'w-full',
-      input: 'uppercase bg-red-700',
-    },
-  },
-]
+// const schema = [
+//   {
+//     $el: 'h2',
+//     attrs: { class: 'text-2xl uppercase text-center text-white mb-4' },
+//     children: 'Instant Quote',
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 gap-4' },
+//     children: [
+//       {
+//         $formkit: 'text',
+//         name: 'origin_input',
+//         id: 'origin-input',
+//         placeholder: 'Enter Address or Airport Code...',
+//         // label: 'Pickup Location:',
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 gap-4' },
+//     children: [
+//       {
+//         $formkit: 'text',
+//         id: 'destination-input',
+//         name: 'destination_input',
+//         placeholder: 'Enter Address or Airport Code...',
+//         // label: 'Drop-off Location:',
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+//     children: [
+//       {
+//         $cmp: 'FormKit',
+//         type: 'myDatePicker',
+//         attrs: {
+//           id: 'pickup-time',
+//           name: 'pickup_time',
+//           placeholder: 'Enter Pickup Time...',
+//         },
+//         props: {
+//           dark: false,
+//           timePicker: true,
+//           modelValue: `$pickup_time`,
+//           inputClassName:
+//             'rounded-md w-full placeholder-gray-500 text-gray-400',
+//         },
+//       },
+//       {
+//         $cmp: 'Datepicker',
+//         attrs: {
+//           id: 'pickup-date',
+//           placeholder: `Enter Pickup Time...`,
+//         },
+//         props: {
+//           enableTimePicker: false,
+//           closeOnAutoApply: true,
+//           is24: false,
+//           name: 'pickup_date',
+//           dark: false,
+//           modelValue: `$pickup_date`,
+//           inputClassName:
+//             'rounded-md w-full placeholder-gray-500 text-gray-400',
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4' },
+//     children: [
+//       {
+//         $cmp: 'FormKit',
+//         props: {
+//           type: 'select',
+//           id: 'service-type',
+//           name: 'service_type',
+//           placeholder: 'Pick the Service Type',
+//           // label: 'Service Type:',
+//           options: [
+//             {
+//               label: 'Point-to-Point',
+//               value: 1,
+//             },
+//             {
+//               label: 'To Airport',
+//               value: 2,
+//             },
+//             {
+//               label: 'From Airport',
+//               value: 3,
+//             },
+//             {
+//               label: 'Hourly/As Directed',
+//               value: 4,
+//             },
+//           ],
+//         },
+//       },
+//       {
+//         $formkit: 'select',
+//         id: 'passenger-count',
+//         name: 'passenger_count',
+//         // label: 'Number of Passengers:',
+//         placeholder: 'Number of Passengers:',
+//         options: [
+//           {
+//             label: '1 passenger',
+//             value: 1,
+//           },
+//           {
+//             label: '2 passengers',
+//             value: 2,
+//           },
+//           {
+//             label: '3 passengers',
+//             value: 3,
+//           },
+//           {
+//             label: '4 passengers',
+//             value: 4,
+//           },
+//           {
+//             label: '5 passengers',
+//             value: 5,
+//           },
+//           {
+//             label: '6 passengers',
+//             value: 6,
+//           },
+//           {
+//             label: '7 passengers',
+//             value: 7,
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+//     children: [
+//       {
+//         $cmp: 'FormKit',
+//         props: {
+//           type: 'select',
+//           id: 'vehicleType',
+//           name: 'vehicle_type',
+//           // label: 'Vehicle Type:',
+//           placeholder: 'Pick The Vehicle Type',
+//           options: [
+//             {
+//               label: 'Standard Sedan',
+//               value: 1,
+//             },
+//             {
+//               label: 'Premium Sedan',
+//               value: 2,
+//             },
+//             {
+//               label: 'Standard SUV',
+//               value: 3,
+//             },
+//             {
+//               label: 'Premium SUV',
+//               value: 4,
+//             },
+//           ],
+//         },
+//       },
+//       {
+//         $cmp: 'FormKit',
+//         props: {
+//           type: 'select',
+//           id: 'number-of-hours',
+//           name: 'number_of_hours',
+//           // label: 'Number Of Hours:',
+//           placeholder: '*For Hourly/As Directed Service',
+//           disabled: {
+//             if: '$get(serviceType).value === 4',
+//             then: false,
+//             else: true,
+//           },
+//           options: [
+//             {
+//               label: '2 hrs',
+//               value: 2,
+//             },
+//             {
+//               label: '3 hrs',
+//               value: 3,
+//             },
+//             {
+//               label: '4 hrs',
+//               value: 4,
+//             },
+//             {
+//               label: '5 hrs',
+//               value: 5,
+//             },
+//             {
+//               label: '6 hrs',
+//               value: 6,
+//             },
+//             {
+//               label: '7 hrs',
+//               value: 7,
+//             },
+//             {
+//               label: '8 hrs',
+//               value: 8,
+//             },
+//             {
+//               label: '9 hrs',
+//               value: 9,
+//             },
+//             {
+//               label: '10 hrs',
+//               value: 10,
+//             },
+//             {
+//               label: '11 hrs',
+//               value: 11,
+//             },
+//             {
+//               label: '12 hrs',
+//               value: 12,
+//             },
+//           ],
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+//     children: [
+//       {
+//         $formkit: 'text',
+//         id: 'first-name',
+//         name: 'first_name',
+//         // label: 'First Name:',
+//         placeholder: 'Enter your First Name...',
+//       },
+//       {
+//         $formkit: 'text',
+//         id: 'last-name',
+//         name: 'last_name',
+//         // label: 'Last Name:',
+//         placeholder: 'Enter your Last Name...',
+//       },
+//     ],
+//   },
+//   {
+//     $el: 'div',
+//     attrs: { class: 'grid grid-cols-1 sm:grid-cols-2 gap-4' },
+//     children: [
+//       {
+//         $formkit: 'email',
+//         id: 'email',
+//         prefixIcon: 'email',
+//         name: 'email_address',
+//         // label: 'Email Address:',
+//         placeholder: 'Enter your email...',
+//         validation: 'required|email',
+//       },
+//       {
+//         $cmp: 'VueTelInput',
+//         bind: `$inputOptions`,
+//         props: {
+//           id: 'phone_number',
+//           placeholder: 'Enter your phone number...',
+//           size: 'sm',
+//           modelValue: `$phone_number`,
+//           styleClasses: 'h-11',
+//         },
+//         attrs: {
+//           label: 'Phone Number:',
+//         },
+//       },
+//     ],
+//   },
+//   {
+//     $formkit: 'submit',
+//     id: 'submit',
+//     label: 'Get Pricing and Availability',
+//     classes: {
+//       outer: 'w-full',
+//       input: 'uppercase bg-red-700',
+//     },
+//   },
+// ]
+
+const embedHsForm = () => {
+  const script = document.createElement('script')
+  script.src = '//js.hsforms.net/forms/embed/v2.js'
+  document.body.appendChild(script)
+  script.addEventListener('load', () => {
+    if (!window.hbspt) return
+    window.hbspt.forms.create({
+      portalId: '22137357',
+      formId: 'a1eb527b-3c3d-4923-ab3c-f10c34e2b6cf',
+      target: '#hubspotForm',
+    })
+  })
+}
+const hubspotForm = ref(null)
+onMounted(() => {
+  embedHsForm()
+  if (hubspotForm.value === true) {
+    initMap()
+    console.dir(hubspotForm.value)
+  } else {
+    setTimeout(() => {
+      initMap()
+    }, 1000)
+  }
+})
 </script>
 
 <template>
-  <FormKitSchema :schema="schema" :data="data" :library="library" />
-  <div id="myMap" ref="myMap"></div>
+  <div>
+    <div class="w-full h-full">
+      <div
+        id="hubspotForm"
+        ref="hubspotForm"
+        class="p-6 bg-black border border-white rounded-lg shadow-xl"
+      ></div>
+    </div>
+    <div id="myMap" ref="myMap"></div>
+  </div>
 </template>
 
-<style scoped></style>
+

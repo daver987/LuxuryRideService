@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Ref } from 'vue'
+
 const isOpen = useOpen() as Ref<boolean>
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
@@ -18,7 +19,7 @@ defineProps({
   <nav
     class="-mb-[5.05rem] w-full px-6 lg:px-10 z-30 row-start-1 self-start justify-self-stretch relative md:col-span-2"
   >
-    <div class="mx-auto max-w-7xl grid pt-6 grid-cols-2 relative">
+    <div class="relative mx-auto grid max-w-7xl grid-cols-2 pt-6">
       <div class="col-span-1 col-start-1">
         <NuxtLink
           to="/"
@@ -33,10 +34,10 @@ defineProps({
         </NuxtLink>
       </div>
       <div
-        class="flex flex-row col-span-1 col-start-2 col-end-3 self-center justify-end"
+        class="col-span-1 col-start-2 col-end-3 flex flex-row justify-end self-center"
       >
         <button
-          class="cursor-pointer text-white text-4xl i-gg-menu-right-alt hover:text-background"
+          class="cursor-pointer text-4xl text-white i-gg-menu-right-alt hover:text-background"
           @click="toggleMenu"
           v-show="showMenuButton"
         />

@@ -1,26 +1,26 @@
 <template>
   <header
-    class="bg-center bg-cover bg-no-repeat h-screen px-6 md:px-12 z-10 overflow-hidden relative"
+    class="relative z-10 h-screen overflow-hidden bg-cover bg-center bg-no-repeat px-6 md:px-12"
     style="background-image: url('/icons/gradient-background.svg')"
   >
     <BaseContainer
-      class="h-full grid py-8 grid-cols-1 grid-rows-6 relative md:grid-cols-2"
+      class="relative grid h-full grid-cols-1 grid-rows-6 py-8 md:grid-cols-2"
     >
       <div
         :style="image"
-        class="bg-center bg-no-repeat bg-cover bg-black bg-blend-darken h-full bg-opacity-60 w-full max-w-7xl grid grid-cols-1 col-span-2 row-start-2 row-end-5 md:grid-cols-2 md:row-end-6 md:self-center"
+        class="col-span-2 row-start-2 row-end-5 grid h-full w-full max-w-7xl grid-cols-1 bg-black bg-opacity-60 bg-cover bg-center bg-no-repeat bg-blend-darken md:row-end-6 md:grid-cols-2 md:self-center"
       >
         <div
-          class="flex flex-col max-w-md space-y-6 px-6 row-start-2 md:max-w-xl md:px-12 md:justify-self-stretch"
+          class="row-start-2 flex max-w-md flex-col px-6 space-y-6 md:max-w-xl md:justify-self-stretch md:px-12"
         >
           <p class="text-center subheading md:text-left">
             {{ aboveHeading }}
           </p>
-          <h1 class="text-center text-white leading-tight heading md:text-left">
+          <h1 class="text-center leading-tight text-white heading md:text-left">
             {{ heading }}
           </h1>
           <p
-            class="font-body max-w-xs text-sm text-center text-white tracking-wider md:max-w-sm md:text-left"
+            class="max-w-xs text-center text-sm tracking-wider text-white font-body md:max-w-sm md:text-left"
           >
             {{ body }}
           </p>
@@ -31,7 +31,7 @@
       >
         <a
           :href="`tel:${companyPhone}`"
-          class="font-body text-sm text-center text-body"
+          class="text-center text-sm font-body text-body"
           >CALL: {{ companyPhone }}</a
         >
       </div>
@@ -40,7 +40,7 @@
       >
         <a
           :href="`mailto:${companyEmail}`"
-          class="font-body text-sm text-center text-body uppercase tracking-wide"
+          class="text-center text-sm uppercase tracking-wide font-body text-body"
         >
           EMAIL: {{ companyEmail }}
         </a>
