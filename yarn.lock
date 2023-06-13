@@ -450,10 +450,10 @@
     "@babel/runtime" "^7.12.5"
     tslib "^2.2.0"
 
-"@microsoft/microsoft-graph-types@^2.27.0":
-  version "2.32.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-types/-/microsoft-graph-types-2.32.0.tgz#8ba72d6f377807fde6fad0f2c528b8e7ef393d8f"
-  integrity sha512-/eGp3ZFWpwh4psqqA3D7EKpadOofZBWfEb3DbS0ijTM0Ux0YllcGZSnG5X0JPTLS0C0/8IHL7uQmA4lM0pXzLQ==
+"@microsoft/microsoft-graph-types@^2.33.0":
+  version "2.33.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-types/-/microsoft-graph-types-2.33.0.tgz#18aa30900d4cb10a7e1da36516378b6f4e18074e"
+  integrity sha512-gl1HjBJAojfaDJPbd0r5k8mBdnEjG4D4m0BBy5VEdIBCinBshL4OYmlUeESxSc4Mb78meiQzqBY3V2xXkvm36A==
 
 "@netlify/functions@^1.0.0":
   version "1.0.0"
