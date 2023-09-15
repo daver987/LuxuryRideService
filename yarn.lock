@@ -681,10 +681,10 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@microsoft/microsoft-graph-client@^3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-client/-/microsoft-graph-client-3.0.5.tgz#c661b5bb271fd59d34391b0657b8a78c02af9ab8"
-  integrity sha512-xQADFNLUhE78RzYadFZtOmy/5wBZenSZhVK193m40MTDC5hl1aYMQO1QOJApnKga8WcvMCDCU10taRhuXTOz5w==
+"@microsoft/microsoft-graph-client@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-client/-/microsoft-graph-client-3.0.6.tgz#84c93b47c64877a6e42b7f0b32930460d7e74795"
+  integrity sha512-corwIFZ+yzOguEWfzhWycOBqekBzaTH0ymf060D0ONdloICcGfNVNv4LIrhbNUeB3jxsotnTY931crPDTqKM0g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     tslib "^2.2.0"
