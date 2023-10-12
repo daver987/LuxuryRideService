@@ -28,7 +28,7 @@
     "vitest": "^0.9.3"
   },
   "dependencies": {
-    "@formkit/nuxt": "^1.0.0",
+    "@formkit/nuxt": "^1.1.0",
     "@microsoft/microsoft-graph-client": "^3.0.5",
     "@microsoft/microsoft-graph-types": "^2.27.0",
     "pinia": "^2.0.33"
