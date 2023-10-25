@@ -488,102 +488,104 @@
   dependencies:
     mime "^3.0.0"
 
-"@formkit/core@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/core/-/core-1.0.0.tgz#d5d7900e8b6c8efdb746d71ff8e4a2d253323218"
-  integrity sha512-rDFVwNngLcakltasYzmyYDPAYoCoakK+7h4/5V1bE1FQDabhVvJIc5EDH8U80RAKNLGS9xiQ1JK4FHGcZ3K+oQ==
+"@formkit/core@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/core/-/core-1.2.2.tgz#4461b416a678b32ccc37e2f2268615460850ad6a"
+  integrity sha512-aJoZW7ZWXdwVBdw2acv62aPaecZ44PnK9eyp/hdMrMxT9xW3I84MytCdII8DYpxLmloaE+NoUANZIvlkTRGlHg==
   dependencies:
-    "@formkit/utils" "1.0.0"
+    "@formkit/utils" "1.2.2"
 
-"@formkit/dev@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/dev/-/dev-1.0.0.tgz#1dfe1b71b1cd5669b9207f72773bbb00f723cb31"
-  integrity sha512-ESX58BklYH1x9312xgyLTJ97wumOfPH98d2F3EL5M6erwHbBssBxBuKqsJkVoBo5Natgtm1VUDd9akA2Qc3dZQ==
+"@formkit/dev@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/dev/-/dev-1.2.2.tgz#43ad81a0096d0e9e4c39b3c61c58277756de4444"
+  integrity sha512-C3KzolVAQE732W2aCKgLDXyhnxCNFtWQEPvs677ZAEciMBrZEgU6ZDleb8XTX7FIF4m4PWszfheQIbdy4p0K+Q==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/utils" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/utils" "1.2.2"
 
-"@formkit/i18n@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/i18n/-/i18n-1.0.0.tgz#c20820ea0158979869f3c4e5702cc74454e9173d"
-  integrity sha512-Q2jvwy54NufxGplzyuykowTSuqSMZsCRPJqV+taa/2V8J7EJh3YKiyWP69eKKlHtX9rMmjrlFSTbG4a0AJxdRw==
+"@formkit/i18n@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/i18n/-/i18n-1.2.2.tgz#29aede7d91b2a1ccc6fdcc716aee431fb98de694"
+  integrity sha512-HABPlja6xQk0JztvQnbnhVzFqhgM6XqlqOzGNOtCOcOpMUSY3okT7NSMPTK/Zq4Yq4XQmbJgi/toGfYakqLfhA==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/utils" "1.0.0"
-    "@formkit/validation" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/utils" "1.2.2"
+    "@formkit/validation" "1.2.2"
 
-"@formkit/inputs@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/inputs/-/inputs-1.0.0.tgz#21612e4b211c7e39b5caeedc0581acb024f4cc23"
-  integrity sha512-fP8kBshH3SD19mei6nAqTq6LTHI4/C1eAP4BYMHBuLwKYMq4SrfPKTCrTNefz+DF3yRaUzUqRg5TgBGgt6wtTw==
+"@formkit/inputs@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/inputs/-/inputs-1.2.2.tgz#5515c149969412f3472b6977b8d4e5b6447c5f1f"
+  integrity sha512-apVGQ+9eHRD8qi9h0LRvaI9UrumDUwXQSw3gMQfDvfCjkqZXY4+m/WS3FraqHH4Mqs7cjryYRYrHYpAaVQtqKQ==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/utils" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/utils" "1.2.2"
 
-"@formkit/nuxt@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/nuxt/-/nuxt-1.0.0.tgz#e504d031fc9a3e260489f95e0adedecc56e9ad33"
-  integrity sha512-9HyKRk+aDoo9qsNquZNab4VH59YK+0lVMwiyk82ybC6zt2XjwXXat9ZmRYhS65E9LW0tIPaC/B7VdubYIpxWgw==
+"@formkit/nuxt@^1.1.0":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/nuxt/-/nuxt-1.2.2.tgz#dd6d4e80c77a2a352c512db2c32058083e8f957d"
+  integrity sha512-qrYex9vhpnpMP32T1E9ZbcRPZIRzGeY0f8bgMUaY3v8DKcEN9okSDYKu8poGUqB5W6wjxgaXvXwhbaDb/Njspw==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/i18n" "1.0.0"
-    "@formkit/vue" "1.0.0"
-    "@nuxt/kit" "^3.5.3"
+    "@formkit/core" "1.2.2"
+    "@formkit/i18n" "1.2.2"
+    "@formkit/vue" "1.2.2"
+    "@nuxt/kit" "^3.7.4"
     chokidar "^3.5.3"
+    nuxi "^3.9.0"
     pathe "^1.1.1"
+    unplugin-formkit "^0.2.7"
 
-"@formkit/observer@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/observer/-/observer-1.0.0.tgz#07f05da7d5067f225d894c8cfad250bb9e11e272"
-  integrity sha512-fKo2TX5MK6L4Nc0YWIcg2Qhp2Rz0pnQg4j541Pwd3tyQ+auHYKD8wnPkq46XHQUAWaq4HJ4WchpPiPSqXpcXAQ==
+"@formkit/observer@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/observer/-/observer-1.2.2.tgz#dd1ef35cb5a01a04cb86cec32e0218688a4acc3b"
+  integrity sha512-D9bVRfs2FEuzuIdC2BFSpayV4xyIexbRc2JTLkdwgsx9rROz9bh67M+VZ7zmrONuikgrD+dfaopIXK5sRZPGSQ==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/utils" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/utils" "1.2.2"
 
-"@formkit/rules@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/rules/-/rules-1.0.0.tgz#0773ac6d905ce271897749b7278e7f0903f06bea"
-  integrity sha512-q9ENjQFEsku8v9M9jybtDh8TVgz4WFrm0wj6v8w8KXqDxdEU6HZ7+IWuF8/0Rh8SwVZLTYTv+dqtw8Xs5Z/b6g==
+"@formkit/rules@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/rules/-/rules-1.2.2.tgz#0778c856aae5397a1ae3fad27f5862cdf7ae7ee3"
+  integrity sha512-WfDZfDDuX9lAyvCvxLwTeszQNd59Ztnyxx6zjRvzF6zHMD4g5swb3Jv6jy0Jwic0nl4+04IEhpBM4Cl5kQuAvA==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/utils" "1.0.0"
-    "@formkit/validation" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/utils" "1.2.2"
+    "@formkit/validation" "1.2.2"
 
-"@formkit/themes@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/themes/-/themes-1.0.0.tgz#049362956b477021b9f195e9af1ccd2fb663aaee"
-  integrity sha512-A5fseWPLp2SWnLpl966vzIIpGDIpZ4FSa4HXaA1PwLg69JVHzoeuls8vd90z7a4VALlslnVUwSm26WWr1BxJgA==
+"@formkit/themes@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/themes/-/themes-1.2.2.tgz#9a4e7f6a6c9efbddc035cd8ea72a377f276dcb22"
+  integrity sha512-YxNmReXkvuF9OP6wAHVyJvTZ+hd+zRfOyTjie75fQ1EkWCjcn2jk+DCY4U+IkgOnq6A/vcKjP5vyuQqsglUgAA==
   dependencies:
-    "@formkit/core" "1.0.0"
+    "@formkit/core" "1.2.2"
 
-"@formkit/utils@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/utils/-/utils-1.0.0.tgz#41515e58ec111ab06f7ebb568a6356ec2525a847"
-  integrity sha512-5T8PbHOajP/eJuoEeLgxA0g25nyVUZKfy2V2mW8idoph+9PT0nZUoIP+KA/PJ2mmexqtuykMT0A5knW8MiXqsw==
+"@formkit/utils@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/utils/-/utils-1.2.2.tgz#67687119ec747077890b399541058388cd5f3098"
+  integrity sha512-4EGm4nfZGSJik0QRAEybxO52F3QhbOfX/KgtWfB3/dDUEOCx5RWDxIs/CU2yI4bceDl2aK8l/yDYwCYK9SO5MA==
 
-"@formkit/validation@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/validation/-/validation-1.0.0.tgz#a72cb5215ac85ad854c11a8547e21d2e9c670cfc"
-  integrity sha512-XRFbPw/YlOWqDyrZb6qtETFjohgOrBfhhsVM6B7qm4xyXx2pa53zf+RjDD4+aUXjZTif+qKZA8xuK3Z3shGuZQ==
+"@formkit/validation@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/validation/-/validation-1.2.2.tgz#e9c2a07ae0e76c14a1b276b30d61bbf62a41ede7"
+  integrity sha512-jUfEjh3HAWlPmcuI+c7ullWKbm3oIRlQvbqN1r2GDqMWWLZ47+k6PVELV/eU7gxrF0mpQcQY5r8zvA1IFocCGA==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/observer" "1.0.0"
-    "@formkit/utils" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/observer" "1.2.2"
+    "@formkit/utils" "1.2.2"
 
-"@formkit/vue@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@formkit/vue/-/vue-1.0.0.tgz#71a5b2e13f1c44291f5b50a38e30a8ab063458e3"
-  integrity sha512-TJ4DIPEI7EgxZ/olXpnyHmezm75acllzbCIHgXB4ckd1AxC2pb0T2Z17B4VK/jYz7Xdkc6apAvYosgVbupbnfw==
+"@formkit/vue@1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formkit/vue/-/vue-1.2.2.tgz#be4ba201307e7d4e7e68dffa554031f3307cb720"
+  integrity sha512-UH7CrEfsj1otO+EMgLYFWsLp1A8s3GYiRik3YPII6sVuImXYuLCtz++oT3JrnM5hmUJWmEjxZoi5gRYJzxa0ow==
   dependencies:
-    "@formkit/core" "1.0.0"
-    "@formkit/dev" "1.0.0"
-    "@formkit/i18n" "1.0.0"
-    "@formkit/inputs" "1.0.0"
-    "@formkit/observer" "1.0.0"
-    "@formkit/rules" "1.0.0"
-    "@formkit/themes" "1.0.0"
-    "@formkit/utils" "1.0.0"
-    "@formkit/validation" "1.0.0"
+    "@formkit/core" "1.2.2"
+    "@formkit/dev" "1.2.2"
+    "@formkit/i18n" "1.2.2"
+    "@formkit/inputs" "1.2.2"
+    "@formkit/observer" "1.2.2"
+    "@formkit/rules" "1.2.2"
+    "@formkit/themes" "1.2.2"
+    "@formkit/utils" "1.2.2"
+    "@formkit/validation" "1.2.2"
     vue "^3.3.4"
 
 "@headlessui/vue@^1.5.0":
@@ -727,28 +729,28 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@^3.5.3":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.7.0.tgz#14046349a7b12412e84782525ef802b65624268f"
-  integrity sha512-bsPRb2NTLHRacjyybhhA3pZFIqo2pxB6bcP4FQDuzlGzVTI5PtJzbfNpkmQC7q+LZt8K0pNlxKVGisDvZctk6w==
+"@nuxt/kit@^3.7.4":
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.7.4.tgz#31c0bd57397cc56a1098af5d6504353cc2e855a2"
+  integrity sha512-/S5abZL62BITCvC/TY3KWA6N721U1Osln3cQdBb56XHIeafZCBVqTi92Xb0o7ovl72mMRhrKwRu7elzvz9oT/g==
   dependencies:
-    "@nuxt/schema" "3.7.0"
+    "@nuxt/schema" "3.7.4"
     c12 "^1.4.2"
     consola "^3.2.3"
     defu "^6.1.2"
     globby "^13.2.2"
     hash-sum "^2.0.0"
     ignore "^5.2.4"
-    jiti "^1.19.3"
+    jiti "^1.20.0"
     knitwork "^1.0.0"
-    mlly "^1.4.1"
+    mlly "^1.4.2"
     pathe "^1.1.1"
     pkg-types "^1.0.3"
     scule "^1.0.0"
     semver "^7.5.4"
     ufo "^1.3.0"
     unctx "^2.3.1"
-    unimport "^3.2.0"
+    unimport "^3.3.0"
     untyped "^1.4.0"
 
 "@nuxt/kit@npm:@nuxt/kit-edge@3.0.0-27495135.4d1a6ba":
@@ -799,12 +801,13 @@
     unimport "^0.1.4"
     untyped "^0.4.4"
 
-"@nuxt/schema@3.7.0":
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.7.0.tgz#60e78916acea20e8c643b8ddbd16fde1bc89742d"
-  integrity sha512-fNRAubny1x6rIibm/HcacnEGeAQri/FkJ5ei24aY4YjQ12+xDfi7bljfFr6C2+CrEGc1beYd4OQcUqXqEpz5+g==
+"@nuxt/schema@3.7.4":
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/schema/-/schema-3.7.4.tgz#8d01aa9d1891d0662e66a48724e177731ce1388d"
+  integrity sha512-q6js+97vDha4Fa2x2kDVEuokJr+CGIh1TY2wZp2PLZ7NhG3XEeib7x9Hq8XE8B6pD0GKBRy3eRPPOY69gekBCw==
   dependencies:
     "@nuxt/ui-templates" "^1.3.1"
+    consola "^3.2.3"
     defu "^6.1.2"
     hookable "^5.5.3"
     pathe "^1.1.1"
@@ -812,7 +815,7 @@
     postcss-import-resolver "^2.0.0"
     std-env "^3.4.3"
     ufo "^1.3.0"
-    unimport "^3.2.0"
+    unimport "^3.3.0"
     untyped "^1.4.0"
 
 "@nuxt/schema@npm:@nuxt/schema-edge@3.0.0-27491748.3186841":
@@ -1022,10 +1025,10 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^5.0.3":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.0.4.tgz#74f808f9053d33bafec0cc98e7b835c9667d32ba"
-  integrity sha512-0KJnIoRI8A+a1dqOYLxH8vBf8bphDmty5QvIm2hqm7oFCFYKCAZWWd2hXgMibaPsNDhI0AtpYfQZJG47pt/k4g==
+"@rollup/pluginutils@^5.0.4":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.0.5.tgz#bbb4c175e19ebfeeb8c132c2eea0ecb89941a66c"
+  integrity sha512-6aEYR910NyP73oHiJglti74iRyOwgFU4x3meH/H8OJx6Ry0j6cOVZ5X/wTvub7G7Ao6qaHBEaNsV3GLJkSsF+Q==
   dependencies:
     "@types/estree" "^1.0.0"
     estree-walker "^2.0.2"
@@ -3233,6 +3236,11 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
+fsevents@~2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -3832,10 +3840,15 @@ jiti@^1.12.14, jiti@^1.13.0:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.13.0.tgz#3cdfc4e651ca0cca4c62ed5e47747b5841d41a8e"
   integrity sha512-/n9mNxZj/HDSrincJ6RP+L+yXbpnB8FybySBa+IjIaoH9FIxBbrbRT5XUbe8R7zuVM2AQqNMNDDqz0bzx3znOQ==
 
-jiti@^1.18.2, jiti@^1.19.1, jiti@^1.19.3:
+jiti@^1.18.2, jiti@^1.19.1:
   version "1.19.3"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.19.3.tgz#ef554f76465b3c2b222dc077834a71f0d4a37569"
   integrity sha512-5eEbBDQT/jF1xg6l36P+mWGGoH9Spuy0PCdSr2dtWRDGC6ph/w9ZCL4lmESW8f8F7MwT3XKescfP0wnZWAKL9w==
+
+jiti@^1.20.0:
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.20.0.tgz#2d823b5852ee8963585c8dd8b7992ffc1ae83b42"
+  integrity sha512-3TV69ZbrvV6U5DfQimop50jE9Dl6J8O1ja1dvBbMba/sZ3YBEQqJ2VZRoQPVnhlzjNtU1vaXRZVrVjU4qtm8yA==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -4234,10 +4247,20 @@ mlly@^0.5.1:
     pathe "^0.2.0"
     pkg-types "^0.3.2"
 
-mlly@^1.2.0, mlly@^1.4.0, mlly@^1.4.1:
+mlly@^1.2.0, mlly@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mlly/-/mlly-1.4.1.tgz#7ab9cbb040bf8bd8205a0c341ce9acc3ae0c3a74"
   integrity sha512-SCDs78Q2o09jiZiE2WziwVBEqXQ02XkGdUy45cbJf+BpYRIjArXRJ1Wbowxkb+NaM9DWvS3UC9GiO/6eqvQ/pg==
+  dependencies:
+    acorn "^8.10.0"
+    pathe "^1.1.1"
+    pkg-types "^1.0.3"
+    ufo "^1.3.0"
+
+mlly@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/mlly/-/mlly-1.4.2.tgz#7cf406aa319ff6563d25da6b36610a93f2a8007e"
+  integrity sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==
   dependencies:
     acorn "^8.10.0"
     pathe "^1.1.1"
@@ -4513,6 +4536,13 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+nuxi@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/nuxi/-/nuxi-3.9.0.tgz#1f463977eeacaeb7195100286dcef432ed1ef71b"
+  integrity sha512-roCfCnQsp/oaHm6PL3HFvvGrwm1d2y1n7G9KzIx+i91eiO4P7fBuaVKibB2e8uqEJBgTwN52KxFha6MJnDykJQ==
+  optionalDependencies:
+    fsevents "~2.3.3"
 
 "nuxi@npm:nuxi-edge@3.0.0-27495135.4d1a6ba":
   version "3.0.0-27495135.4d1a6ba"
@@ -5930,22 +5960,22 @@ unimport@^0.1.4:
     scule "^0.2.1"
     unplugin "^0.3.3"
 
-unimport@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/unimport/-/unimport-3.2.0.tgz#40dad8f736faaae6868c83aab4d8a701094167d5"
-  integrity sha512-9buxPxkNwxwxAlH/RfOFHxtQTUrlmBGi9Ai9HezY2yYbkoOhgJTYPI6+WqxI1EZphoM9cw1SHoCFRkXSb8/fjQ==
+unimport@^3.3.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/unimport/-/unimport-3.4.0.tgz#e8302c2eabdfc6e23b65e02c3dfe592e427e8340"
+  integrity sha512-M/lfFEgufIT156QAr/jWHLUn55kEmxBBiQsMxvRSIbquwmeJEyQYgshHDEvQDWlSJrVOOTAgnJ3FvlsrpGkanA==
   dependencies:
-    "@rollup/pluginutils" "^5.0.3"
+    "@rollup/pluginutils" "^5.0.4"
     escape-string-regexp "^5.0.0"
     fast-glob "^3.3.1"
     local-pkg "^0.4.3"
     magic-string "^0.30.3"
-    mlly "^1.4.0"
+    mlly "^1.4.2"
     pathe "^1.1.1"
     pkg-types "^1.0.3"
     scule "^1.0.0"
     strip-literal "^1.3.0"
-    unplugin "^1.4.0"
+    unplugin "^1.5.0"
 
 universalify@^2.0.0:
   version "2.0.0"
@@ -5976,6 +6006,14 @@ unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
 
+unplugin-formkit@^0.2.7:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/unplugin-formkit/-/unplugin-formkit-0.2.7.tgz#c372f5679ed00447426998f746e520f50b0f4757"
+  integrity sha512-2Ea5CyEZ2rwjSpx6maweyzFUsV1M/6CiACXHkz4Jv2G32SI4jq58stU7ADWSqrIKgjJE0bllyUx25lpj6ry9gA==
+  dependencies:
+    pathe "^1.1.1"
+    unplugin "^1.4.0"
+
 unplugin@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.3.3.tgz#e9b148f84cabef5e6529f232a10e674a7c020930"
@@ -5998,6 +6036,16 @@ unplugin@^1.3.1, unplugin@^1.4.0:
   integrity sha512-5x4eIEL6WgbzqGtF9UV8VEC/ehKptPXDS6L2b0mv4FRMkJxRtjaJfOWDd6a8+kYbqsjklix7yWP0N3SUepjXcg==
   dependencies:
     acorn "^8.9.0"
+    chokidar "^3.5.3"
+    webpack-sources "^3.2.3"
+    webpack-virtual-modules "^0.5.0"
+
+unplugin@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-1.5.0.tgz#8938ae84defe62afc7757df9ca05d27160f6c20c"
+  integrity sha512-9ZdRwbh/4gcm1JTOkp9lAkIDrtOyOxgHmY7cjuwI8L/2RTikMcVG25GsZwNAgRuap3iDw2jeq7eoqtAsz5rW3A==
+  dependencies:
+    acorn "^8.10.0"
     chokidar "^3.5.3"
     webpack-sources "^3.2.3"
     webpack-virtual-modules "^0.5.0"
